@@ -163,7 +163,7 @@
               "foreignTaxCreditRelief": {
                 "type": "boolean",
                 "description": "A boolean indicating whether Foreign Tax Credit Relief (FTCR) has been claimed.",
-                "example": "5000.99"
+                "example": false
               },
               "premiumsOfLeaseGrant": {
                 "type": "number",
