@@ -45,7 +45,7 @@ requestBody:
     application/json:
       schema:
         # {{#if (enabled 'foreign-property-r19-property-id')}}
-        oneOf:
+        anyOf:
           - $ref: './schemas/foreign_property_annual_submission_create_and_amend/def1/request.json'
           - $ref: './schemas/foreign_property_annual_submission_create_and_amend/def2/request.json'
           - $ref: './schemas/foreign_property_annual_submission_create_and_amend/def3/request.json'
