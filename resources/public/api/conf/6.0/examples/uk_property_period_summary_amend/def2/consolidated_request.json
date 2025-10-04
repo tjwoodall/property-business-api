@@ -13,11 +13,11 @@
   },
   "ukNonFhlProperty": {
     "income": {
-      "premiumsOfLeaseGrant": -42.12,
+      "premiumsOfLeaseGrant": 42.12,
       "reversePremiums": 84.31,
       "periodAmount": 9884.93,
       "taxDeducted": 842.99,
-      "otherIncome": -31.44,
+      "otherIncome": 31.44,
       "rentARoom": {
         "rentsReceived": 947.66
       }
