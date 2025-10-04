@@ -268,6 +268,14 @@
               "maximum": 99999999999.99,
               "example": "5000.99"
             },
+            "broughtFwdResidentialFinancialCost": {
+              "description": "Amount of relief brought forward for restricted residential financial costs. The value must be between 0 and 99999999999.99 up to 2 decimal places.",
+              "type": "number",
+              "multipleOf": 0.01,
+              "minimum": -99999999999.99,
+              "maximum": 99999999999.99,
+              "example": "5000.99"
+            },
             "residentialFinancialCostsCarriedForward": {
               "description": "Amount of residential financial costs carried forward. The value must be between 0 and 99999999999.99 up to 2 decimal places.",
               "type": "number",
