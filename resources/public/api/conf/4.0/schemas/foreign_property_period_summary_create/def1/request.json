@@ -208,8 +208,7 @@
           "income"
         ],
         "additionalProperties": false
-      },
-      "additionalItems": false
+      }
     }
   },
   "required": [
