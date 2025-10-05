@@ -185,8 +185,7 @@
                   "amount",
                   "building"
                 ]
-              },
-              "additionalItems": false
+              }
             },
             "enhancedStructuredBuildingAllowance": {
               "type": "array",
@@ -260,8 +259,7 @@
                   "amount",
                   "building"
                 ]
-              },
-              "additionalItems": false
+              }
             }
           },
           "additionalProperties": false
