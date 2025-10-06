@@ -54,12 +54,10 @@ responses:
         examples:
           property-allowance-any-TY:
             description: Property Allowance - any tax year
-            value:
-              $ref: './examples/uk_property_annual_submission_retrieve/def1/property_allowance_response.json'
+            externalValue: './examples/uk_property_annual_submission_retrieve/def1/property_allowance_response.json'
           all-others-any-TY:
             description: All Other Allowances - any tax year
-            value:
-              $ref: './examples/uk_property_annual_submission_retrieve/def1/all_other_allowances_response.json'
+            externalValue: './examples/uk_property_annual_submission_retrieve/def1/all_other_allowances_response.json'
   "400":
     description: Bad request
     headers:
