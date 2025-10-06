@@ -41,12 +41,10 @@ requestBody:
       examples:
         property-allowance-request:
           description: Property Allowance request
-          value:
-            $ref: './examples/uk_property_annual_submission_create_and_amend/def1/property_allowance_request.json'
+          externalValue: './examples/uk_property_annual_submission_create_and_amend/def1/property_allowance_request.json'
         all-other-allowance-request:
           description: All Other Allowances request
-          value:
-            $ref: './examples/uk_property_annual_submission_create_and_amend/def1/all_other_allowances_request.json'
+          externalValue: './examples/uk_property_annual_submission_create_and_amend/def1/all_other_allowances_request.json'
 
 responses:
   "200":

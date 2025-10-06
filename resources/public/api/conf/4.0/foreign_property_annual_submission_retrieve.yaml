@@ -56,12 +56,10 @@ responses:
         examples:
           all-other-allowances-response:
             description: All Other Allowances Response
-            value:
-              $ref: './examples/foreign_property_annual_submission_retrieve/def1/all_other_allowances_response.json'
+            externalValue: './examples/foreign_property_annual_submission_retrieve/def1/all_other_allowances_response.json'
           property-allowance-response:
             description: Property Allowance Response
-            value:
-              $ref: './examples/foreign_property_annual_submission_retrieve/def1/property_allowance_response.json'
+            externalValue: './examples/foreign_property_annual_submission_retrieve/def1/property_allowance_response.json'
 
   "400":
     description: Bad request

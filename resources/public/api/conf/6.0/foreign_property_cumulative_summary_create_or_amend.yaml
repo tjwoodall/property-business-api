@@ -59,11 +59,9 @@ requestBody:
             $ref: './examples/foreign_property_cumulative_summary_create_and_amend/def2/consolidated_request.json'
         # 
         Full expenses request for TY 2025-26:
-          value:
-            $ref: './examples/foreign_property_cumulative_summary_create_and_amend/def1/request.json'
+          externalValue: './examples/foreign_property_cumulative_summary_create_and_amend/def1/request.json'
         Consolidated expenses request for TY 2025-26:
-          value:
-            $ref: './examples/foreign_property_cumulative_summary_create_and_amend/def1/consolidated_request.json'
+          externalValue: './examples/foreign_property_cumulative_summary_create_and_amend/def1/consolidated_request.json'
 
 responses:
   "204":

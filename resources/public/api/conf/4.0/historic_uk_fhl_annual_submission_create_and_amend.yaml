@@ -35,8 +35,7 @@ requestBody:
       examples:
         property-allowance-request:
           description: Property Allowance request given any tax year
-          value:
-            $ref: './examples/historic_uk_fhl_annual_submission_create_and_amend/def1/request.json'
+          externalValue: './examples/historic_uk_fhl_annual_submission_create_and_amend/def1/request.json'
 
 responses:
   "200":
