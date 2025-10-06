@@ -50,17 +50,13 @@ post:
             - $ref: './schemas/foreign_property_period_summary_create/def2/request.json'
         examples:
           Full Expenses request for TY 2023-24 and before:
-            value:
-              $ref: './examples/foreign_property_period_summary_create/def1/request.json'
+            externalValue: './examples/foreign_property_period_summary_create/def1/request.json'
           Consolidated Expenses request for TY 2023-24 and before:
-            value:
-              $ref: './examples/foreign_property_period_summary_create/def1/consolidated_request.json'
+            externalValue: './examples/foreign_property_period_summary_create/def1/consolidated_request.json'
           Full Expenses request for TY 2024-25:
-            value:
-              $ref: './examples/foreign_property_period_summary_create/def2/request.json'
+            externalValue: './examples/foreign_property_period_summary_create/def2/request.json'
           Consolidated Expenses request for TY 2024-25:
-            value:
-              $ref: './examples/foreign_property_period_summary_create/def2/consolidated_request.json'
+            externalValue: './examples/foreign_property_period_summary_create/def2/consolidated_request.json'
 
   responses:
     "201":
@@ -81,8 +77,7 @@ post:
           examples:
             example-response:
               description: Example Response
-              value:
-                $ref: './examples/foreign_property_period_summary_create/response.json'
+              externalValue: './examples/foreign_property_period_summary_create/response.json'
     "400":
       description: Bad request
       headers:
