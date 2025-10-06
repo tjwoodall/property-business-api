@@ -53,20 +53,16 @@ responses:
         examples:
           property-allowance-response-TY-2024-25:
             description: Property Allowance response for TY 2024-25 and before
-            value:
-              $ref: './examples/uk_property_annual_submission_retrieve/def1/property_allowance_response.json'
+            externalValue: './examples/uk_property_annual_submission_retrieve/def1/property_allowance_response.json'
           all-other-allowances-response-TY-2024-25:
             description: All Other Allowances response for TY 2024-25 and before
-            value:
-              $ref: './examples/uk_property_annual_submission_retrieve/def1/all_other_allowances_response.json'
+            externalValue: './examples/uk_property_annual_submission_retrieve/def1/all_other_allowances_response.json'
           property-allowance-response-TY-2025-26:
             description: Property Allowance request for TY 2025-26 and after
-            value:
-              $ref: './examples/uk_property_annual_submission_retrieve/def2/property_allowance_response.json'
+            externalValue: './examples/uk_property_annual_submission_retrieve/def2/property_allowance_response.json'
           all-other-allowances-response-TY-2025-26:
             description: All Other Allowances request for TY 2025-26 and after
-            value:
-              $ref: './examples/uk_property_annual_submission_retrieve/def2/all_other_allowances_response.json'
+            externalValue: './examples/uk_property_annual_submission_retrieve/def2/all_other_allowances_response.json'
   "400":
     description: Bad request
     headers:
