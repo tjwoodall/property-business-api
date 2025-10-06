@@ -45,12 +45,10 @@ responses:
         examples:
           all-other-response:
             description: Full Expenditure response given any tax year
-            value:
-              $ref: './examples/historic_uk_fhl_period_summary_retrieve/def1/response.json'
+            externalValue: './examples/historic_uk_fhl_period_summary_retrieve/def1/response.json'
           property-allowance-response:
             description: Consolidated Expenditure response given any tax year
-            value:
-              $ref: './examples/historic_uk_fhl_period_summary_retrieve/def1/consolidated_response.json'
+            externalValue: './examples/historic_uk_fhl_period_summary_retrieve/def1/consolidated_response.json'
   "400":
     description: Bad request
     headers:
