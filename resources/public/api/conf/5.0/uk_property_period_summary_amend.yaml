@@ -42,17 +42,13 @@ requestBody:
           - $ref: './schemas/uk_property_period_summary_amend/def2/request.json'
       examples:
         Full Expenses request for TY 2023-24 and before:
-          value:
-            $ref: './examples/uk_property_period_summary_amend/def1/request.json'
+          externalValue: './examples/uk_property_period_summary_amend/def1/request.json'
         Consolidated Expenses request for TY 2023-24 and before:
-          value:
-            $ref: './examples/uk_property_period_summary_amend/def1/consolidated_request.json'
+          externalValue: './examples/uk_property_period_summary_amend/def1/consolidated_request.json'
         Full Expenses request for TY 2024-25:
-          value:
-            $ref: './examples/uk_property_period_summary_amend/def2/request.json'
+          externalValue: './examples/uk_property_period_summary_amend/def2/request.json'
         Consolidated Expenses request for TY 2024-25:
-          value:
-            $ref: './examples/uk_property_period_summary_amend/def2/consolidated_request.json'
+          externalValue: './examples/uk_property_period_summary_amend/def2/consolidated_request.json'
 
 responses:
   "200":
