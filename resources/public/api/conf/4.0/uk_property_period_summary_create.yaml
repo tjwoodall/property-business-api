@@ -49,20 +49,16 @@ post:
         examples:
           full-expense-request-for-TY-2021-22:
             description: Full Expenses request for TY 2023-24 and before
-            value:
-              $ref: './examples/uk_property_period_summary_create/def1/request.json'
+            externalValue: './examples/uk_property_period_summary_create/def1/request.json'
           consolidated-expense-request-for-TY-2021-22:
             description: Consolidated Expenses request for TY 2023-24 and before
-            value:
-              $ref: './examples/uk_property_period_summary_create/def1/consolidated_request.json'
+            externalValue: './examples/uk_property_period_summary_create/def1/consolidated_request.json'
           full-expense-request-for-TY-2024-25:
             description: Full Expenses request for TY 2024-25 and after
-            value:
-              $ref: './examples/uk_property_period_summary_create/def2/request.json'
+            externalValue: './examples/uk_property_period_summary_create/def2/request.json'
           consolidated-expense-request-for-TY-2024-25:
             description: Consolidated Expenses request for TY 2024-25 and after
-            value:
-              $ref: './examples/uk_property_period_summary_create/def2/consolidated_request.json'
+            externalValue: './examples/uk_property_period_summary_create/def2/consolidated_request.json'
 
   responses:
     "201":
@@ -83,8 +79,7 @@ post:
           examples:
             example-response:
               description: Example Response
-              value:
-                $ref: './examples/uk_property_period_summary_create/response.json'
+              externalValue: './examples/uk_property_period_summary_create/response.json'
     "400":
       description: Bad request
       headers:
