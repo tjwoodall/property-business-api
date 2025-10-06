@@ -51,20 +51,16 @@ requestBody:
       examples:
         all-other-allowances-request-TY-2024-25:
           description: All Other Allowances request for TY 2024-25 and before
-          value:
-            $ref: './examples/foreign_property_annual_submission_create_and_amend/def1/all_other_allowances_request.json'
+          externalValue: './examples/foreign_property_annual_submission_create_and_amend/def1/all_other_allowances_request.json'
         property-allowance-request-TY-2024-25:
           description: Property Allowance request for TY 2024-25 and before
-          value:
-            $ref: './examples/foreign_property_annual_submission_create_and_amend/def1/property_allowance_request.json'
+          externalValue: './examples/foreign_property_annual_submission_create_and_amend/def1/property_allowance_request.json'
         all-other-allowances-request-TY-2025-26:
           description: All Other Allowances request for TY 2025-26
-          value:
-            $ref: './examples/foreign_property_annual_submission_create_and_amend/def2/all_other_allowances_request.json'
+          externalValue: './examples/foreign_property_annual_submission_create_and_amend/def2/all_other_allowances_request.json'
         property-allowance-request-TY-2025-26:
           description: Property Allowance request for TY 2025-26
-          value:
-            $ref: './examples/foreign_property_annual_submission_create_and_amend/def2/property_allowance_request.json'
+          externalValue: './examples/foreign_property_annual_submission_create_and_amend/def2/property_allowance_request.json'
         # 
         all-other-allowances-request-TY-2026-27:
           description: All Other Allowances request for TY 2026-27 and after
