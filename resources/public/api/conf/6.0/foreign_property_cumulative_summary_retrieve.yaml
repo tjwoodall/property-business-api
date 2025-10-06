@@ -65,11 +65,9 @@ responses:
               $ref: './examples/foreign_property_cumulative_summary_retrieve/def2/consolidated_response.json'
           # 
           Full expenses response for TY 2025-26:
-            value:
-              $ref: './examples/foreign_property_cumulative_summary_retrieve/def1/response.json'
+            externalValue: './examples/foreign_property_cumulative_summary_retrieve/def1/response.json'
           Consolidated expenses response for TY 2025-26:
-            value:
-              $ref: './examples/foreign_property_cumulative_summary_retrieve/def1/consolidated_response.json'
+            externalValue: './examples/foreign_property_cumulative_summary_retrieve/def1/consolidated_response.json'
 
   "400":
     description: Bad request
