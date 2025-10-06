@@ -60,17 +60,13 @@ responses:
           # 
         examples:
           All Other Allowances Response for TY 2024-25 and before:
-            value:
-              $ref: './examples/foreign_property_annual_submission_retrieve/def1/all_other_allowances_response.json'
+            externalValue: './examples/foreign_property_annual_submission_retrieve/def1/all_other_allowances_response.json'
           Property Allowance Response for TY 2024-25 and before:
-            value:
-              $ref: './examples/foreign_property_annual_submission_retrieve/def1/property_allowance_response.json'
+            externalValue: './examples/foreign_property_annual_submission_retrieve/def1/property_allowance_response.json'
           All Other Allowances Response for TY 2025-26:
-            value:
-              $ref: './examples/foreign_property_annual_submission_retrieve/def2/all_other_allowances_response.json'
+            externalValue: './examples/foreign_property_annual_submission_retrieve/def2/all_other_allowances_response.json'
           Property Allowance Response for TY 2025-26:
-            value:
-              $ref: './examples/foreign_property_annual_submission_retrieve/def2/property_allowance_response.json'
+            externalValue: './examples/foreign_property_annual_submission_retrieve/def2/property_allowance_response.json'
         # 
           All Other Allowances Response for TY 2026-27 and after:
             value:
