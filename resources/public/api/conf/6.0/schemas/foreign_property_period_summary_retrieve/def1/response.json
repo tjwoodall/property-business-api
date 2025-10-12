@@ -36,7 +36,7 @@
               "multipleOf": 0.01,
               "minimum": 0.00,
               "maximum": 99999999999.99,
-              "example": "5000.99"
+              "example": 5000.99
             }
           },
           "additionalProperties": false
@@ -51,7 +51,7 @@
               "multipleOf": 0.01,
               "minimum": 0.00,
               "maximum": 99999999999.99,
-              "example": "5000.99"
+              "example": 5000.99
             },
             "repairsAndMaintenance": {
               "type": "number",
@@ -59,7 +59,7 @@
               "multipleOf": 0.01,
               "minimum": 0.00,
               "maximum": 99999999999.99,
-              "example": "5000.99"
+              "example": 5000.99
             },
             "financialCosts": {
               "type": "number",
@@ -67,7 +67,7 @@
               "multipleOf": 0.01,
               "minimum": 0.00,
               "maximum": 99999999999.99,
-              "example": "5000.99"
+              "example": 5000.99
             },
             "professionalFees": {
               "type": "number",
@@ -75,7 +75,7 @@
               "multipleOf": 0.01,
               "minimum": 0.00,
               "maximum": 99999999999.99,
-              "example": "5000.99"
+              "example": 5000.99
             },
             "costOfServices": {
               "type": "number",
@@ -83,7 +83,7 @@
               "multipleOf": 0.01,
               "minimum": 0.00,
               "maximum": 99999999999.99,
-              "example": "5000.99"
+              "example": 5000.99
             },
             "travelCosts": {
               "type": "number",
@@ -91,7 +91,7 @@
               "multipleOf": 0.01,
               "minimum": 0.00,
               "maximum": 99999999999.99,
-              "example": "5000.99"
+              "example": 5000.99
             },
             "other": {
               "type": "number",
@@ -99,7 +99,7 @@
               "multipleOf": 0.01,
               "minimum": 0.00,
               "maximum": 99999999999.99,
-              "example": "5000.99"
+              "example": 5000.99
             },
             "rentARoom": {
               "type": "object",
@@ -111,7 +111,7 @@
                   "multipleOf": 0.01,
                   "minimum": 0.00,
                   "maximum": 99999999999.99,
-                  "example": "5000.99"
+                  "example": 5000.99
                 }
               },
               "additionalProperties": false
@@ -122,7 +122,7 @@
               "multipleOf": 0.01,
               "minimum": 0.00,
               "maximum": 99999999999.99,
-              "example": "5000.99"
+              "example": 5000.99
             }
           },
           "additionalProperties": false
@@ -155,7 +155,7 @@
                     "multipleOf": 0.01,
                     "minimum": 0.00,
                     "maximum": 99999999999.99,
-                    "example": "5000.99"
+                    "example": 5000.99
                   }
                 },
                 "additionalProperties": false
@@ -171,7 +171,7 @@
                 "multipleOf": 0.01,
                 "minimum": 0.00,
                 "maximum": 99999999999.99,
-                "example": "5000.99"
+                "example": 5000.99
               },
               "otherPropertyIncome": {
                 "type": "number",
@@ -179,7 +179,7 @@
                 "multipleOf": 0.01,
                 "minimum": 0.00,
                 "maximum": 99999999999.99,
-                "example": "5000.99"
+                "example": 5000.99
               },
               "foreignTaxPaidOrDeducted": {
                 "type": "number",
@@ -187,7 +187,7 @@
                 "multipleOf": 0.01,
                 "minimum": 0.00,
                 "maximum": 99999999999.99,
-                "example": "5000.99"
+                "example": 5000.99
               },
               "specialWithholdingTaxOrUkTaxPaid": {
                 "type": "number",
@@ -195,7 +195,7 @@
                 "multipleOf": 0.01,
                 "minimum": 0.00,
                 "maximum": 99999999999.99,
-                "example": "5000.99"
+                "example": 5000.99
               }
             },
             "required": [
@@ -213,7 +213,7 @@
                 "multipleOf": 0.01,
                 "minimum": 0.00,
                 "maximum": 99999999999.99,
-                "example": "5000.99"
+                "example": 5000.99
               },
               "repairsAndMaintenance": {
                 "type": "number",
@@ -221,7 +221,7 @@
                 "multipleOf": 0.01,
                 "minimum": 0.00,
                 "maximum": 99999999999.99,
-                "example": "5000.99"
+                "example": 5000.99
               },
               "financialCosts": {
                 "type": "number",
@@ -229,7 +229,7 @@
                 "multipleOf": 0.01,
                 "minimum": 0.00,
                 "maximum": 99999999999.99,
-                "example": "5000.99"
+                "example": 5000.99
               },
               "professionalFees": {
                 "type": "number",
@@ -237,7 +237,7 @@
                 "multipleOf": 0.01,
                 "minimum": 0.00,
                 "maximum": 99999999999.99,
-                "example": "5000.99"
+                "example": 5000.99
               },
               "costOfServices": {
                 "type": "number",
@@ -245,7 +245,7 @@
                 "multipleOf": 0.01,
                 "minimum": 0.00,
                 "maximum": 99999999999.99,
-                "example": "5000.99"
+                "example": 5000.99
               },
               "travelCosts": {
                 "type": "number",
@@ -253,7 +253,7 @@
                 "multipleOf": 0.01,
                 "minimum": 0.00,
                 "maximum": 99999999999.99,
-                "example": "5000.99"
+                "example": 5000.99
               },
               "residentialFinancialCost": {
                 "type": "number",
@@ -261,7 +261,7 @@
                 "multipleOf": 0.01,
                 "minimum": 0.00,
                 "maximum": 99999999999.99,
-                "example": "5000.99"
+                "example": 5000.99
               },
               "broughtFwdResidentialFinancialCost": {
                 "type": "number",
@@ -269,7 +269,7 @@
                 "multipleOf": 0.01,
                 "minimum": 0.00,
                 "maximum": 99999999999.99,
-                "example": "5000.99"
+                "example": 5000.99
               },
               "other": {
                 "type": "number",
@@ -277,7 +277,7 @@
                 "multipleOf": 0.01,
                 "minimum": 0.00,
                 "maximum": 99999999999.99,
-                "example": "5000.99"
+                "example": 5000.99
               },
               "rentARoom": {
                 "type": "object",
@@ -289,7 +289,7 @@
                     "multipleOf": 0.01,
                     "minimum": 0.00,
                     "maximum": 99999999999.99,
-                    "example": "5000.99"
+                    "example": 5000.99
                   }
                 },
                 "additionalProperties": false
@@ -300,7 +300,7 @@
                 "multipleOf": 0.01,
                 "minimum": 0.00,
                 "maximum": 99999999999.99,
-                "example": "5000.99"
+                "example": 5000.99
               }
             },
             "additionalProperties": false
