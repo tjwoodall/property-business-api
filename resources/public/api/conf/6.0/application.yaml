@@ -16,6 +16,7 @@ info:
     -  [Foreign Property Income and Expenses Period Summary](#tag/Foreign-Property-Income-and-Expenses-Period-Summary)
     -  [Foreign Property Annual Submission](#tag/Foreign-Property-Annual-Submission)
     
+    
     # Send fraud prevention data
     HMRC monitors transactions to help protect your customers' confidential data from criminals and fraudsters. 
 
@@ -75,6 +76,8 @@ tags:
   - name: Historic Annual and Periodic Submissions
     description: Resources relating to Historic Annual and Periodic Submissions
 
+# 
+
 paths:
   /individuals/business/property/uk/{nino}/{businessId}/annual/{taxYear}:
     $ref: "./uk_property_annual_submission.yaml"
@@ -108,3 +111,4 @@ paths:
     $ref: "./uk_foreign_property_annual_submission_deletion.yaml"
   /individuals/business/property/{nino}/{businessId}/period/{taxYear}:
     $ref: "./uk_foreign_property_period_summaries_list.yaml"
+# 
