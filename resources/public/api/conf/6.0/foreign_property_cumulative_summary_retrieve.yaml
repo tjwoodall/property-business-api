@@ -49,7 +49,7 @@ responses:
       application/json:
         schema:
           # 
-            - $ref: './schemas/foreign_property_cumulative_summary_retrieve/def1/response.json'
+          $ref: './schemas/foreign_property_cumulative_summary_retrieve/def1/response.json'
           # 
         examples:
           # 
