@@ -26,7 +26,7 @@
             "description": "A customer-friendly name for the foreign property. This name will be unique for each country.",
             "type": "string",
             "pattern": "^.{1,105}$",
-            "example": "Bob & Bobby Co",
+            "example": "Bob & Bobby Co"
           },
           "countryCode": {
             "description": "A three-letter code that represents a country name.\n\nThis must be an ISO 3166-1 Alpha-3 value.",
