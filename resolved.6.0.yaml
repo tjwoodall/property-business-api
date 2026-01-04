@@ -10,13 +10,14 @@ info:
     -  [Historic non-FHL UK Property Income and Expenses Period Summary](#tag/Historic-non-FHL-UK-Property-Income-and-Expenses-Period-Summary)\n\
     -  [Foreign Property Income and Expenses Period Summary](#tag/Foreign-Property-Income-and-Expenses-Period-Summary)\n\
     -  [Foreign Property Annual Submission](#tag/Foreign-Property-Annual-Submission)\n\
-    \n\n# Send fraud prevention data\nHMRC monitors transactions to help protect your\
-    \ customers' confidential data from criminals and fraudsters. \n\n<div class=\"\
-    govuk-warning-text warning-icon-fix\">\n  <span class=\"govuk-warning-text__icon\
-    \ warning-icon-ui-fix\" aria-hidden=\"true\">!</span>\n  <strong class=\"govuk-warning-text__text\"\
-    >\n    <span class=\"govuk-warning-text__assistive\">Warning</span>\n    You are\
-    \ required by law to submit header data for this API. This includes all associated\
-    \ APIs and endpoints.\n  </strong>\n</div>\n\n[Check the data you need to send](/guides/fraud-prevention/).\
+    -  [Foreign Property Details](#tag/Foreign-Property-Details)\n\n# Send fraud prevention\
+    \ data\nHMRC monitors transactions to help protect your customers' confidential\
+    \ data from criminals and fraudsters. \n\n<div class=\"govuk-warning-text warning-icon-fix\"\
+    >\n  <span class=\"govuk-warning-text__icon warning-icon-ui-fix\" aria-hidden=\"\
+    true\">!</span>\n  <strong class=\"govuk-warning-text__text\">\n    <span class=\"\
+    govuk-warning-text__assistive\">Warning</span>\n    You are required by law to\
+    \ submit header data for this API. This includes all associated APIs and endpoints.\n\
+    \  </strong>\n</div>\n\n[Check the data you need to send](/guides/fraud-prevention/).\
     \ You can also use the [Test API](/api-documentation/docs/api/service/txm-fph-validator-api/1.0)\
     \ during initial development and as part of your quality assurance checks.\n\n\
     # Mapping APIs to Self Assessment tax return forms\nSome parameters in this API\
@@ -55,6 +56,8 @@ tags:
     cumulative and List periods)
 - name: Historic Annual and Periodic Submissions
   description: Resources relating to Historic Annual and Periodic Submissions
+- name: Foreign Property Details
+  description: Resources relating to Foreign Property Details
 paths:
   /individuals/business/property/uk/{nino}/{businessId}/annual/{taxYear}:
     get:
@@ -2713,6 +2716,426 @@ paths:
       security:
       - User-Restricted:
         - read:self-assessment
+  /individuals/business/property/foreign/{nino}/{businessId}/details/{taxYear}:
+    get:
+      summary: "Retrieve Foreign Property Details  [test only]"
+      security:
+      - User-Restricted:
+        - read:self-assessment
+    post:
+      summary: "Create Foreign Property Details  [test only]"
+      security:
+      - User-Restricted:
+        - write:self-assessment
+  /individuals/business/property/foreign/{nino}/details/{propId}/{taxYear}:
+    put:
+      tags:
+      - Foreign Property Details
+      summary: "Update Foreign Property Details [test only]"
+      description: |
+        This endpoint enables you to update the details of a foreign property for a given National Insurance number, foreign property ID and tax year. Please note that this endpoint is only available for tax years starting from 2026–27 onwards.
+
+        Customers can amend or remove the end date before the Post Finalisation Amendment (PFA) window closes. Any property with an end date added will no longer appear on the list of properties to report against for any subsequent tax year.
+
+        ### Test data
+        Scenario simulation using Gov-Test-Scenario headers is only available in the sandbox environment.
+
+        | Header Value (Gov-Test-Scenario)| Scenario                                                                                                    |
+        |---------------------------------|-------------------------------------------------------------------------------------------------------------|
+        | N/A - DEFAULT                   | Simulates success response.                                                                                 |
+        | NOT_FOUND                       | Simulates the scenario where no data is found.                                                              |
+        | DUPLICATE_PROPERTY_NAME         | Simulates the scenario where the foreign property name already exists for the same country.                 |
+        | TAX_YEAR_BEFORE_BUSINESS_START  | Simulates the scenario where the requested tax year is before the first tax year in which the foreign property business was reported. |
+        | PROPERTY_BUSINESS_CEASED        | Simulates the scenario where the foreign property business income source has ceased.                        |
+        | OUTSIDE_AMENDMENT_WINDOW        | Simulates the scenario where request cannot be completed as it is outside the amendment window.             |
+        | STATEFUL                        | Performs a stateful update.                                                                                 |
+      parameters:
+      - name: nino
+        in: path
+        description: "National Insurance number, in the format `AA999999A`."
+        required: true
+        schema:
+          type: string
+          example: TC663795B
+      - name: propertyId
+        in: path
+        description: |
+          A unique identifier for each foreign property.
+        required: true
+        schema:
+          type: string
+          format: uuid
+          example: 8e8b8450-dc1b-4360-8109-7067337b42cb
+      - name: taxYear
+        in: path
+        description: |
+          The tax year to which the data applies. The start year and end year must not span two tax years.
+          The minimum tax year is 2026-27. No gaps are allowed, for example, 2026-28 is not valid.
+
+          The foreign property must fall within the start and end dates of the associated foreign property income source, and the income source should not be ceased.
+        required: true
+        schema:
+          type: string
+          example: 2026-27
+      - name: Accept
+        in: header
+        description: |
+          Specifies the response format and the version of the API to be used.
+        required: true
+        schema:
+          type: string
+          enum:
+          - application/vnd.hmrc.6.0+json
+      - name: Content-Type
+        in: header
+        description: |
+          Specifies the format of the request body, which must be JSON.
+        required: true
+        schema:
+          type: string
+          enum:
+          - application/json
+      - name: Authorization
+        in: header
+        description: |
+          An OAuth 2.0 Bearer Token with the *write:self-assessment* scope.
+        required: true
+        schema:
+          type: string
+          example: Bearer bb7fed3fe10dd235a2ccda3d50fb
+      - name: Gov-Test-Scenario
+        in: header
+        description: |
+          Only in sandbox environment. See Test Data table for all header values.
+        required: false
+        schema:
+          type: string
+          example: "-"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              title: For TY 2026-27 onwards
+              required:
+              - propertyName
+              type: object
+              properties:
+                propertyName:
+                  pattern: "^.{1,105}$"
+                  type: string
+                  description: A customer-friendly name for the foreign property.
+                    This name must be unique for each country. Uniqueness checks ignore
+                    differences in letter case and any leading or trailing spaces.
+                  example: Bob & Bobby Co
+                endDate:
+                  type: string
+                  description: |-
+                    The date on which income is no longer received from the property. The end date must not be later than the end of the relevant tax year. A property with an end date must always have an associated end reason.
+
+                     Must conform to the format `YYYY-MM-DD`
+                  format: date
+                  example: 2026-08-24
+                endReason:
+                  type: string
+                  description: Specifies the reason for ending the property record.
+                    A property with an end reason must always have an associated end
+                    date.
+                  enum:
+                  - no-longer-renting-property-out
+                  - disposal
+                  - added-in-error
+              additionalProperties: false
+              description: Update Foreign Property Details
+            example:
+              $ref: ./examples/foreign_property_details_update/def1/request.json
+      responses:
+        "204":
+          description: No Content
+          headers:
+            X-CorrelationId:
+              description: |
+                Unique ID for operation tracking
+                String, 36 characters.
+              required: true
+              schema:
+                type: string
+                example: c75f40a6-a3df-4429-a697-471eeec46435
+            Deprecation:
+              description: |
+                The deprecation date/time for this endpoint.
+              required: false
+              schema:
+                type: string
+                example: "Sun, 01 Jan 2023 23:59:59 UTC"
+            Sunset:
+              description: |
+                The earliest date/time this endpoint will become unavailable after deprecation.
+              required: false
+              schema:
+                type: string
+                example: "Sun, 02 Jul 2023 23:59:59 UTC"
+            Link:
+              description: |
+                See the API documentation.
+              required: false
+              schema:
+                type: string
+                example: https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/property-business-api
+        "400":
+          description: Bad request
+          headers:
+            X-CorrelationId:
+              description: |
+                Unique ID for operation tracking
+                String, 36 characters.
+              required: true
+              schema:
+                type: string
+                example: c75f40a6-a3df-4429-a697-471eeec46435
+            Deprecation:
+              description: |
+                The deprecation date/time for this endpoint.
+              required: false
+              schema:
+                type: string
+                example: "Sun, 01 Jan 2023 23:59:59 UTC"
+            Sunset:
+              description: |
+                The earliest date/time this endpoint will become unavailable after deprecation.
+              required: false
+              schema:
+                type: string
+                example: "Sun, 02 Jul 2023 23:59:59 UTC"
+            Link:
+              description: |
+                See the API documentation.
+              required: false
+              schema:
+                type: string
+                example: https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/property-business-api
+          content:
+            application/json:
+              schema:
+                required:
+                - code
+                type: object
+                properties:
+                  code:
+                    type: string
+                    description: The error code
+                  message:
+                    type: string
+                    description: The error message
+                description: Error Response
+              examples:
+                FORMAT_NINO:
+                  description: The format of the supplied NINO field is not valid.
+                  value:
+                    code: FORMAT_NINO
+                    message: The provided NINO is invalid
+                FORMAT_PROPERTY_ID:
+                  description: The format of the supplied property ID field is not
+                    valid.
+                  value:
+                    code: FORMAT_PROPERTY_ID
+                    message: The provided property ID is invalid
+                FORMAT_TAX_YEAR:
+                  description: The format of the supplied taxYear value is not valid.
+                  value:
+                    code: FORMAT_TAX_YEAR
+                    message: The provided tax year is invalid
+                FORMAT_PROPERTY_NAME:
+                  description: The format of the supplied property name is not valid.
+                  value:
+                    code: FORMAT_PROPERTY_NAME
+                    message: The provided property name is invalid
+                FORMAT_END_DATE:
+                  description: The format of the supplied end date is not valid.
+                  value:
+                    code: FORMAT_END_DATE
+                    message: The provided end date is invalid
+                FORMAT_END_REASON:
+                  description: The format of the supplied end reason is not valid.
+                  value:
+                    code: FORMAT_END_REASON
+                    message: The provided end reason is invalid
+                RULE_INCORRECT_OR_EMPTY_BODY_SUBMITTED:
+                  description: An empty or non-matching body was submitted.
+                  value:
+                    code: RULE_INCORRECT_OR_EMPTY_BODY_SUBMITTED
+                    message: An empty or non-matching body was submitted
+                RULE_TAX_YEAR_RANGE_INVALID:
+                  description: Tax year range invalid. A tax year range of one year
+                    is required.
+                  value:
+                    code: RULE_TAX_YEAR_RANGE_INVALID
+                    message: Tax year range invalid. A tax year range of one year
+                      is required
+                RULE_TAX_YEAR_NOT_SUPPORTED:
+                  description: |
+                    The specified tax year is not supported.
+                    Either the tax year specified is before the minimum tax year value, or it is after the maximum tax year value.
+                  value:
+                    code: RULE_TAX_YEAR_NOT_SUPPORTED
+                    message: The tax year specified does not lie within the supported
+                      range
+                RULE_DUPLICATE_PROPERTY_NAME:
+                  description: The foreign property name already exists for the same
+                    country.
+                  value:
+                    code: RULE_DUPLICATE_PROPERTY_NAME
+                    message: Foreign property name already exists for the same country
+                RULE_TAX_YEAR_BEFORE_BUSINESS_START:
+                  description: The requested tax year is before the first tax year
+                    in which the Foreign Property business was reported.
+                  value:
+                    code: RULE_TAX_YEAR_BEFORE_BUSINESS_START
+                    message: Foreign property cannot be reported for a tax year before
+                      the first tax year of the business
+                RULE_END_DATE_BEFORE_TAX_YEAR_START:
+                  description: The end date is before the start of the tax year.
+                  value:
+                    code: RULE_END_DATE_BEFORE_TAX_YEAR_START
+                    message: The end date is before the start of the tax year
+                RULE_END_DATE_AFTER_TAX_YEAR_END:
+                  description: The end date is after the end of the tax year.
+                  value:
+                    code: RULE_END_DATE_AFTER_TAX_YEAR_END
+                    message: The end date is after the end of the tax year
+                RULE_PROPERTY_BUSINESS_CEASED:
+                  description: This foreign property business income source has ceased.
+                  value:
+                    code: RULE_PROPERTY_BUSINESS_CEASED
+                    message: Foreign property business income source has ceased
+                RULE_MISSING_END_DETAILS:
+                  description: "A foreign property with an end date must have an end\
+                    \ reason, and a foreign property with an end reason must have\
+                    \ an end date."
+                  value:
+                    code: RULE_MISSING_END_DETAILS
+                    message: End date and end reason must be supplied together
+                RULE_INCORRECT_GOV_TEST_SCENARIO:
+                  description: The request did not match any available Sandbox data.
+                    Check that the supplied Gov-Test-Scenario is correct for this
+                    endpoint version. This error will only be returned in the Sandbox
+                    environment.
+                  value:
+                    code: RULE_INCORRECT_GOV_TEST_SCENARIO
+                    message: The supplied Gov-Test-Scenario is not valid
+                RULE_OUTSIDE_AMENDMENT_WINDOW:
+                  description: Request cannot be completed as you are outside the
+                    amendment window.
+                  value:
+                    code: RULE_OUTSIDE_AMENDMENT_WINDOW
+                    message: You are outside the amendment window
+        "403":
+          description: Forbidden
+          headers:
+            X-CorrelationId:
+              description: |
+                Unique ID for operation tracking
+                String, 36 characters.
+              required: true
+              schema:
+                type: string
+                example: c75f40a6-a3df-4429-a697-471eeec46435
+            Deprecation:
+              description: |
+                The deprecation date/time for this endpoint.
+              required: false
+              schema:
+                type: string
+                example: "Sun, 01 Jan 2023 23:59:59 UTC"
+            Sunset:
+              description: |
+                The earliest date/time this endpoint will become unavailable after deprecation.
+              required: false
+              schema:
+                type: string
+                example: "Sun, 02 Jul 2023 23:59:59 UTC"
+            Link:
+              description: |
+                See the API documentation.
+              required: false
+              schema:
+                type: string
+                example: https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/property-business-api
+          content:
+            application/json:
+              schema:
+                required:
+                - code
+                type: object
+                properties:
+                  code:
+                    type: string
+                    description: The error code
+                  message:
+                    type: string
+                    description: The error message
+                description: Error Response
+              examples:
+                CLIENT_OR_AGENT_NOT_AUTHORISED:
+                  description: |
+                    The client and/or agent is not authorised. This is normally because: the client is not subscribed to MTD, the agent is not subscribed to Agent Services, or the client has not authorised the agent to act on their behalf.
+                  value:
+                    code: CLIENT_OR_AGENT_NOT_AUTHORISED
+                    message: The client and/or agent is not authorised
+        "404":
+          description: Not Found
+          headers:
+            X-CorrelationId:
+              description: |
+                Unique ID for operation tracking
+                String, 36 characters.
+              required: true
+              schema:
+                type: string
+                example: c75f40a6-a3df-4429-a697-471eeec46435
+            Deprecation:
+              description: |
+                The deprecation date/time for this endpoint.
+              required: false
+              schema:
+                type: string
+                example: "Sun, 01 Jan 2023 23:59:59 UTC"
+            Sunset:
+              description: |
+                The earliest date/time this endpoint will become unavailable after deprecation.
+              required: false
+              schema:
+                type: string
+                example: "Sun, 02 Jul 2023 23:59:59 UTC"
+            Link:
+              description: |
+                See the API documentation.
+              required: false
+              schema:
+                type: string
+                example: https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/property-business-api
+          content:
+            application/json:
+              schema:
+                required:
+                - code
+                type: object
+                properties:
+                  code:
+                    type: string
+                    description: The error code
+                  message:
+                    type: string
+                    description: The error message
+                description: Error Response
+              examples:
+                MATCHING_RESOURCE_NOT_FOUND:
+                  description: The supplied income source could not be found.
+                  value:
+                    code: MATCHING_RESOURCE_NOT_FOUND
+                    message: Matching resource not found
+      security:
+      - User-Restricted:
+        - write:self-assessment
 components:
   schemas:
     request:
@@ -3744,6 +4167,37 @@ components:
         \ Holiday Letting (FHL) and Non FHL UK property or foreign property business\
         \ for either or both of Furnished Holiday Letting (FHL) in the European Economic\
         \ Area (EEA). A National Insurance number, tax year and business ID are required."
+    request_4:
+      title: For TY 2026-27 onwards
+      required:
+      - propertyName
+      type: object
+      properties:
+        propertyName:
+          pattern: "^.{1,105}$"
+          type: string
+          description: A customer-friendly name for the foreign property. This name
+            must be unique for each country. Uniqueness checks ignore differences
+            in letter case and any leading or trailing spaces.
+          example: Bob & Bobby Co
+        endDate:
+          type: string
+          description: |-
+            The date on which income is no longer received from the property. The end date must not be later than the end of the relevant tax year. A property with an end date must always have an associated end reason.
+
+             Must conform to the format `YYYY-MM-DD`
+          format: date
+          example: 2026-08-24
+        endReason:
+          type: string
+          description: Specifies the reason for ending the property record. A property
+            with an end reason must always have an associated end date.
+          enum:
+          - no-longer-renting-property-out
+          - disposal
+          - added-in-error
+      additionalProperties: false
+      description: Update Foreign Property Details
   parameters:
     nino:
       name: nino
@@ -3831,6 +4285,28 @@ components:
       schema:
         type: string
         example: Bearer bb7fed3fe10dd235a2ccda3d50fb
+    propertyId:
+      name: propertyId
+      in: path
+      description: |
+        A unique identifier for each foreign property.
+      required: true
+      schema:
+        type: string
+        format: uuid
+        example: 8e8b8450-dc1b-4360-8109-7067337b42cb
+    foreignPropertyDetailsTaxYear:
+      name: taxYear
+      in: path
+      description: |
+        The tax year to which the data applies. The start year and end year must not span two tax years.
+        The minimum tax year is 2026-27. No gaps are allowed, for example, 2026-28 is not valid.
+
+        The foreign property must fall within the start and end dates of the associated foreign property income source, and the income source should not be ceased.
+      required: true
+      schema:
+        type: string
+        example: 2026-27
   examples:
     formatNino:
       description: The format of the supplied NINO field is not valid.
@@ -3962,6 +4438,66 @@ components:
       value:
         code: RULE_OUTSIDE_AMENDMENT_WINDOW
         message: You are outside the amendment window
+    formatPropertyId:
+      description: The format of the supplied property ID field is not valid.
+      value:
+        code: FORMAT_PROPERTY_ID
+        message: The provided property ID is invalid
+    formatPropertyName:
+      description: The format of the supplied property name is not valid.
+      value:
+        code: FORMAT_PROPERTY_NAME
+        message: The provided property name is invalid
+    formatEndDate:
+      description: The format of the supplied end date is not valid.
+      value:
+        code: FORMAT_END_DATE
+        message: The provided end date is invalid
+    formatEndReason:
+      description: The format of the supplied end reason is not valid.
+      value:
+        code: FORMAT_END_REASON
+        message: The provided end reason is invalid
+    ruleTaxYearNotSupportedMinMax:
+      description: |
+        The specified tax year is not supported.
+        Either the tax year specified is before the minimum tax year value, or it is after the maximum tax year value.
+      value:
+        code: RULE_TAX_YEAR_NOT_SUPPORTED
+        message: The tax year specified does not lie within the supported range
+    ruleDuplicatePropertyName:
+      description: The foreign property name already exists for the same country.
+      value:
+        code: RULE_DUPLICATE_PROPERTY_NAME
+        message: Foreign property name already exists for the same country
+    ruleTaxYearBeforeBusinessStart:
+      description: The requested tax year is before the first tax year in which the
+        Foreign Property business was reported.
+      value:
+        code: RULE_TAX_YEAR_BEFORE_BUSINESS_START
+        message: Foreign property cannot be reported for a tax year before the first
+          tax year of the business
+    ruleEndDateBeforeTaxYearStart:
+      description: The end date is before the start of the tax year.
+      value:
+        code: RULE_END_DATE_BEFORE_TAX_YEAR_START
+        message: The end date is before the start of the tax year
+    ruleEndDateAfterTaxYearEnd:
+      description: The end date is after the end of the tax year.
+      value:
+        code: RULE_END_DATE_AFTER_TAX_YEAR_END
+        message: The end date is after the end of the tax year
+    rulePropertyBusinessCeased:
+      description: This foreign property business income source has ceased.
+      value:
+        code: RULE_PROPERTY_BUSINESS_CEASED
+        message: Foreign property business income source has ceased
+    ruleMissingEndDetails:
+      description: "A foreign property with an end date must have an end reason, and\
+        \ a foreign property with an end reason must have an end date."
+      value:
+        code: RULE_MISSING_END_DETAILS
+        message: End date and end reason must be supplied together
   headers:
     correlationId:
       description: |

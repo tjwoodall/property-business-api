@@ -1,0 +1,12 @@
+get:
+  $ref: "./foreign_property_details_retrieve.yaml"
+  summary: Retrieve Foreign Property Details  [test only]
+  security:
+    - User-Restricted:
+        - read:self-assessment
+post:
+  $ref: "./foreign_property_details_create.yaml"
+  summary: Create Foreign Property Details  [test only]
+  security:
+    - User-Restricted:
+        - write:self-assessment
