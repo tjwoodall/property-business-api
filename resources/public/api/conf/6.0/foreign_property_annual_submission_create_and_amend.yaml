@@ -64,12 +64,10 @@ requestBody:
         # 
         all-other-allowances-request-TY-2026-27:
           description: All Other Allowances request for TY 2026-27 and after
-          value:
-            $ref: './examples/foreign_property_annual_submission_create_and_amend/def3/all_other_allowances_request.json'
+          externalValue: './examples/foreign_property_annual_submission_create_and_amend/def3/all_other_allowances_request.json'
         property-allowance-request-TY-2026-27:
           description: Property Allowance request for TY 2026-27 and after
-          value:
-            $ref: './examples/foreign_property_annual_submission_create_and_amend/def3/property_allowance_request.json'
+          externalValue: './examples/foreign_property_annual_submission_create_and_amend/def3/property_allowance_request.json'
         # 
 responses:
   "200":
