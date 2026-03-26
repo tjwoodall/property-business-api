@@ -2718,12 +2718,12 @@ paths:
         - read:self-assessment
   /individuals/business/property/foreign/{nino}/{businessId}/details/{taxYear}:
     get:
-      summary: "Retrieve Foreign Property Details  [test only]"
+      summary: Retrieve Foreign Property Details
       security:
       - User-Restricted:
         - read:self-assessment
     post:
-      summary: "Create Foreign Property Details  [test only]"
+      summary: Create Foreign Property Details
       security:
       - User-Restricted:
         - write:self-assessment
@@ -2731,7 +2731,7 @@ paths:
     put:
       tags:
       - Foreign Property Details
-      summary: "Update Foreign Property Details [test only]"
+      summary: Update Foreign Property Details
       description: |
         This endpoint enables you to update the details of a foreign property for a given National Insurance number, foreign property ID and tax year. Please note that this endpoint is only available for tax years starting from 2026–27 onwards.
 
