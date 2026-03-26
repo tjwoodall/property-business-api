@@ -1,4 +1,4 @@
-summary: "Create Foreign Property Details [test only]"
+summary: Create Foreign Property Details
 description: |
   This endpoint enables you to create a record for a foreign property for a given National Insurance number, business ID, and tax year. Please note that this endpoint is only available for tax years starting from 2026–27 onwards.
   
