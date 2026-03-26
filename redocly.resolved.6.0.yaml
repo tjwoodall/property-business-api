@@ -621,128 +621,19 @@ paths:
                 property-allowance-response-TY-2024-25:
                   description: Property Allowance response for TY 2024-25 and before
                   value:
-                    submittedOn: '2020-06-17T10:59:47.544Z'
-                    ukFhlProperty:
-                      adjustments:
-                        balancingCharge: 231.45
-                        periodOfGraceAdjustment: true
-                        businessPremisesRenovationAllowanceBalancingCharges: 567.67
-                        nonResidentLandlord: true
-                        rentARoom:
-                          jointlyLet: true
-                      allowances:
-                        propertyIncomeAllowance: 453.45
-                    ukProperty:
-                      adjustments:
-                        balancingCharge: 565.34
-                        businessPremisesRenovationAllowanceBalancingCharges: 563.34
-                        nonResidentLandlord: true
-                        rentARoom:
-                          jointlyLet: true
-                      allowances:
-                        propertyIncomeAllowance: 342.34
+                    $ref: ./examples/uk_property_annual_submission_retrieve/def1/property_allowance_response.json
                 all-other-allowances-response-TY-2024-25:
                   description: All Other Allowances response for TY 2024-25 and before
                   value:
-                    submittedOn: '2020-06-17T10:59:47.544Z'
-                    ukFhlProperty:
-                      adjustments:
-                        privateUseAdjustment: 454.45
-                        balancingCharge: 231.45
-                        periodOfGraceAdjustment: true
-                        businessPremisesRenovationAllowanceBalancingCharges: 567.67
-                        nonResidentLandlord: true
-                        rentARoom:
-                          jointlyLet: true
-                      allowances:
-                        annualInvestmentAllowance: 123.45
-                        businessPremisesRenovationAllowance: 345.56
-                        otherCapitalAllowance: 345.34
-                        electricChargePointAllowance: 453.34
-                        zeroEmissionsCarAllowance: 123.12
-                    ukProperty:
-                      adjustments:
-                        balancingCharge: 565.34
-                        privateUseAdjustment: 533.54
-                        businessPremisesRenovationAllowanceBalancingCharges: 563.34
-                        nonResidentLandlord: true
-                        rentARoom:
-                          jointlyLet: true
-                      allowances:
-                        annualInvestmentAllowance: 678.45
-                        zeroEmissionsGoodsVehicleAllowance: 456.34
-                        businessPremisesRenovationAllowance: 573.45
-                        otherCapitalAllowance: 452.34
-                        costOfReplacingDomesticItems: 567.34
-                        electricChargePointAllowance: 454.34
-                        structuredBuildingAllowance:
-                          - amount: 234.34
-                            firstYear:
-                              qualifyingDate: '2020-03-29'
-                              qualifyingAmountExpenditure: 3434.45
-                            building:
-                              name: Plaza
-                              number: '1'
-                              postcode: TF3 4EH
-                        enhancedStructuredBuildingAllowance:
-                          - amount: 234.45
-                            firstYear:
-                              qualifyingDate: '2020-05-29'
-                              qualifyingAmountExpenditure: 453.34
-                            building:
-                              name: Plaza 2
-                              number: '2'
-                              postcode: TF3 4ER
-                        zeroEmissionsCarAllowance: 454.34
+                    $ref: ./examples/uk_property_annual_submission_retrieve/def1/all_other_allowances_response.json
                 property-allowance-response-TY-2025-26:
                   description: Property Allowance request for TY 2025-26 and after
                   value:
-                    submittedOn: '2025-06-17T10:59:47.544Z'
-                    ukProperty:
-                      adjustments:
-                        balancingCharge: 565.34
-                        businessPremisesRenovationAllowanceBalancingCharges: 563.34
-                        nonResidentLandlord: true
-                        rentARoom:
-                          jointlyLet: true
-                      allowances:
-                        propertyIncomeAllowance: 342.34
+                    $ref: ./examples/uk_property_annual_submission_retrieve/def2/property_allowance_response.json
                 all-other-allowances-response-TY-2025-26:
                   description: All Other Allowances request for TY 2025-26 and after
                   value:
-                    submittedOn: '2025-06-17T10:59:47.544Z'
-                    ukProperty:
-                      adjustments:
-                        balancingCharge: 565.34
-                        privateUseAdjustment: 533.54
-                        businessPremisesRenovationAllowanceBalancingCharges: 563.34
-                        nonResidentLandlord: true
-                        rentARoom:
-                          jointlyLet: true
-                      allowances:
-                        annualInvestmentAllowance: 678.45
-                        businessPremisesRenovationAllowance: 573.45
-                        otherCapitalAllowance: 452.34
-                        costOfReplacingDomesticItems: 567.34
-                        structuredBuildingAllowance:
-                          - amount: 234.34
-                            firstYear:
-                              qualifyingDate: '2020-03-29'
-                              qualifyingAmountExpenditure: 3434.45
-                            building:
-                              name: Plaza
-                              number: '1'
-                              postcode: TF3 4EH
-                        enhancedStructuredBuildingAllowance:
-                          - amount: 234.45
-                            firstYear:
-                              qualifyingDate: '2020-05-29'
-                              qualifyingAmountExpenditure: 453.34
-                            building:
-                              name: Plaza 2
-                              number: '2'
-                              postcode: TF3 4ER
-                        zeroEmissionsCarAllowance: 454.34
+                    $ref: ./examples/uk_property_annual_submission_retrieve/def2/all_other_allowances_response.json
         '400':
           description: Bad request
           headers:
@@ -1550,124 +1441,19 @@ paths:
               property-allowance-request-TY-2024-25:
                 description: Property Allowance request for TY 2024-25 and before
                 value:
-                  ukFhlProperty:
-                    allowances:
-                      propertyIncomeAllowance: 123.45
-                    adjustments:
-                      balancingCharge: 231.45
-                      periodOfGraceAdjustment: true
-                      businessPremisesRenovationAllowanceBalancingCharges: 567.67
-                      nonResidentLandlord: true
-                      rentARoom:
-                        jointlyLet: true
-                  ukProperty:
-                    allowances:
-                      propertyIncomeAllowance: 678.45
-                    adjustments:
-                      balancingCharge: 565.34
-                      businessPremisesRenovationAllowanceBalancingCharges: 563.34
-                      nonResidentLandlord: true
-                      rentARoom:
-                        jointlyLet: true
+                  $ref: ./examples/uk_property_annual_submission_create_and_amend/def1/property_allowance_request.json
               all-other-allowance-request-TY-2024-25:
                 description: All Other Allowances request for TY 2024-25 and before
                 value:
-                  ukFhlProperty:
-                    allowances:
-                      annualInvestmentAllowance: 123.45
-                      businessPremisesRenovationAllowance: 345.56
-                      otherCapitalAllowance: 345.34
-                      electricChargePointAllowance: 453.34
-                      zeroEmissionsCarAllowance: 123.12
-                    adjustments:
-                      privateUseAdjustment: 454.45
-                      balancingCharge: 231.45
-                      periodOfGraceAdjustment: true
-                      businessPremisesRenovationAllowanceBalancingCharges: 567.67
-                      nonResidentLandlord: true
-                      rentARoom:
-                        jointlyLet: true
-                  ukProperty:
-                    allowances:
-                      annualInvestmentAllowance: 678.45
-                      zeroEmissionsGoodsVehicleAllowance: 456.34
-                      businessPremisesRenovationAllowance: 573.45
-                      otherCapitalAllowance: 452.34
-                      costOfReplacingDomesticItems: 567.34
-                      electricChargePointAllowance: 454.34
-                      structuredBuildingAllowance:
-                        - amount: 234.34
-                          firstYear:
-                            qualifyingDate: '2020-03-29'
-                            qualifyingAmountExpenditure: 3434.45
-                          building:
-                            name: Red Oaks
-                            number: '1'
-                            postcode: SW1A 2AA
-                      enhancedStructuredBuildingAllowance:
-                        - amount: 234.45
-                          firstYear:
-                            qualifyingDate: '2020-05-29'
-                            qualifyingAmountExpenditure: 453.34
-                          building:
-                            name: Green Oaks
-                            number: '2'
-                            postcode: SW1A 2AB
-                      zeroEmissionsCarAllowance: 454.34
-                    adjustments:
-                      balancingCharge: 565.34
-                      privateUseAdjustment: 533.54
-                      businessPremisesRenovationAllowanceBalancingCharges: 563.34
-                      nonResidentLandlord: true
-                      rentARoom:
-                        jointlyLet: true
+                  $ref: ./examples/uk_property_annual_submission_create_and_amend/def1/all_other_allowances_request.json
               property-allowance-request-TY-2025-26:
                 description: Property Allowance request for TY 2025-26 and after
                 value:
-                  ukProperty:
-                    allowances:
-                      propertyIncomeAllowance: 678.45
-                    adjustments:
-                      balancingCharge: 565.34
-                      businessPremisesRenovationAllowanceBalancingCharges: 563.34
-                      nonResidentLandlord: true
-                      rentARoom:
-                        jointlyLet: true
+                  $ref: ./examples/uk_property_annual_submission_create_and_amend/def2/property_allowance_request.json
               all-other-allowance-request-TY-2025-26:
                 description: All Other Allowances request for TY 2025-26 and after
                 value:
-                  ukProperty:
-                    allowances:
-                      annualInvestmentAllowance: 678.45
-                      businessPremisesRenovationAllowance: 573.45
-                      otherCapitalAllowance: 452.34
-                      costOfReplacingDomesticItems: 567.34
-                      structuredBuildingAllowance:
-                        - amount: 234.34
-                          firstYear:
-                            qualifyingDate: '2020-03-29'
-                            qualifyingAmountExpenditure: 3434.45
-                          building:
-                            name: Plaza
-                            number: '1'
-                            postcode: TF3 4EH
-                      enhancedStructuredBuildingAllowance:
-                        - amount: 234.45
-                          firstYear:
-                            qualifyingDate: '2020-05-29'
-                            qualifyingAmountExpenditure: 453.34
-                          building:
-                            name: Plaza 2
-                            number: '2'
-                            postcode: TF3 4ER
-                      zeroEmissionsCarAllowance: 454.34
-                    adjustments:
-                      balancingCharge: 565.34
-                      privateUseAdjustment: 533.54
-                      businessPremisesRenovationAllowanceBalancingCharges: 563.34
-                      nonResidentLandlord: true
-                      rentARoom:
-                        jointlyLet: true
+                  $ref: ./examples/uk_property_annual_submission_create_and_amend/def2/all_other_allowances_request.json
       responses:
         '200':
           description: Success
@@ -1757,12 +1543,12 @@ paths:
                     message: The value must be between 0 and 99999999999.99
                 FORMAT_DATE:
                   description: The supplied date format is not valid.
-                  value: &ref_63
+                  value: &ref_59
                     code: FORMAT_DATE
                     message: The supplied date format is not valid
                 FORMAT_STRING:
                   description: One or more strings have been added with the incorrect format.
-                  value: &ref_64
+                  value: &ref_60
                     code: FORMAT_STRING
                     message: The supplied string format is not valid
                 RULE_INCORRECT_OR_EMPTY_BODY_SUBMITTED:
@@ -1773,12 +1559,12 @@ paths:
                 RULE_BOTH_ALLOWANCES_SUPPLIED:
                   description: |
                     Both allowances and property income allowance must not be present at the same time.
-                  value: &ref_65
+                  value: &ref_61
                     code: RULE_BOTH_ALLOWANCES_SUPPLIED
                     message: Both allowances and property allowances must not be present at the same time
                 RULE_BUILDING_NAME_NUMBER:
                   description: One of building name or number must be supplied.
-                  value: &ref_66
+                  value: &ref_62
                     code: RULE_BUILDING_NAME_NUMBER
                     message: Postcode must be supplied along with at least one of name or number
                 RULE_TAX_YEAR_RANGE_INVALID:
@@ -1793,7 +1579,7 @@ paths:
                   value: *ref_16
                 RULE_PROPERTY_INCOME_ALLOWANCE:
                   description: The propertyIncomeAllowance cannot be submitted if privateUseAdjustment is supplied.
-                  value: &ref_69
+                  value: &ref_65
                     code: RULE_PROPERTY_INCOME_ALLOWANCE
                     message: The propertyIncomeAllowance cannot be submitted if privateUseAdjustment is supplied
                 RULE_INCORRECT_GOV_TEST_SCENARIO:
@@ -2336,138 +2122,16 @@ paths:
             examples:
               Full Expenses request for TY 2023-24 and before:
                 value:
-                  fromDate: '2021-04-06'
-                  toDate: '2021-07-05'
-                  ukFhlProperty:
-                    income:
-                      periodAmount: 5000.99
-                      taxDeducted: 3123.21
-                      rentARoom:
-                        rentsReceived: 532.12
-                    expenses:
-                      premisesRunningCosts: 3123.21
-                      repairsAndMaintenance: 928.42
-                      financialCosts: 842.99
-                      professionalFees: 8831.12
-                      costOfServices: 484.12
-                      other: 99282
-                      travelCosts: 974.47
-                      rentARoom:
-                        amountClaimed: 8842.43
-                  ukNonFhlProperty:
-                    income:
-                      premiumsOfLeaseGrant: 42.12
-                      reversePremiums: 84.31
-                      periodAmount: 9884.93
-                      taxDeducted: 842.99
-                      otherIncome: 31.44
-                      rentARoom:
-                        rentsReceived: 947.66
-                    expenses:
-                      premisesRunningCosts: 4141.21
-                      repairsAndMaintenance: 582.21
-                      financialCosts: 829.39
-                      professionalFees: 4992.31
-                      costOfServices: 98.21
-                      other: 29.48
-                      residentialFinancialCost: 2884.99
-                      travelCosts: 48.93
-                      residentialFinancialCostsCarriedForward: 483.91
-                      rentARoom:
-                        amountClaimed: 88.21
+                  $ref: ./examples/uk_property_period_summary_create/def1/request.json
               Consolidated Expenses request for TY 2023-24 and before:
                 value:
-                  fromDate: '2021-04-06'
-                  toDate: '2021-07-05'
-                  ukFhlProperty:
-                    income:
-                      periodAmount: 5000.99
-                      taxDeducted: 3123.21
-                      rentARoom:
-                        rentsReceived: 532.12
-                    expenses:
-                      consolidatedExpenses: 988.18
-                  ukNonFhlProperty:
-                    income:
-                      premiumsOfLeaseGrant: 42.12
-                      reversePremiums: 84.31
-                      periodAmount: 9884.93
-                      taxDeducted: 842.99
-                      otherIncome: 31.44
-                      rentARoom:
-                        rentsReceived: 947.66
-                    expenses:
-                      consolidatedExpenses: 988.18
+                  $ref: ./examples/uk_property_period_summary_create/def1/consolidated_request.json
               Full Expenses request for TY 2024-25:
                 value:
-                  fromDate: '2024-04-06'
-                  toDate: '2024-07-05'
-                  ukFhlProperty:
-                    income:
-                      periodAmount: 5000.99
-                      taxDeducted: 3123.21
-                      rentARoom:
-                        rentsReceived: 532.12
-                    expenses:
-                      premisesRunningCosts: -3123.21
-                      repairsAndMaintenance: 928.42
-                      financialCosts: -842.99
-                      professionalFees: 8831.12
-                      costOfServices: 484.12
-                      other: 99282
-                      travelCosts: 974.47
-                      rentARoom:
-                        amountClaimed: 8842.43
-                  ukNonFhlProperty:
-                    income:
-                      premiumsOfLeaseGrant: 42.12
-                      reversePremiums: 84.31
-                      periodAmount: 9884.93
-                      taxDeducted: 842.99
-                      otherIncome: 31.44
-                      rentARoom:
-                        rentsReceived: 947.66
-                    expenses:
-                      premisesRunningCosts: 4141.21
-                      repairsAndMaintenance: 582.21
-                      financialCosts: 829.39
-                      professionalFees: -4992.31
-                      costOfServices: -5008.31
-                      other: -29.48
-                      residentialFinancialCost: 2884.99
-                      travelCosts: 48.93
-                      residentialFinancialCostsCarriedForward: 483.91
-                      rentARoom:
-                        amountClaimed: 88.21
+                  $ref: ./examples/uk_property_period_summary_create/def2/request.json
               Consolidated Expenses request for TY 2024-25:
                 value:
-                  fromDate: '2024-04-06'
-                  toDate: '2024-07-05'
-                  ukFhlProperty:
-                    income:
-                      periodAmount: 5000.99
-                      taxDeducted: 3123.21
-                      rentARoom:
-                        rentsReceived: 532.12
-                    expenses:
-                      consolidatedExpenses: 988.18
-                      rentARoom:
-                        amountClaimed: 3000.87
-                  ukNonFhlProperty:
-                    income:
-                      premiumsOfLeaseGrant: 42.12
-                      reversePremiums: 84.31
-                      periodAmount: 9884.93
-                      taxDeducted: 842.99
-                      otherIncome: 31.44
-                      rentARoom:
-                        rentsReceived: 947.66
-                    expenses:
-                      consolidatedExpenses: 988.18
-                      residentialFinancialCost: 988.18
-                      residentialFinancialCostsCarriedForward: 302.23
-                      rentARoom:
-                        amountClaimed: 952.53
+                  $ref: ./examples/uk_property_period_summary_create/def2/consolidated_request.json
       responses:
         '201':
           description: Success
@@ -2521,7 +2185,7 @@ paths:
                 example-response:
                   description: Example Response
                   value:
-                    submissionId: 4557ecb5-fd32-48cc-81f5-e6acd1099f3c
+                    $ref: ./examples/uk_property_period_summary_create/response.json
         '400':
           description: Bad request
           headers:
@@ -3380,136 +3044,16 @@ paths:
               examples:
                 Full Expenses response for TY 2023-24 and before:
                   value:
-                    submittedOn: '2024-10-21T10:59:47.544Z'
-                    fromDate: '2022-04-06'
-                    toDate: '2022-07-04'
-                    ukFhlProperty:
-                      income:
-                        periodAmount: 5000.99
-                        taxDeducted: 5000.99
-                        rentARoom:
-                          rentsReceived: 5000.99
-                      expenses:
-                        premisesRunningCosts: 5000.99
-                        repairsAndMaintenance: 5000.99
-                        financialCosts: 5000.99
-                        professionalFees: 5000.99
-                        costOfServices: 5000.99
-                        other: 5000.99
-                        travelCosts: 5000.99
-                        rentARoom:
-                          amountClaimed: 5000.99
-                    ukNonFhlProperty:
-                      income:
-                        premiumsOfLeaseGrant: 5000.99
-                        reversePremiums: 5000.99
-                        periodAmount: 5000.99
-                        taxDeducted: 5000.99
-                        otherIncome: 5000.99
-                        rentARoom:
-                          rentsReceived: 5000.99
-                      expenses:
-                        premisesRunningCosts: 5000.99
-                        repairsAndMaintenance: 5000.99
-                        financialCosts: 5000.99
-                        professionalFees: 5000.99
-                        costOfServices: 5000.99
-                        other: 5000.99
-                        residentialFinancialCost: 5000.99
-                        travelCosts: 5000.99
-                        residentialFinancialCostsCarriedForward: 5000.99
-                        rentARoom:
-                          amountClaimed: 5000.99
+                    $ref: ./examples/uk_property_period_summary_retrieve/def1/response.json
                 Consolidated Expenses response for TY 2023-24 and before:
                   value:
-                    submittedOn: '2024-10-21T10:59:47.544Z'
-                    fromDate: '2022-04-06'
-                    toDate: '2022-07-04'
-                    ukFhlProperty:
-                      income:
-                        periodAmount: 5000.99
-                        taxDeducted: 5000.99
-                        rentARoom:
-                          rentsReceived: 5000.99
-                      expenses:
-                        consolidatedExpenses: 5000.99
-                    ukNonFhlProperty:
-                      income:
-                        premiumsOfLeaseGrant: 5000.99
-                        reversePremiums: 5000.99
-                        periodAmount: 5000.99
-                        taxDeducted: 5000.99
-                        otherIncome: 5000.99
-                        rentARoom:
-                          rentsReceived: 5000.99
-                      expenses:
-                        consolidatedExpenses: 5000.99
+                    $ref: ./examples/uk_property_period_summary_retrieve/def1/consolidated_response.json
                 Full Expenses response for TY 2024-25 onwards:
                   value:
-                    submittedOn: '2024-10-21T10:59:47.544Z'
-                    fromDate: '2024-07-06'
-                    toDate: '2024-10-05'
-                    ukFhlProperty:
-                      income:
-                        periodAmount: 5000.99
-                        taxDeducted: 3123.21
-                        rentARoom:
-                          rentsReceived: 532.12
-                      expenses:
-                        premisesRunningCosts: -993.1
-                        repairsAndMaintenance: -939.75
-                        financialCosts: 399.29
-                        professionalFees: -3991.49
-                        costOfServices: -849.2
-                        other: 8849.95
-                        travelCosts: 3910.5
-                        rentARoom:
-                          amountClaimed: 9482.75
-                    ukNonFhlProperty:
-                      income:
-                        premiumsOfLeaseGrant: 4889.23
-                        reversePremiums: 847.35
-                        periodAmount: 747.45
-                        taxDeducted: 984.29
-                        otherIncome: 954.32
-                        rentARoom:
-                          rentsReceived: 488.39
-                      expenses:
-                        premisesRunningCosts: -4141.21
-                        repairsAndMaintenance: -582.25
-                        financialCosts: 829.39
-                        professionalFees: -4992.31
-                        costOfServices: -98.5
-                        other: 488.95
-                        residentialFinancialCost: 2884.99
-                        travelCosts: 48.93
-                        residentialFinancialCostsCarriedForward: 483.91
-                        rentARoom:
-                          amountClaimed: 88.55
+                    $ref: ./examples/uk_property_period_summary_retrieve/def2/response.json
                 Consolidated Expenses response for TY 2024-25 onwards:
                   value:
-                    submittedOn: '2024-10-21T10:59:47.544Z'
-                    fromDate: '2024-07-06'
-                    toDate: '2024-10-05'
-                    ukFhlProperty:
-                      income:
-                        periodAmount: 5000.99
-                        taxDeducted: 3123.21
-                        rentARoom:
-                          rentsReceived: 532.12
-                      expenses:
-                        consolidatedExpenses: 988.18
-                    ukNonFhlProperty:
-                      income:
-                        premiumsOfLeaseGrant: 4889.23
-                        reversePremiums: 847.35
-                        periodAmount: 747.45
-                        taxDeducted: 984.29
-                        otherIncome: 954.32
-                        rentARoom:
-                          rentsReceived: 488.39
-                      expenses:
-                        consolidatedExpenses: -1998.18
+                    $ref: ./examples/uk_property_period_summary_retrieve/def2/consolidated_response.json
         '400':
           description: Bad request
           headers:
@@ -4268,126 +3812,16 @@ paths:
             examples:
               Full Expenses request for TY 2023-24 and before:
                 value:
-                  ukFhlProperty:
-                    income:
-                      periodAmount: 5000.99
-                      taxDeducted: 3123.21
-                      rentARoom:
-                        rentsReceived: 532.12
-                    expenses:
-                      premisesRunningCosts: 3123.21
-                      repairsAndMaintenance: 928.42
-                      financialCosts: 842.99
-                      professionalFees: 8831.12
-                      costOfServices: 484.12
-                      other: 99282
-                      travelCosts: 974.47
-                      rentARoom:
-                        amountClaimed: 8842.43
-                  ukNonFhlProperty:
-                    income:
-                      premiumsOfLeaseGrant: 42.12
-                      reversePremiums: 84.31
-                      periodAmount: 9884.93
-                      taxDeducted: 842.99
-                      otherIncome: 31.44
-                      rentARoom:
-                        rentsReceived: 947.66
-                    expenses:
-                      premisesRunningCosts: 4141.21
-                      repairsAndMaintenance: 582.21
-                      financialCosts: 829.39
-                      professionalFees: 4992.31
-                      costOfServices: 98.21
-                      other: 29.48
-                      residentialFinancialCost: 2884.99
-                      travelCosts: 48.93
-                      residentialFinancialCostsCarriedForward: 483.91
-                      rentARoom:
-                        amountClaimed: 88.21
+                  $ref: ./examples/uk_property_period_summary_amend/def1/request.json
               Consolidated Expenses request for TY 2023-24 and before:
                 value:
-                  ukFhlProperty:
-                    income:
-                      periodAmount: 5000.99
-                      taxDeducted: 3123.21
-                      rentARoom:
-                        rentsReceived: 532.12
-                    expenses:
-                      consolidatedExpenses: 988.18
-                  ukNonFhlProperty:
-                    income:
-                      premiumsOfLeaseGrant: 42.12
-                      reversePremiums: 84.31
-                      periodAmount: 9884.93
-                      taxDeducted: 842.99
-                      otherIncome: 31.44
-                      rentARoom:
-                        rentsReceived: 947.66
-                    expenses:
-                      consolidatedExpenses: 988.18
+                  $ref: ./examples/uk_property_period_summary_amend/def1/consolidated_request.json
               Full Expenses request for TY 2024-25:
                 value:
-                  ukFhlProperty:
-                    income:
-                      periodAmount: 5000.99
-                      taxDeducted: 3123.21
-                      rentARoom:
-                        rentsReceived: 532.12
-                    expenses:
-                      premisesRunningCosts: 3123.21
-                      repairsAndMaintenance: 928.42
-                      financialCosts: 842.99
-                      professionalFees: 8831.12
-                      costOfServices: 484.12
-                      other: 99282
-                      travelCosts: 974.47
-                      rentARoom:
-                        amountClaimed: 8842.43
-                  ukNonFhlProperty:
-                    income:
-                      premiumsOfLeaseGrant: 42.12
-                      reversePremiums: 84.31
-                      periodAmount: 9884.93
-                      taxDeducted: 842.99
-                      otherIncome: 31.44
-                      rentARoom:
-                        rentsReceived: 947.66
-                    expenses:
-                      premisesRunningCosts: 4141.21
-                      repairsAndMaintenance: 582.21
-                      financialCosts: -829.39
-                      professionalFees: 4992.31
-                      costOfServices: -98.21
-                      other: 29.48
-                      residentialFinancialCost: 2884.99
-                      travelCosts: -48.93
-                      residentialFinancialCostsCarriedForward: 483.91
-                      rentARoom:
-                        amountClaimed: 88.21
+                  $ref: ./examples/uk_property_period_summary_amend/def2/request.json
               Consolidated Expenses request for TY 2024-25:
                 value:
-                  ukFhlProperty:
-                    income:
-                      periodAmount: 5000.99
-                      taxDeducted: 3123.21
-                      rentARoom:
-                        rentsReceived: 532.12
-                    expenses:
-                      consolidatedExpenses: -988.18
-                  ukNonFhlProperty:
-                    income:
-                      premiumsOfLeaseGrant: -42.12
-                      reversePremiums: 84.31
-                      periodAmount: 9884.93
-                      taxDeducted: 842.99
-                      otherIncome: -31.44
-                      rentARoom:
-                        rentsReceived: 947.66
-                    expenses:
-                      consolidatedExpenses: -988.18
-                      residentialFinancialCost: 879.28
-                      broughtFwdResidentialFinancialCost: 846.13
+                  $ref: ./examples/uk_property_period_summary_amend/def2/consolidated_request.json
       responses:
         '200':
           description: Success
@@ -4854,50 +4288,10 @@ paths:
               examples:
                 Full expenses response for TY 2025-26 and after:
                   value:
-                    submittedOn: '2025-07-07T10:59:47.544Z'
-                    fromDate: '2025-04-06'
-                    toDate: '2025-07-05'
-                    ukProperty:
-                      income:
-                        premiumsOfLeaseGrant: 4889.23
-                        reversePremiums: 847.35
-                        periodAmount: 747.45
-                        taxDeducted: 984.29
-                        otherIncome: 954.32
-                        rentARoom:
-                          rentsReceived: 488.39
-                      expenses:
-                        premisesRunningCosts: -4141.21
-                        repairsAndMaintenance: -582.25
-                        financialCosts: 829.39
-                        professionalFees: -4992.31
-                        costOfServices: -98.5
-                        other: 488.95
-                        residentialFinancialCost: 2884.99
-                        travelCosts: 48.93
-                        residentialFinancialCostsCarriedForward: 483.91
-                        rentARoom:
-                          amountClaimed: 88.55
+                    $ref: ./examples/uk_property_cumulative_summary_retrieve/def1/response.json
                 Consolidated expenses response for TY 2025-26 and after:
                   value:
-                    submittedOn: '2025-07-07T10:59:47.544Z'
-                    fromDate: '2025-04-06'
-                    toDate: '2025-07-05'
-                    ukProperty:
-                      income:
-                        premiumsOfLeaseGrant: 4889.23
-                        reversePremiums: 847.35
-                        periodAmount: 747.45
-                        taxDeducted: 984.29
-                        otherIncome: 954.32
-                        rentARoom:
-                          rentsReceived: 488.39
-                      expenses:
-                        residentialFinancialCost: 2884.99
-                        residentialFinancialCostsCarriedForward: 483.91
-                        rentARoom:
-                          amountClaimed: 88.55
-                        consolidatedExpenses: 998.18
+                    $ref: ./examples/uk_property_cumulative_summary_retrieve/def1/consolidated_response.json
         '400':
           description: Bad request
           headers:
@@ -5275,48 +4669,10 @@ paths:
             examples:
               Full expenses request for TY 2025-26 and after:
                 value:
-                  fromDate: '2025-04-06'
-                  toDate: '2025-07-05'
-                  ukProperty:
-                    income:
-                      premiumsOfLeaseGrant: 4889.23
-                      reversePremiums: 847.35
-                      periodAmount: 5000.99
-                      taxDeducted: 3123.21
-                      otherIncome: 954.32
-                      rentARoom:
-                        rentsReceived: 532.12
-                    expenses:
-                      premisesRunningCosts: 3123.21
-                      repairsAndMaintenance: 928.42
-                      financialCosts: -842.99
-                      professionalFees: -8831.12
-                      costOfServices: 484.12
-                      other: 99282
-                      residentialFinancialCost: 2884.99
-                      travelCosts: 974.47
-                      residentialFinancialCostsCarriedForward: 483.91
-                      rentARoom:
-                        amountClaimed: 8842.43
+                  $ref: ./examples/uk_property_cumulative_summary_create_and_amend/def1/request.json
               Consolidated expenses request for TY 2025-26 and after:
                 value:
-                  fromDate: '2025-04-06'
-                  toDate: '2025-07-05'
-                  ukProperty:
-                    income:
-                      premiumsOfLeaseGrant: 42.12
-                      reversePremiums: 84.31
-                      periodAmount: 9884.93
-                      taxDeducted: 842.99
-                      otherIncome: 31.44
-                      rentARoom:
-                        rentsReceived: 947.66
-                    expenses:
-                      consolidatedExpenses: -988.18
-                      residentialFinancialCost: 9000.1
-                      residentialFinancialCostsCarriedForward: 300.13
-                      rentARoom:
-                        amountClaimed: 860.88
+                  $ref: ./examples/uk_property_cumulative_summary_create_and_amend/def1/consolidated_request.json
       responses:
         '204':
           description: Success(No Content)
@@ -5430,38 +4786,38 @@ paths:
                   value: *ref_17
                 RULE_ADVANCE_SUBMISSION_REQUIRES_PERIOD_END_DATE:
                   description: To submit in advance, submission end date must be the end of the period.
-                  value: &ref_54
+                  value: &ref_50
                     code: RULE_ADVANCE_SUBMISSION_REQUIRES_PERIOD_END_DATE
                     message: For advance submission, end date must be the end of the period
                 RULE_SUBMISSION_END_DATE_CANNOT_MOVE_BACKWARDS:
                   description: Submission end date cannot be earlier than existing submission.
-                  value: &ref_55
+                  value: &ref_51
                     code: RULE_SUBMISSION_END_DATE_CANNOT_MOVE_BACKWARDS
                     message: Submission end date cannot be earlier than existing submission
                 RULE_START_DATE_NOT_ALIGNED_WITH_REPORTING_TYPE:
                   description: |
                     Start date does not align with the reporting type: must start at either the 6th or the 1st of the month.
-                  value: &ref_56
+                  value: &ref_52
                     code: RULE_START_DATE_NOT_ALIGNED_WITH_REPORTING_TYPE
                     message: Start date does not align with the reporting type
                 RULE_START_DATE_NOT_ALIGNED_TO_COMMENCEMENT_DATE:
                   description: Start date does not align with the commencement date.
-                  value: &ref_57
+                  value: &ref_53
                     code: RULE_START_DATE_NOT_ALIGNED_TO_COMMENCEMENT_DATE
                     message: Start date does not align with the commencement date
                 RULE_END_DATE_NOT_ALIGNED_WITH_REPORTING_TYPE:
                   description: End date does not align wiih the reporting type.
-                  value: &ref_58
+                  value: &ref_54
                     code: RULE_END_DATE_NOT_ALIGNED_WITH_REPORTING_TYPE
                     message: End date does not align with the reporting type
                 RULE_MISSING_SUBMISSION_DATES:
                   description: Submission start/end date not provided.
-                  value: &ref_59
+                  value: &ref_55
                     code: RULE_MISSING_SUBMISSION_DATES
                     message: Submission start/end date not provided
                 RULE_START_AND_END_DATE_NOT_ALLOWED:
                   description: Start/end date not accepted for annual/latent submission.
-                  value: &ref_60
+                  value: &ref_56
                     code: RULE_START_AND_END_DATE_NOT_ALLOWED
                     message: Start/end date not accepted for annual/latent submission
                 RULE_OUTSIDE_AMENDMENT_WINDOW:
@@ -5469,7 +4825,7 @@ paths:
                   value: *ref_33
                 RULE_EARLY_DATA_SUBMISSION_NOT_ACCEPTED:
                   description: Cannot submit data more than 10 days before end of period.
-                  value: &ref_61
+                  value: &ref_57
                     code: RULE_EARLY_DATA_SUBMISSION_NOT_ACCEPTED
                     message: Cannot submit data more than 10 days before end of period
         '403':
@@ -5717,20 +5073,7 @@ paths:
               property-allowance-request:
                 description: Property Allowance request given any tax year
                 value:
-                  annualAdjustments:
-                    lossBroughtForward: 200
-                    balancingCharge: 200
-                    privateUseAdjustment: 200
-                    periodOfGraceAdjustment: true
-                    businessPremisesRenovationAllowanceBalancingCharges: 200.02
-                    nonResidentLandlord: true
-                    rentARoom:
-                      jointlyLet: true
-                  annualAllowances:
-                    annualInvestmentAllowance: 200
-                    otherCapitalAllowance: 200
-                    businessPremisesRenovationAllowance: 100.02
-                    propertyIncomeAllowance: 10.02
+                  $ref: ./examples/historic_uk_fhl_annual_submission_create_and_amend/def1/request.json
       responses:
         '200':
           description: Success
@@ -6070,20 +5413,7 @@ paths:
                 example:
                   description: Example Response given any tax year
                   value:
-                    annualAdjustments:
-                      lossBroughtForward: 200
-                      balancingCharge: 200
-                      privateUseAdjustment: 200
-                      periodOfGraceAdjustment: true
-                      businessPremisesRenovationAllowanceBalancingCharges: 200.02
-                      nonResidentLandlord: true
-                      rentARoom:
-                        jointlyLet: true
-                    annualAllowances:
-                      annualInvestmentAllowance: 200
-                      otherCapitalAllowance: 200
-                      businessPremisesRenovationAllowance: 100.02
-                      propertyIncomeAllowance: 10.02
+                    $ref: ./examples/historic_uk_fhl_annual_submission_retrieve/def1/response.json
         '400':
           description: Bad request
           headers:
@@ -6621,21 +5951,7 @@ paths:
               property-allowance-request:
                 description: Property Allowance request given any tax year
                 value:
-                  annualAdjustments:
-                    lossBroughtForward: 200
-                    balancingCharge: 200
-                    privateUseAdjustment: 200
-                    businessPremisesRenovationAllowanceBalancingCharges: 80.02
-                    nonResidentLandlord: true
-                    rentARoom:
-                      jointlyLet: true
-                  annualAllowances:
-                    annualInvestmentAllowance: 200
-                    zeroEmissionGoodsVehicleAllowance: 200
-                    businessPremisesRenovationAllowance: 200
-                    otherCapitalAllowance: 200
-                    costOfReplacingDomesticGoods: 200
-                    propertyIncomeAllowance: 30.02
+                  $ref: ./examples/historic_uk_non_fhl_annual_submission_create_and_amend/def1/request.json
       responses:
         '200':
           description: Success
@@ -6976,21 +6292,7 @@ paths:
                 example:
                   description: Example response given any tax year
                   value:
-                    annualAdjustments:
-                      lossBroughtForward: 200
-                      balancingCharge: 200
-                      privateUseAdjustment: 200
-                      businessPremisesRenovationAllowanceBalancingCharges: 80.02
-                      nonResidentLandlord: true
-                      rentARoom:
-                        jointlyLet: true
-                    annualAllowances:
-                      annualInvestmentAllowance: 200
-                      otherCapitalAllowance: 200
-                      zeroEmissionGoodsVehicleAllowance: 200
-                      businessPremisesRenovationAllowance: 200
-                      costOfReplacingDomesticGoods: 200
-                      propertyIncomeAllowance: 30.02
+                    $ref: ./examples/historic_uk_non_fhl_annual_submission_retrieve/def1/response.json
         '400':
           description: Bad request
           headers:
@@ -7480,10 +6782,7 @@ paths:
                 example-1:
                   description: Default Example given any tax year
                   value:
-                    submissions:
-                      - periodId: 2019-03-24_2020-05-28
-                        fromDate: '2019-03-24'
-                        toDate: '2020-05-28'
+                    $ref: ./examples/historic_uk_fhl_period_summary_list/def1/response.json
         '400':
           description: Bad request
           headers:
@@ -7714,35 +7013,11 @@ paths:
               full-expense-request:
                 description: Full Expenses request given any tax year
                 value:
-                  fromDate: '2017-04-06'
-                  toDate: '2017-07-05'
-                  income:
-                    periodAmount: 100.25
-                    taxDeducted: 100.25
-                    rentARoom:
-                      rentsReceived: 100.25
-                  expenses:
-                    premisesRunningCosts: 100.25
-                    repairsAndMaintenance: 100.25
-                    financialCosts: 100.25
-                    professionalFees: 100.25
-                    costOfServices: 100.25
-                    other: 100.25
-                    travelCosts: 100.25
-                    rentARoom:
-                      amountClaimed: 100.25
+                  $ref: ./examples/historic_uk_fhl_period_summary_create/def1/request.json
               consolidated-expense-request:
                 description: Consolidated Expenses request given any tax year
                 value:
-                  fromDate: '2017-04-06'
-                  toDate: '2017-07-05'
-                  income:
-                    periodAmount: 100.25
-                    taxDeducted: 100.25
-                    rentARoom:
-                      rentsReceived: 100.25
-                  expenses:
-                    consolidatedExpenses: 100.25
+                  $ref: ./examples/historic_uk_fhl_period_summary_create/def1/consolidated_request.json
       responses:
         '201':
           description: Success
@@ -7796,7 +7071,7 @@ paths:
                 example-response:
                   description: Example Response
                   value:
-                    periodId: 2017-04-06_2017-07-04
+                    $ref: ./examples/historic_uk_fhl_period_summary_create/def1/response.json
         '400':
           description: Bad request
           headers:
@@ -8131,31 +7406,11 @@ paths:
               full-expenses-request:
                 description: Full Expenses request given any tax year
                 value:
-                  income:
-                    periodAmount: 1123.45
-                    taxDeducted: 2134.53
-                    rentARoom:
-                      rentsReceived: 5167.56
-                  expenses:
-                    premiseRunningCosts: 5167.53
-                    repairsAndMaintenance: 424.65
-                    financialCosts: 853.56
-                    professionalFees: 835.78
-                    costOfServices: 978.34
-                    other: 382.34
-                    travelCosts: 145.56
-                    rentARoom:
-                      amountClaimed: 945.9
+                  $ref: ./examples/historic_uk_fhl_period_summary_amend/def1/request.json
               consolidated-expenses-request:
                 description: Consolidated Expenses request given any tax year
                 value:
-                  income:
-                    periodAmount: 1123.45
-                    taxDeducted: 2134.53
-                    rentARoom:
-                      rentsReceived: 5167.56
-                  expenses:
-                    consolidatedExpenses: 135.78
+                  $ref: ./examples/historic_uk_fhl_period_summary_amend/def1/consolidated_request.json
       responses:
         '200':
           description: Success
@@ -8529,35 +7784,11 @@ paths:
                 all-other-response:
                   description: Full Expenditure response given any tax year
                   value:
-                    fromDate: '2017-04-06'
-                    toDate: ' 2017-07-04'
-                    income:
-                      periodAmount: 5000.99
-                      taxDeducted: 5000.99
-                      rentARoom:
-                        rentsReceived: 5000.99
-                    expenses:
-                      premisesRunningCosts: 5000.99
-                      repairsAndMaintenance: 5000.99
-                      financialCosts: 5000.99
-                      professionalFees: 5000.99
-                      costOfServices: 5000.99
-                      other: 5000.99
-                      travelCosts: 5000.99
-                      rentARoom:
-                        amountClaimed: 5000.99
+                    $ref: ./examples/historic_uk_fhl_period_summary_retrieve/def1/response.json
                 property-allowance-response:
                   description: Consolidated Expenditure response given any tax year
                   value:
-                    fromDate: '2017-04-06'
-                    toDate: '2017-07-05'
-                    income:
-                      periodAmount: 100.25
-                      taxDeducted: 100.25
-                      rentARoom:
-                        rentsReceived: 100.25
-                    expenses:
-                      consolidatedExpenses: 5000.99
+                    $ref: ./examples/historic_uk_fhl_period_summary_retrieve/def1/consolidated_response.json
         '400':
           description: Bad request
           headers:
@@ -8820,10 +8051,7 @@ paths:
                 example-1:
                   description: Default Example given any tax year
                   value:
-                    submissions:
-                      - periodId: 2017-04-06_2017-07-04
-                        fromDate: '2017-04-06'
-                        toDate: '2017-07-04'
+                    $ref: ./examples/historic_uk_non_fhl_period_summary_list/def1/response.json
         '400':
           description: Bad request
           headers:
@@ -9109,43 +8337,11 @@ paths:
               full-income-expenses-request:
                 description: Full income and expenses request given any tax year
                 value:
-                  fromDate: '2019-03-11'
-                  toDate: '2020-04-23'
-                  income: &ref_44
-                    periodAmount: 123.45
-                    premiumsOfLeaseGrant: 2355.45
-                    reversePremiums: 454.56
-                    otherIncome: 567.89
-                    taxDeducted: 234.53
-                    rentARoom:
-                      rentsReceived: 567.56
-                  expenses: &ref_45
-                    premisesRunningCosts: 567.53
-                    repairsAndMaintenance: 324.65
-                    financialCosts: 453.56
-                    professionalFees: 535.78
-                    costOfServices: 678.34
-                    other: 682.34
-                    travelCosts: 645.56
-                    residentialFinancialCostsCarriedForward: 672.34
-                    residentialFinancialCost: 1000.45
-                    rentARoom:
-                      amountClaimed: 545.9
+                  $ref: ./examples/historic_uk_non_fhl_period_summary_create/def1/request.json
               consolidated-income-expenses-request:
                 description: Consolidated income and expenses request given any tax year
                 value:
-                  fromDate: '2019-03-11'
-                  toDate: '2020-04-23'
-                  income: &ref_46
-                    periodAmount: 123.45
-                    premiumsOfLeaseGrant: 2355.45
-                    reversePremiums: 454.56
-                    otherIncome: 567.89
-                    taxDeducted: 234.53
-                    rentARoom:
-                      rentsReceived: 567.56
-                  expenses: &ref_47
-                    consolidatedExpenses: 235.78
+                  $ref: ./examples/historic_uk_non_fhl_period_summary_create/def1/consolidated_request.json
       responses:
         '200':
           description: Success
@@ -9196,7 +8392,7 @@ paths:
                 example-response:
                   description: Example Response given any tax year
                   value:
-                    periodId: 2019-03-11_2020-04-23
+                    $ref: ./examples/historic_uk_non_fhl_period_summary_create/def1/response.json
         '400':
           description: Bad request
           headers:
@@ -9585,43 +8781,11 @@ paths:
                 full-response:
                   description: Example response given any tax year
                   value:
-                    fromDate: '2020-01-01'
-                    toDate: '2020-01-31'
-                    income:
-                      periodAmount: 200
-                      premiumsOfLeaseGrant: 200
-                      reversePremiums: 200
-                      otherIncome: 200
-                      taxDeducted: 100
-                      rentARoom:
-                        rentsReceived: 100
-                    expenses:
-                      premisesRunningCosts: 200
-                      repairsAndMaintenance: 200
-                      financialCosts: 200
-                      professionalFees: 200
-                      costOfServices: 200
-                      other: 200
-                      travelCosts: 200
-                      residentialFinancialCostsCarriedForward: 200
-                      residentialFinancialCost: 200
-                      rentARoom:
-                        amountClaimed: 200
+                    $ref: ./examples/historic_uk_non_fhl_period_summary_retrieve/def1/response.json
                 consolidated-response:
                   description: Consolidated response given any tax year
                   value:
-                    fromDate: '2020-01-01'
-                    toDate: '2020-01-31'
-                    income:
-                      periodAmount: 200
-                      premiumsOfLeaseGrant: 200
-                      reversePremiums: 200
-                      otherIncome: 200
-                      taxDeducted: 100
-                      rentARoom:
-                        rentsReceived: 100
-                    expenses:
-                      consolidatedExpenses: 200
+                    $ref: ./examples/historic_uk_non_fhl_period_summary_retrieve/def1/consolidated_response.json
         '400':
           description: Bad request
           headers:
@@ -9831,17 +8995,11 @@ paths:
               full-income-expenses-request:
                 description: Full income and expenses request given any tax year
                 value:
-                  fromDate: '2019-03-11'
-                  toDate: '2020-04-23'
-                  income: *ref_44
-                  expenses: *ref_45
+                  $ref: ./examples/historic_uk_non_fhl_period_summary_create/def1/request.json
               consolidated-income-expenses-request:
                 description: Consolidated income and expenses request given any tax year
                 value:
-                  fromDate: '2019-03-11'
-                  toDate: '2020-04-23'
-                  income: *ref_46
-                  expenses: *ref_47
+                  $ref: ./examples/historic_uk_non_fhl_period_summary_create/def1/consolidated_request.json
       responses:
         '200':
           description: Success
@@ -10087,7 +9245,7 @@ paths:
             The minimum tax year is 2022-23. No gaps are allowed, for example, 2022-24 is not valid.
             (The minimum tax year in Sandbox is 2021-22.)        
             Maximum tax year supported is 2024-25.
-          schema: &ref_48
+          schema: &ref_44
             type: string
             example: 2022-23
           required: true
@@ -10464,120 +9622,16 @@ paths:
             examples:
               Full Expenses request for TY 2023-24 and before:
                 value:
-                  fromDate: '2020-04-06'
-                  toDate: '2020-07-05'
-                  foreignFhlEea:
-                    income:
-                      rentAmount: 5000.99
-                    expenses:
-                      premisesRunningCosts: 5000.99
-                      repairsAndMaintenance: 5000.99
-                      financialCosts: 5000.99
-                      professionalFees: 5000.99
-                      costOfServices: 5000.99
-                      travelCosts: 5000.99
-                      other: 5000.99
-                  foreignNonFhlProperty:
-                    - countryCode: FRA
-                      income:
-                        rentIncome:
-                          rentAmount: 5000.99
-                        foreignTaxCreditRelief: false
-                        premiumsOfLeaseGrant: 5000.99
-                        otherPropertyIncome: 5000.99
-                        foreignTaxPaidOrDeducted: 5000.99
-                        specialWithholdingTaxOrUkTaxPaid: 5000.99
-                      expenses:
-                        premisesRunningCosts: 5000.99
-                        repairsAndMaintenance: 5000.99
-                        financialCosts: 5000.99
-                        professionalFees: 5000.99
-                        costOfServices: 5000.99
-                        travelCosts: 5000.99
-                        residentialFinancialCost: 5000.99
-                        broughtFwdResidentialFinancialCost: 5000.99
-                        other: 5000.99
+                  $ref: ./examples/foreign_property_period_summary_create/def1/request.json
               Consolidated Expenses request for TY 2023-24 and before:
                 value:
-                  fromDate: '2020-04-06'
-                  toDate: '2020-07-05'
-                  foreignFhlEea:
-                    income:
-                      rentAmount: 5000.99
-                    expenses:
-                      consolidatedExpenses: 5000.99
-                  foreignNonFhlProperty:
-                    - countryCode: FRA
-                      income:
-                        rentIncome:
-                          rentAmount: 5000.99
-                        foreignTaxCreditRelief: false
-                        premiumsOfLeaseGrant: 5000.99
-                        otherPropertyIncome: 5000.99
-                        foreignTaxPaidOrDeducted: 5000.99
-                        specialWithholdingTaxOrUkTaxPaid: 5000.99
-                      expenses:
-                        residentialFinancialCost: 200.25
-                        broughtFwdResidentialFinancialCost: 100.25
-                        consolidatedExpenses: 100.25
+                  $ref: ./examples/foreign_property_period_summary_create/def1/consolidated_request.json
               Full Expenses request for TY 2024-25:
                 value:
-                  fromDate: '2024-10-06'
-                  toDate: '2025-01-05'
-                  foreignFhlEea:
-                    income:
-                      rentAmount: 5000.99
-                    expenses:
-                      premisesRunningCosts: 5000.99
-                      repairsAndMaintenance: 5000.99
-                      financialCosts: 5000.99
-                      professionalFees: 5000.99
-                      costOfServices: 5000.99
-                      travelCosts: -5000.99
-                      other: -5000.99
-                  foreignNonFhlProperty:
-                    - countryCode: FRA
-                      income:
-                        rentIncome:
-                          rentAmount: 5000.99
-                        foreignTaxCreditRelief: false
-                        premiumsOfLeaseGrant: 5000.99
-                        otherPropertyIncome: 5000.99
-                        foreignTaxPaidOrDeducted: 5000.99
-                        specialWithholdingTaxOrUkTaxPaid: 5000.99
-                      expenses:
-                        premisesRunningCosts: -45000.99
-                        repairsAndMaintenance: -35000.99
-                        financialCosts: 5000.99
-                        professionalFees: -15000.99
-                        costOfServices: 5000.99
-                        travelCosts: 5000.99
-                        residentialFinancialCost: 5000.99
-                        broughtFwdResidentialFinancialCost: 5000.99
-                        other: 5000.99
+                  $ref: ./examples/foreign_property_period_summary_create/def2/request.json
               Consolidated Expenses request for TY 2024-25:
                 value:
-                  fromDate: '2024-04-06'
-                  toDate: '2024-07-05'
-                  foreignFhlEea:
-                    income:
-                      rentAmount: 5000.99
-                    expenses:
-                      consolidatedExpenses: -15000.99
-                  foreignNonFhlProperty:
-                    - countryCode: FRA
-                      income:
-                        rentIncome:
-                          rentAmount: 5000.99
-                        foreignTaxCreditRelief: false
-                        premiumsOfLeaseGrant: 5000.99
-                        otherPropertyIncome: 5000.99
-                        foreignTaxPaidOrDeducted: 5000.99
-                        specialWithholdingTaxOrUkTaxPaid: 5000.99
-                      expenses:
-                        residentialFinancialCost: 200.25
-                        broughtFwdResidentialFinancialCost: 100.25
-                        consolidatedExpenses: -21100.25
+                  $ref: ./examples/foreign_property_period_summary_create/def2/consolidated_request.json
       responses:
         '201':
           description: Success
@@ -10631,7 +9685,7 @@ paths:
                 example-response:
                   description: Example Response
                   value:
-                    submissionId: 4557ecb5-fd32-48cc-81f5-e6acd1099f3c
+                    $ref: ./examples/foreign_property_period_summary_create/response.json
         '400':
           description: Bad request
           headers:
@@ -10692,7 +9746,7 @@ paths:
                   value: *ref_22
                 FORMAT_COUNTRY_CODE:
                   description: The format of the supplied Country Code field is not valid.
-                  value: &ref_50
+                  value: &ref_46
                     code: FORMAT_COUNTRY_CODE
                     message: The provided Country code is invalid
                 RULE_TAX_YEAR_RANGE_INVALID:
@@ -10707,7 +9761,7 @@ paths:
                   value: *ref_27
                 RULE_TYPE_OF_BUSINESS_INCORRECT:
                   description: The supplied Business ID does not represent a foreign property business.
-                  value: &ref_49
+                  value: &ref_45
                     code: RULE_TYPE_OF_BUSINESS_INCORRECT
                     message: The businessId is for a different type of business
                 RULE_INCORRECT_OR_EMPTY_BODY_SUBMITTED:
@@ -10718,7 +9772,7 @@ paths:
                   value: *ref_32
                 RULE_COUNTRY_CODE:
                   description: Not a valid ISO 3166-1 alpha-3 country code.
-                  value: &ref_52
+                  value: &ref_48
                     code: RULE_COUNTRY_CODE
                     message: The country code is not a valid ISO 3166-1 alpha-3 country code
                 RULE_OVERLAPPING_PERIOD:
@@ -10737,7 +9791,7 @@ paths:
                   description: |
                     The same countryCode cannot be supplied for multiple properties.
                     If there are multiple properties per country the adjustments and allowances should be the total across all properties.
-                  value: &ref_51
+                  value: &ref_47
                     code: RULE_DUPLICATE_COUNTRY_CODE
                     message: You cannot supply the same country code for multiple properties
                 RULE_INCORRECT_GOV_TEST_SCENARIO:
@@ -10877,7 +9931,7 @@ paths:
             The minimum tax year is 2022-23. No gaps are allowed, for example, 2022-24 is not valid.
             (The minimum tax year in Sandbox is 2021-22.)        
             Maximum tax year supported is 2024-25.
-          schema: *ref_48
+          schema: *ref_44
           required: true
         - name: submissionId
           in: path
@@ -11587,124 +10641,16 @@ paths:
               examples:
                 Full Expenses response for TY 2023-24 and before:
                   value:
-                    submittedOn: '2021-06-17T10:59:47.544Z'
-                    fromDate: '2020-01-01'
-                    toDate: '2020-01-31'
-                    foreignFhlEea:
-                      income:
-                        rentAmount: 200.22
-                      expenses:
-                        premisesRunningCosts: 100.25
-                        repairsAndMaintenance: 100.25
-                        financialCosts: 100.25
-                        professionalFees: 100.25
-                        costOfServices: 100.25
-                        travelCosts: 100.25
-                        other: 100.25
-                    foreignNonFhlProperty:
-                      - countryCode: FRA
-                        income:
-                          rentIncome:
-                            rentAmount: 200.22
-                          foreignTaxCreditRelief: true
-                          premiumsOfLeaseGrant: 100.25
-                          otherPropertyIncome: 100.25
-                          foreignTaxPaidOrDeducted: 44.21
-                          specialWithholdingTaxOrUkTaxPaid: 23.78
-                        expenses:
-                          premisesRunningCosts: 100.25
-                          repairsAndMaintenance: 100.25
-                          financialCosts: 200.25
-                          professionalFees: 100.25
-                          costOfServices: 100.25
-                          travelCosts: 100.25
-                          residentialFinancialCost: 100.25
-                          broughtFwdResidentialFinancialCost: 100.25
-                          other: 100.25
+                    $ref: ./examples/foreign_property_period_summary_retrieve/def1/response.json
                 Consolidated Expenses response for TY 2023-24 and before:
                   value:
-                    submittedOn: '2021-06-17T10:59:47.544Z'
-                    fromDate: '2020-01-01'
-                    toDate: '2020-01-31'
-                    foreignFhlEea:
-                      income:
-                        rentAmount: 200.22
-                      expenses:
-                        consolidatedExpenses: 100.25
-                    foreignNonFhlProperty:
-                      - countryCode: FRA
-                        income:
-                          rentIncome:
-                            rentAmount: 200.22
-                          foreignTaxCreditRelief: true
-                          premiumsOfLeaseGrant: 100.25
-                          otherPropertyIncome: 100.25
-                          foreignTaxPaidOrDeducted: 44.21
-                          specialWithholdingTaxOrUkTaxPaid: 23.78
-                        expenses:
-                          residentialFinancialCost: 200.25
-                          broughtFwdResidentialFinancialCost: 100.25
-                          consolidatedExpenses: 100.25
+                    $ref: ./examples/foreign_property_period_summary_retrieve/def1/consolidated_response.json
                 Full Expenses response for TY 2024-25:
                   value:
-                    submittedOn: '2021-06-17T10:59:47.544Z'
-                    fromDate: '2020-01-01'
-                    toDate: '2020-01-31'
-                    foreignFhlEea:
-                      income:
-                        rentAmount: 200.22
-                      expenses:
-                        premisesRunningCosts: 100.25
-                        repairsAndMaintenance: 100.25
-                        financialCosts: 100.25
-                        professionalFees: 100.25
-                        costOfServices: 100.25
-                        travelCosts: 100.25
-                        other: 100.25
-                    foreignNonFhlProperty:
-                      - countryCode: FRA
-                        income:
-                          rentIncome:
-                            rentAmount: 200.22
-                          foreignTaxCreditRelief: true
-                          premiumsOfLeaseGrant: 100.25
-                          otherPropertyIncome: 100.25
-                          foreignTaxPaidOrDeducted: 44.21
-                          specialWithholdingTaxOrUkTaxPaid: 23.78
-                        expenses:
-                          premisesRunningCosts: -1200.25
-                          repairsAndMaintenance: -1300.25
-                          financialCosts: -200.25
-                          professionalFees: 100.25
-                          costOfServices: 100.25
-                          travelCosts: 100.25
-                          residentialFinancialCost: 100.25
-                          broughtFwdResidentialFinancialCost: 100.25
-                          other: 100.25
+                    $ref: ./examples/foreign_property_period_summary_retrieve/def2/response.json
                 Consolidated Expenses response for TY 2024-25:
                   value:
-                    submittedOn: '2024-06-17T10:59:47.544Z'
-                    fromDate: '2024-04-06'
-                    toDate: '2024-07-05'
-                    foreignFhlEea:
-                      income:
-                        rentAmount: 200.22
-                      expenses:
-                        consolidatedExpenses: 100.25
-                    foreignNonFhlProperty:
-                      - countryCode: FRA
-                        income:
-                          rentIncome:
-                            rentAmount: 200.22
-                          foreignTaxCreditRelief: true
-                          premiumsOfLeaseGrant: 100.25
-                          otherPropertyIncome: 100.25
-                          foreignTaxPaidOrDeducted: 44.21
-                          specialWithholdingTaxOrUkTaxPaid: 23.78
-                        expenses:
-                          residentialFinancialCost: 200.25
-                          broughtFwdResidentialFinancialCost: 100.25
-                          consolidatedExpenses: -2100.25
+                    $ref: ./examples/foreign_property_period_summary_retrieve/def2/consolidated_response.json
         '400':
           description: Bad request
           headers:
@@ -11756,7 +10702,7 @@ paths:
                   value: *ref_26
                 RULE_TYPE_OF_BUSINESS_INCORRECT:
                   description: The supplied Business ID does not represent a foreign property business.
-                  value: *ref_49
+                  value: *ref_45
                 RULE_INCORRECT_GOV_TEST_SCENARIO:
                   description: The request did not match any available Sandbox data. Check that the supplied Gov-Test-Scenario is correct for this endpoint version. This error will only be returned in the Sandbox environment.
                   value: *ref_17
@@ -11891,7 +10837,7 @@ paths:
             The minimum tax year is 2022-23. No gaps are allowed, for example, 2022-24 is not valid.
             (The minimum tax year in Sandbox is 2021-22.)        
             Maximum tax year supported is 2024-25.
-          schema: *ref_48
+          schema: *ref_44
           required: true
         - name: submissionId
           in: path
@@ -12379,112 +11325,16 @@ paths:
             examples:
               Full Expenses request for TY 2023-24 and before:
                 value:
-                  foreignFhlEea:
-                    income:
-                      rentAmount: 1123.89
-                    expenses:
-                      premisesRunningCosts: 332.78
-                      repairsAndMaintenance: 231.45
-                      financialCosts: 345.23
-                      professionalFees: 232.45
-                      costOfServices: 231.56
-                      travelCosts: 234.67
-                      other: 3457.9
-                  foreignNonFhlProperty:
-                    - countryCode: AFG
-                      income:
-                        rentIncome:
-                          rentAmount: 440.31
-                        foreignTaxCreditRelief: false
-                        premiumsOfLeaseGrant: 950.48
-                        otherPropertyIncome: 802.49
-                        foreignTaxPaidOrDeducted: 734.18
-                        specialWithholdingTaxOrUkTaxPaid: 85.47
-                      expenses:
-                        premisesRunningCosts: 129.35
-                        repairsAndMaintenance: 7490.32
-                        financialCosts: 5000.99
-                        professionalFees: 847.9
-                        travelCosts: 69.2
-                        costOfServices: 478.23
-                        residentialFinancialCost: 879.28
-                        broughtFwdResidentialFinancialCost: 846.13
-                        other: 138.92
+                  $ref: ./examples/foreign_property_period_summary_amend/def1/request.json
               Consolidated Expenses request for TY 2023-24 and before:
                 value:
-                  foreignFhlEea:
-                    income:
-                      rentAmount: 1123.89
-                    expenses:
-                      consolidatedExpenses: 334.64
-                  foreignNonFhlProperty:
-                    - countryCode: AFG
-                      income:
-                        rentIncome:
-                          rentAmount: 440.31
-                        foreignTaxCreditRelief: false
-                        premiumsOfLeaseGrant: 950.48
-                        otherPropertyIncome: 802.49
-                        foreignTaxPaidOrDeducted: 734.18
-                        specialWithholdingTaxOrUkTaxPaid: 85.47
-                      expenses:
-                        residentialFinancialCost: 200.25
-                        broughtFwdResidentialFinancialCost: 100.25
-                        consolidatedExpenses: 3992.93
+                  $ref: ./examples/foreign_property_period_summary_amend/def1/consolidated_request.json
               Full Expenses request for TY 2024-25:
                 value:
-                  foreignFhlEea:
-                    income:
-                      rentAmount: 1123.89
-                    expenses:
-                      premisesRunningCosts: -332.78
-                      repairsAndMaintenance: 231.45
-                      financialCosts: -345.23
-                      professionalFees: 232.45
-                      costOfServices: -231.56
-                      travelCosts: 234.67
-                      other: 3457.9
-                  foreignNonFhlProperty:
-                    - countryCode: AFG
-                      income:
-                        rentIncome:
-                          rentAmount: 440.31
-                        foreignTaxCreditRelief: false
-                        premiumsOfLeaseGrant: 950.48
-                        otherPropertyIncome: 802.49
-                        foreignTaxPaidOrDeducted: 734.18
-                        specialWithholdingTaxOrUkTaxPaid: 85.47
-                      expenses:
-                        premisesRunningCosts: 129.35
-                        repairsAndMaintenance: -7490.32
-                        financialCosts: 5000.99
-                        professionalFees: -847.9
-                        travelCosts: 69.2
-                        costOfServices: -478.23
-                        residentialFinancialCost: 879.28
-                        broughtFwdResidentialFinancialCost: 846.13
-                        other: 138.92
+                  $ref: ./examples/foreign_property_period_summary_amend/def2/request.json
               Consolidated Expenses request for TY 2024-25:
                 value:
-                  foreignFhlEea:
-                    income:
-                      rentAmount: 1123.89
-                    expenses:
-                      consolidatedExpenses: -334.64
-                  foreignNonFhlProperty:
-                    - countryCode: AFG
-                      income:
-                        rentIncome:
-                          rentAmount: 440.31
-                        foreignTaxCreditRelief: false
-                        premiumsOfLeaseGrant: 950.48
-                        otherPropertyIncome: 802.49
-                        foreignTaxPaidOrDeducted: 734.18
-                        specialWithholdingTaxOrUkTaxPaid: 85.47
-                      expenses:
-                        residentialFinancialCost: 200.25
-                        broughtFwdResidentialFinancialCost: 100.25
-                        consolidatedExpenses: -3992.93
+                  $ref: ./examples/foreign_property_period_summary_amend/def2/consolidated_request.json
       responses:
         '200':
           description: Success
@@ -12572,7 +11422,7 @@ paths:
                   value: *ref_26
                 FORMAT_COUNTRY_CODE:
                   description: The format of the supplied Country Code field is not valid.
-                  value: *ref_50
+                  value: *ref_46
                 FORMAT_VALUE:
                   description: One or more values have been added with the incorrect format.
                   value: *ref_22
@@ -12588,18 +11438,18 @@ paths:
                   value: *ref_27
                 RULE_TYPE_OF_BUSINESS_INCORRECT:
                   description: The supplied Business ID does not represent a foreign property business.
-                  value: *ref_49
+                  value: *ref_45
                 RULE_DUPLICATE_COUNTRY_CODE:
                   description: |
                     The same countryCode cannot be supplied for multiple properties.
                     If there are multiple properties per country the adjustments and allowances should be the total across all properties.
-                  value: *ref_51
+                  value: *ref_47
                 RULE_INCORRECT_OR_EMPTY_BODY_SUBMITTED:
                   description: An empty or non-matching body was submitted.
                   value: *ref_23
                 RULE_COUNTRY_CODE:
                   description: Not a valid ISO 3166-1 alpha-3 country code.
-                  value: *ref_52
+                  value: *ref_48
                 RULE_INCORRECT_GOV_TEST_SCENARIO:
                   description: The request did not match any available Sandbox data. Check that the supplied Gov-Test-Scenario is correct for this endpoint version. This error will only be returned in the Sandbox environment.
                   value: *ref_17
@@ -12738,7 +11588,7 @@ paths:
           in: query
           description: |
             A unique identifier for each foreign property.<strong> This parameter is only supported for tax years 2026-27 onwards.</strong>
-          schema: &ref_62
+          schema: &ref_58
             type: string
             format: uuid
             example: 8e8b8450-dc1b-4360-8109-7067337b42cb
@@ -12962,7 +11812,7 @@ paths:
                       - foreignProperty
                     additionalProperties: false
                   - $schema: http://json-schema.org/draft-04/schema#
-                    title: 'For TY 2026-27 and onwards [Test Only] '
+                    title: 'For TY 2026-27 and onwards '
                     type: object
                     properties:
                       submittedOn:
@@ -13128,92 +11978,16 @@ paths:
               examples:
                 Full expenses response for TY 2026-27 and onwards:
                   value:
-                    submittedOn: '2026-07-07T10:59:47.544Z'
-                    fromDate: '2026-04-06'
-                    toDate: '2026-07-05'
-                    foreignProperty:
-                      - propertyId: 8e8b8450-dc1b-4360-8109-7067337b42cb
-                        income:
-                          rentIncome:
-                            rentAmount: 440.31
-                          foreignTaxCreditRelief: false
-                          premiumsOfLeaseGrant: 950.48
-                          otherPropertyIncome: 802.49
-                          foreignTaxPaidOrDeducted: 734.18
-                          specialWithholdingTaxOrUkTaxPaid: 85.47
-                        expenses:
-                          premisesRunningCosts: -4929.5
-                          repairsAndMaintenance: -54.3
-                          financialCosts: 2090.35
-                          professionalFees: -90.2
-                          travelCosts: 560.99
-                          costOfServices: -100.83
-                          residentialFinancialCost: 857.78
-                          broughtFwdResidentialFinancialCost: 600.1
-                          other: 334.64
+                    $ref: ./examples/foreign_property_cumulative_summary_retrieve/def2/response.json
                 Consolidated expenses response for TY 2026-27 and onwards:
                   value:
-                    submittedOn: '2026-07-07T10:59:47.544Z'
-                    fromDate: '2026-04-06'
-                    toDate: '2026-07-05'
-                    foreignProperty:
-                      - propertyId: 8e8b8450-dc1b-4360-8109-7067337b42cb
-                        income:
-                          rentIncome:
-                            rentAmount: 440.31
-                          foreignTaxCreditRelief: false
-                          premiumsOfLeaseGrant: 950.48
-                          otherPropertyIncome: 802.49
-                          foreignTaxPaidOrDeducted: 734.18
-                          specialWithholdingTaxOrUkTaxPaid: 85.47
-                        expenses:
-                          residentialFinancialCost: 857.78
-                          broughtFwdResidentialFinancialCost: 600.1
-                          consolidatedExpenses: 1500.5
+                    $ref: ./examples/foreign_property_cumulative_summary_retrieve/def2/consolidated_response.json
                 Full expenses response for TY 2025-26:
                   value:
-                    submittedOn: '2025-07-07T10:59:47.544Z'
-                    fromDate: '2025-04-06'
-                    toDate: '2025-07-05'
-                    foreignProperty:
-                      - countryCode: AFG
-                        income:
-                          rentIncome:
-                            rentAmount: 440.31
-                          foreignTaxCreditRelief: false
-                          premiumsOfLeaseGrant: 950.48
-                          otherPropertyIncome: 802.49
-                          foreignTaxPaidOrDeducted: 734.18
-                          specialWithholdingTaxOrUkTaxPaid: 85.47
-                        expenses:
-                          premisesRunningCosts: -4929.5
-                          repairsAndMaintenance: -54.3
-                          financialCosts: 2090.35
-                          professionalFees: -90.2
-                          travelCosts: 560.99
-                          costOfServices: -100.83
-                          residentialFinancialCost: 857.78
-                          broughtFwdResidentialFinancialCost: 600.1
-                          other: 334.64
+                    $ref: ./examples/foreign_property_cumulative_summary_retrieve/def1/response.json
                 Consolidated expenses response for TY 2025-26:
                   value:
-                    submittedOn: '2025-07-07T10:59:47.544Z'
-                    fromDate: '2025-04-06'
-                    toDate: '2025-07-05'
-                    foreignProperty:
-                      - countryCode: AFG
-                        income:
-                          rentIncome:
-                            rentAmount: 440.31
-                          foreignTaxCreditRelief: false
-                          premiumsOfLeaseGrant: 950.48
-                          otherPropertyIncome: 802.49
-                          foreignTaxPaidOrDeducted: 734.18
-                          specialWithholdingTaxOrUkTaxPaid: 85.47
-                        expenses:
-                          residentialFinancialCost: 857.78
-                          broughtFwdResidentialFinancialCost: 600.1
-                          consolidatedExpenses: 1500.5
+                    $ref: ./examples/foreign_property_cumulative_summary_retrieve/def1/consolidated_response.json
         '400':
           description: Bad request
           headers:
@@ -13265,7 +12039,7 @@ paths:
                   value: *ref_12
                 FORMAT_PROPERTY_ID:
                   description: The format of the supplied property ID field is not valid.
-                  value: &ref_53
+                  value: &ref_49
                     code: FORMAT_PROPERTY_ID
                     message: The provided property ID is invalid
                 RULE_TAX_YEAR_RANGE_INVALID:
@@ -13278,7 +12052,7 @@ paths:
                   value: *ref_29
                 RULE_TYPE_OF_BUSINESS_INCORRECT:
                   description: The supplied Business ID does not represent a foreign property business.
-                  value: *ref_49
+                  value: *ref_45
                 RULE_INCORRECT_GOV_TEST_SCENARIO:
                   description: The request did not match any available Sandbox data. Check that the supplied Gov-Test-Scenario is correct for this endpoint version. This error will only be returned in the Sandbox environment.
                   value: *ref_17
@@ -13587,7 +12361,7 @@ paths:
                     - foreignProperty
                   additionalProperties: false
                 - $schema: http://json-schema.org/draft-04/schema#
-                  title: 'For TY 2026-27 and onwards [Test Only] '
+                  title: 'For TY 2026-27 and onwards '
                   type: object
                   properties:
                     fromDate:
@@ -13751,88 +12525,16 @@ paths:
             examples:
               Full expenses request for TY 2026-27 and onwards:
                 value:
-                  fromDate: '2026-04-06'
-                  toDate: '2026-07-05'
-                  foreignProperty:
-                    - propertyId: 8e8b8450-dc1b-4360-8109-7067337b42cb
-                      income:
-                        rentIncome:
-                          rentAmount: 4882.23
-                        foreignTaxCreditRelief: false
-                        premiumsOfLeaseGrant: 884.72
-                        otherPropertyIncome: 7713.09
-                        foreignTaxPaidOrDeducted: 884.12
-                        specialWithholdingTaxOrUkTaxPaid: 847.72
-                      expenses:
-                        premisesRunningCosts: 129.35
-                        repairsAndMaintenance: 7490.32
-                        financialCosts: 5000.99
-                        professionalFees: 847.9
-                        travelCosts: 69.2
-                        costOfServices: 478.23
-                        residentialFinancialCost: 879.28
-                        broughtFwdResidentialFinancialCost: 846.13
-                        other: 138.92
+                  $ref: ./examples/foreign_property_cumulative_summary_create_and_amend/def2/request.json
               Consolidated expenses request for TY 2026-27 and onwards:
                 value:
-                  fromDate: '2026-04-06'
-                  toDate: '2026-07-05'
-                  foreignProperty:
-                    - propertyId: 8e8b8450-dc1b-4360-8109-7067337b42cb
-                      income:
-                        rentIncome:
-                          rentAmount: 4882.23
-                        foreignTaxCreditRelief: false
-                        premiumsOfLeaseGrant: 884.72
-                        otherPropertyIncome: 7713.09
-                        foreignTaxPaidOrDeducted: 884.12
-                        specialWithholdingTaxOrUkTaxPaid: 847.72
-                      expenses:
-                        consolidatedExpenses: 3992.93
-                        residentialFinancialCost: 879.28
-                        broughtFwdResidentialFinancialCost: 846.13
+                  $ref: ./examples/foreign_property_cumulative_summary_create_and_amend/def2/consolidated_request.json
               Full expenses request for TY 2025-26:
                 value:
-                  fromDate: '2025-04-06'
-                  toDate: '2025-07-05'
-                  foreignProperty:
-                    - countryCode: FRA
-                      income:
-                        rentIncome:
-                          rentAmount: 4882.23
-                        foreignTaxCreditRelief: false
-                        premiumsOfLeaseGrant: 884.72
-                        otherPropertyIncome: 7713.09
-                        foreignTaxPaidOrDeducted: 884.12
-                        specialWithholdingTaxOrUkTaxPaid: 847.72
-                      expenses:
-                        premisesRunningCosts: 129.35
-                        repairsAndMaintenance: 7490.32
-                        financialCosts: 5000.99
-                        professionalFees: 847.9
-                        travelCosts: 69.2
-                        costOfServices: 478.23
-                        residentialFinancialCost: 879.28
-                        broughtFwdResidentialFinancialCost: 846.13
-                        other: 138.92
+                  $ref: ./examples/foreign_property_cumulative_summary_create_and_amend/def1/request.json
               Consolidated expenses request for TY 2025-26:
                 value:
-                  fromDate: '2025-04-06'
-                  toDate: '2025-07-05'
-                  foreignProperty:
-                    - countryCode: FRA
-                      income:
-                        rentIncome:
-                          rentAmount: 4882.23
-                        foreignTaxCreditRelief: false
-                        premiumsOfLeaseGrant: 884.72
-                        otherPropertyIncome: 7713.09
-                        foreignTaxPaidOrDeducted: 884.12
-                        specialWithholdingTaxOrUkTaxPaid: 847.72
-                      expenses:
-                        consolidatedExpenses: 3992.93
-                        residentialFinancialCost: 879.28
-                        broughtFwdResidentialFinancialCost: 846.13
+                  $ref: ./examples/foreign_property_cumulative_summary_create_and_amend/def1/consolidated_request.json
       responses:
         '204':
           description: Success(No Content)
@@ -13917,7 +12619,7 @@ paths:
                   value: *ref_12
                 FORMAT_PROPERTY_ID:
                   description: The format of the supplied property ID field is not valid.
-                  value: *ref_53
+                  value: *ref_49
                 RULE_TAX_YEAR_RANGE_INVALID:
                   description: Tax year range invalid. A tax year range of one year is required.
                   value: *ref_14
@@ -13949,10 +12651,10 @@ paths:
                   value: *ref_32
                 FORMAT_COUNTRY_CODE:
                   description: The format of the supplied Country Code field is not valid.
-                  value: *ref_50
+                  value: *ref_46
                 RULE_COUNTRY_CODE:
                   description: Not a valid ISO 3166-1 alpha-3 country code.
-                  value: *ref_52
+                  value: *ref_48
                 RULE_DUPLICATE_COUNTRY_CODE:
                   description: |
                     You cannot supply the same country code for multiple properties.
@@ -13963,13 +12665,13 @@ paths:
                 RULE_DUPLICATE_PROPERTY_ID:
                   description: |
                     You cannot supply the same property ID for multiple properties.
-                  value: &ref_67
+                  value: &ref_63
                     code: RULE_DUPLICATE_PROPERTY_ID
                     message: The property ID '8e8b8450-dc1b-4360-8109-7067337b42cb' is duplicated for multiple properties
                 RULE_PROPERTY_ID_MISMATCH:
                   description: |
                     The supplied property ID is not associated with the income source on record.
-                  value: &ref_68
+                  value: &ref_64
                     code: RULE_PROPERTY_ID_MISMATCH
                     message: The supplied property ID is not valid for this income source
                 RULE_INCORRECT_GOV_TEST_SCENARIO:
@@ -13977,32 +12679,32 @@ paths:
                   value: *ref_17
                 RULE_ADVANCE_SUBMISSION_REQUIRES_PERIOD_END_DATE:
                   description: To submit in advance, submission end date must be the end of the period.
-                  value: *ref_54
+                  value: *ref_50
                 RULE_SUBMISSION_END_DATE_CANNOT_MOVE_BACKWARDS:
                   description: Submission end date cannot be earlier than existing submission.
-                  value: *ref_55
+                  value: *ref_51
                 RULE_START_DATE_NOT_ALIGNED_WITH_REPORTING_TYPE:
                   description: |
                     Start date does not align with the reporting type: must start at either the 6th or the 1st of the month.
-                  value: *ref_56
+                  value: *ref_52
                 RULE_START_DATE_NOT_ALIGNED_TO_COMMENCEMENT_DATE:
                   description: Start date does not align with the commencement date.
-                  value: *ref_57
+                  value: *ref_53
                 RULE_END_DATE_NOT_ALIGNED_WITH_REPORTING_TYPE:
                   description: End date does not align wiih the reporting type.
-                  value: *ref_58
+                  value: *ref_54
                 RULE_MISSING_SUBMISSION_DATES:
                   description: Submission start/end date not provided.
-                  value: *ref_59
+                  value: *ref_55
                 RULE_START_AND_END_DATE_NOT_ALLOWED:
                   description: Start/end date not accepted for annual/latent submission.
-                  value: *ref_60
+                  value: *ref_56
                 RULE_OUTSIDE_AMENDMENT_WINDOW:
                   description: Request cannot be completed as you are outside the amendment window.
                   value: *ref_33
                 RULE_EARLY_DATA_SUBMISSION_NOT_ACCEPTED:
                   description: Cannot submit data more than 10 days before end of period.
-                  value: *ref_61
+                  value: *ref_57
         '403':
           description: Forbidden
           headers:
@@ -14139,7 +12841,7 @@ paths:
           in: query
           description: |
             A unique identifier for each foreign property.<strong> This parameter is only supported for tax years 2026-27 onwards.</strong>
-          schema: *ref_62
+          schema: *ref_58
           required: false
         - name: Accept
           in: header
@@ -14483,7 +13185,7 @@ paths:
                       - submittedOn
                     additionalProperties: false
                   - $schema: http://json-schema.org/draft-04/schema#
-                    title: 'For TY 2026-27 and after [Test Only] '
+                    title: 'For TY 2026-27 and after '
                     type: object
                     properties:
                       submittedOn:
@@ -14601,115 +13303,22 @@ paths:
               examples:
                 All Other Allowances Response for TY 2024-25 and before:
                   value:
-                    submittedOn: '2020-06-17T10:59:47.544Z'
-                    foreignFhlEea:
-                      adjustments:
-                        privateUseAdjustment: 34343.45
-                        balancingCharge: 53543.23
-                        periodOfGraceAdjustment: true
-                      allowances:
-                        annualInvestmentAllowance: 3434.23
-                        otherCapitalAllowance: 1343.34
-                        electricChargePointAllowance: 6565.45
-                        zeroEmissionsCarAllowance: 3456.34
-                    foreignProperty:
-                      - countryCode: LBN
-                        adjustments:
-                          privateUseAdjustment: 4553.34
-                          balancingCharge: 3453.34
-                        allowances:
-                          annualInvestmentAllowance: 38330.95
-                          costOfReplacingDomesticItems: 41985.17
-                          zeroEmissionsGoodsVehicleAllowance: 9769.19
-                          otherCapitalAllowance: 1049.21
-                          electricChargePointAllowance: 3565.45
-                          structuredBuildingAllowance:
-                            - amount: 3545.12
-                              firstYear:
-                                qualifyingDate: '2020-03-29'
-                                qualifyingAmountExpenditure: 3453.34
-                              building:
-                                name: Blue Oaks
-                                number: '12'
-                                postcode: TF3 4GH
-                          zeroEmissionsCarAllowance: 3456.34
+                    $ref: ./examples/foreign_property_annual_submission_retrieve/def1/all_other_allowances_response.json
                 Property Allowance Response for TY 2024-25 and before:
                   value:
-                    submittedOn: '2020-06-17T10:59:47.544Z'
-                    foreignFhlEea:
-                      adjustments:
-                        balancingCharge: 53543.23
-                        periodOfGraceAdjustment: true
-                      allowances:
-                        propertyIncomeAllowance: 100.25
-                    foreignProperty:
-                      - countryCode: LBN
-                        adjustments:
-                          balancingCharge: 3453.34
-                        allowances:
-                          propertyIncomeAllowance: 100.25
+                    $ref: ./examples/foreign_property_annual_submission_retrieve/def1/property_allowance_response.json
                 All Other Allowances Response for TY 2025-26:
                   value:
-                    submittedOn: '2025-06-17T10:59:47.544Z'
-                    foreignProperty:
-                      - countryCode: LBN
-                        adjustments:
-                          privateUseAdjustment: 4553.34
-                          balancingCharge: 3453.34
-                        allowances:
-                          annualInvestmentAllowance: 38330.95
-                          costOfReplacingDomesticItems: 41985.17
-                          otherCapitalAllowance: 1049.21
-                          structuredBuildingAllowance:
-                            - amount: 3545.12
-                              firstYear:
-                                qualifyingDate: '2020-03-29'
-                                qualifyingAmountExpenditure: 3453.34
-                              building:
-                                name: Blue Oaks
-                                number: '12'
-                                postcode: TF3 4GH
-                          zeroEmissionsCarAllowance: 3456.34
+                    $ref: ./examples/foreign_property_annual_submission_retrieve/def2/all_other_allowances_response.json
                 Property Allowance Response for TY 2025-26:
                   value:
-                    submittedOn: '2025-06-17T10:59:47.544Z'
-                    foreignProperty:
-                      - countryCode: LBN
-                        adjustments:
-                          balancingCharge: 3453.34
-                        allowances:
-                          propertyIncomeAllowance: 100.25
+                    $ref: ./examples/foreign_property_annual_submission_retrieve/def2/property_allowance_response.json
                 All Other Allowances Response for TY 2026-27 and after:
                   value:
-                    submittedOn: '2026-06-17T10:59:47.544Z'
-                    foreignProperty:
-                      - propertyId: 8e8b8450-dc1b-4360-8109-7067337b42cb
-                        adjustments:
-                          privateUseAdjustment: 4553.34
-                          balancingCharge: 3453.34
-                        allowances:
-                          annualInvestmentAllowance: 38330.95
-                          costOfReplacingDomesticItems: 41985.17
-                          otherCapitalAllowance: 1049.21
-                          structuredBuildingAllowance:
-                            - amount: 3545.12
-                              firstYear:
-                                qualifyingDate: '2020-03-29'
-                                qualifyingAmountExpenditure: 3453.34
-                              building:
-                                name: Blue Oaks
-                                number: '12'
-                                postcode: TF3 4GH
-                          zeroEmissionsCarAllowance: 3456.34
+                    $ref: ./examples/foreign_property_annual_submission_retrieve/def3/all_other_allowances_response.json
                 Property Allowance Response for TY 2026-27 and after:
                   value:
-                    submittedOn: '2026-06-17T10:59:47.544Z'
-                    foreignProperty:
-                      - propertyId: 8e8b8450-dc1b-4360-8109-7067337b42cb
-                        adjustments:
-                          balancingCharge: 3453.34
-                        allowances:
-                          propertyIncomeAllowance: 100.25
+                    $ref: ./examples/foreign_property_annual_submission_retrieve/def3/property_allowance_response.json
         '400':
           description: Bad request
           headers:
@@ -14761,7 +13370,7 @@ paths:
                   value: *ref_13
                 FORMAT_PROPERTY_ID:
                   description: The format of the supplied property ID field is not valid.
-                  value: *ref_53
+                  value: *ref_49
                 RULE_TAX_YEAR_NOT_SUPPORTED:
                   description: |
                     The specified tax year is not supported. That is, the tax year specified is before the minimum tax year value.
@@ -14771,7 +13380,7 @@ paths:
                   value: *ref_14
                 RULE_TYPE_OF_BUSINESS_INCORRECT:
                   description: The supplied Business ID does not represent a foreign property business.
-                  value: *ref_49
+                  value: *ref_45
                 RULE_INCORRECT_GOV_TEST_SCENARIO:
                   description: The request did not match any available Sandbox data. Check that the supplied Gov-Test-Scenario is correct for this endpoint version. This error will only be returned in the Sandbox environment.
                   value: *ref_17
@@ -15298,7 +13907,7 @@ paths:
                     - foreignProperty
                   additionalProperties: false
                 - $schema: http://json-schema.org/draft-04/schema#
-                  title: 'For TY 2026-27 and after [Test Only] '
+                  title: 'For TY 2026-27 and after '
                   type: object
                   properties:
                     foreignProperty:
@@ -15440,114 +14049,27 @@ paths:
               all-other-allowances-request-TY-2024-25:
                 description: All Other Allowances request for TY 2024-25 and before
                 value:
-                  foreignFhlEea:
-                    adjustments:
-                      privateUseAdjustment: 34343.45
-                      balancingCharge: 53543.23
-                      periodOfGraceAdjustment: true
-                    allowances:
-                      annualInvestmentAllowance: 3434.23
-                      otherCapitalAllowance: 1343.34
-                      electricChargePointAllowance: 6565.45
-                      zeroEmissionsCarAllowance: 3456.34
-                  foreignProperty:
-                    - countryCode: LBN
-                      adjustments:
-                        privateUseAdjustment: 4553.34
-                        balancingCharge: 3453.34
-                      allowances:
-                        annualInvestmentAllowance: 38330.95
-                        costOfReplacingDomesticItems: 41985.17
-                        zeroEmissionsGoodsVehicleAllowance: 9769.19
-                        otherCapitalAllowance: 1049.21
-                        electricChargePointAllowance: 3565.45
-                        zeroEmissionsCarAllowance: 1000.99
-                        structuredBuildingAllowance:
-                          - amount: 3545.12
-                            firstYear:
-                              qualifyingDate: '2020-03-29'
-                              qualifyingAmountExpenditure: 3453.34
-                            building:
-                              name: Green Oaks
-                              number: '12'
-                              postcode: TF3 4GH
+                  $ref: ./examples/foreign_property_annual_submission_create_and_amend/def1/all_other_allowances_request.json
               property-allowance-request-TY-2024-25:
                 description: Property Allowance request for TY 2024-25 and before
                 value:
-                  foreignFhlEea:
-                    adjustments:
-                      balancingCharge: 53543.23
-                      periodOfGraceAdjustment: true
-                    allowances:
-                      propertyIncomeAllowance: 100.25
-                  foreignProperty:
-                    - countryCode: LBN
-                      adjustments:
-                        balancingCharge: 3453.34
-                      allowances:
-                        propertyIncomeAllowance: 200.25
+                  $ref: ./examples/foreign_property_annual_submission_create_and_amend/def1/property_allowance_request.json
               all-other-allowances-request-TY-2025-26:
                 description: All Other Allowances request for TY 2025-26
                 value:
-                  foreignProperty:
-                    - countryCode: LBN
-                      adjustments:
-                        privateUseAdjustment: 4553.34
-                        balancingCharge: 3453.34
-                      allowances:
-                        annualInvestmentAllowance: 38330.95
-                        costOfReplacingDomesticItems: 41985.17
-                        otherCapitalAllowance: 1049.21
-                        zeroEmissionsCarAllowance: 1000.99
-                        structuredBuildingAllowance:
-                          - amount: 3545.12
-                            firstYear:
-                              qualifyingDate: '2020-03-29'
-                              qualifyingAmountExpenditure: 3453.34
-                            building:
-                              name: Green Oaks
-                              number: '12'
-                              postcode: TF3 4GH
+                  $ref: ./examples/foreign_property_annual_submission_create_and_amend/def2/all_other_allowances_request.json
               property-allowance-request-TY-2025-26:
                 description: Property Allowance request for TY 2025-26
                 value:
-                  foreignProperty:
-                    - countryCode: LBN
-                      adjustments:
-                        balancingCharge: 3453.34
-                      allowances:
-                        propertyIncomeAllowance: 200.25
+                  $ref: ./examples/foreign_property_annual_submission_create_and_amend/def2/property_allowance_request.json
               all-other-allowances-request-TY-2026-27:
                 description: All Other Allowances request for TY 2026-27 and after
                 value:
-                  foreignProperty:
-                    - propertyId: 8e8b8450-dc1b-4360-8109-7067337b42cb
-                      adjustments:
-                        privateUseAdjustment: 4553.34
-                        balancingCharge: 3453.34
-                      allowances:
-                        annualInvestmentAllowance: 38330.95
-                        costOfReplacingDomesticItems: 41985.17
-                        otherCapitalAllowance: 1049.21
-                        zeroEmissionsCarAllowance: 1000.99
-                        structuredBuildingAllowance:
-                          - amount: 3545.12
-                            firstYear:
-                              qualifyingDate: '2020-03-29'
-                              qualifyingAmountExpenditure: 3453.34
-                            building:
-                              name: Green Oaks
-                              number: '12'
-                              postcode: TF3 4GH
+                  $ref: ./examples/foreign_property_annual_submission_create_and_amend/def3/all_other_allowances_request.json
               property-allowance-request-TY-2026-27:
                 description: Property Allowance request for TY 2026-27 and after
                 value:
-                  foreignProperty:
-                    - propertyId: 8e8b8450-dc1b-4360-8109-7067337b42cb
-                      adjustments:
-                        balancingCharge: 3453.34
-                      allowances:
-                        propertyIncomeAllowance: 200.25
+                  $ref: ./examples/foreign_property_annual_submission_create_and_amend/def3/property_allowance_request.json
       responses:
         '200':
           description: Success
@@ -15635,16 +14157,16 @@ paths:
                   value: *ref_22
                 FORMAT_DATE:
                   description: The supplied date format is not valid.
-                  value: *ref_63
+                  value: *ref_59
                 FORMAT_STRING:
                   description: One or more strings have been added with the incorrect format.
-                  value: *ref_64
+                  value: *ref_60
                 FORMAT_COUNTRY_CODE:
                   description: The format of the supplied Country Code field is not valid.
-                  value: *ref_50
+                  value: *ref_46
                 FORMAT_PROPERTY_ID:
                   description: The format of the supplied property ID field is not valid.
-                  value: *ref_53
+                  value: *ref_49
                 RULE_INCORRECT_OR_EMPTY_BODY_SUBMITTED:
                   description: An empty or non-matching body was submitted.
                   value: *ref_23
@@ -15657,33 +14179,33 @@ paths:
                   value: *ref_15
                 RULE_TYPE_OF_BUSINESS_INCORRECT:
                   description: The supplied Business ID does not represent a foreign property business.
-                  value: *ref_49
+                  value: *ref_45
                 RULE_BOTH_ALLOWANCES_SUPPLIED:
                   description: |
                     Both allowances and property income allowance must not be present at the same time.
-                  value: *ref_65
+                  value: *ref_61
                 RULE_BUILDING_NAME_NUMBER:
                   description: One of building name or number must be supplied.
-                  value: *ref_66
+                  value: *ref_62
                 RULE_COUNTRY_CODE:
                   description: Not a valid ISO 3166-1 alpha-3 country code.
-                  value: *ref_52
+                  value: *ref_48
                 RULE_DUPLICATE_COUNTRY_CODE:
                   description: |
                     The same countryCode cannot be supplied for multiple properties.
                     If there are multiple properties per country the adjustments and allowances should be the total across all properties.
-                  value: *ref_51
+                  value: *ref_47
                 RULE_DUPLICATE_PROPERTY_ID:
                   description: |
                     You cannot supply the same property ID for multiple properties.
-                  value: *ref_67
+                  value: *ref_63
                 RULE_PROPERTY_ID_MISMATCH:
                   description: |
                     The supplied property ID is not associated with the income source on record.
-                  value: *ref_68
+                  value: *ref_64
                 RULE_PROPERTY_INCOME_ALLOWANCE:
                   description: The propertyIncomeAllowance cannot be submitted if privateUseAdjustment is supplied.
-                  value: *ref_69
+                  value: *ref_65
                 RULE_INCORRECT_GOV_TEST_SCENARIO:
                   description: The request did not match any available Sandbox data. Check that the supplied Gov-Test-Scenario is correct for this endpoint version. This error will only be returned in the Sandbox environment.
                   value: *ref_17
@@ -16054,7 +14576,7 @@ paths:
             The minimum tax year is 2022-23. No gaps are allowed, for example, 2022-24 is not valid.
             (The minimum tax year in Sandbox is 2021-22.)        
             Maximum tax year supported is 2024-25.
-          schema: *ref_48
+          schema: *ref_44
           required: true
         - name: Accept
           in: header
@@ -16149,13 +14671,7 @@ paths:
                 example-response:
                   description: Default Example given any tax year
                   value:
-                    submissions:
-                      - submissionId: 4557ecb5-fd32-48cc-81f5-e6acd1099f3c
-                        fromDate: '2021-04-06'
-                        toDate: '2021-07-05'
-                      - submissionId: 46954a50-5127-41ec-bf63-0242ac130002
-                        fromDate: '2021-07-06'
-                        toDate: '2021-10-05'
+                    $ref: ./examples/property_period_summaries_list/def1/response.json
         '400':
           description: Bad request
           headers:
@@ -16304,7 +14820,7 @@ paths:
                   value: *ref_19
   /individuals/business/property/foreign/{nino}/{businessId}/details/{taxYear}:
     get:
-      summary: Retrieve Foreign Property Details  [test only]
+      summary: Retrieve Foreign Property Details
       security:
         - User-Restricted:
             - read:self-assessment
@@ -16330,7 +14846,7 @@ paths:
             The minimum tax year is 2026-27. No gaps are allowed, for example, 2026-28 is not valid.
 
             The foreign property must fall within the start and end dates of the associated foreign property income source, and the income source should not be ceased.
-          schema: &ref_70
+          schema: &ref_66
             type: string
             example: 2026-27
           required: true
@@ -16514,7 +15030,7 @@ paths:
                   value: *ref_12
                 FORMAT_PROPERTY_ID:
                   description: The format of the supplied property ID field is not valid.
-                  value: *ref_53
+                  value: *ref_49
                 RULE_TAX_YEAR_RANGE_INVALID:
                   description: Tax year range invalid. A tax year range of one year is required.
                   value: *ref_14
@@ -16614,7 +15130,7 @@ paths:
                   description: The supplied income source could not be found.
                   value: *ref_19
     post:
-      summary: Create Foreign Property Details  [test only]
+      summary: Create Foreign Property Details
       security:
         - User-Restricted:
             - write:self-assessment
@@ -16640,7 +15156,7 @@ paths:
             The minimum tax year is 2026-27. No gaps are allowed, for example, 2026-28 is not valid.
 
             The foreign property must fall within the start and end dates of the associated foreign property income source, and the income source should not be ceased.
-          schema: *ref_70
+          schema: *ref_66
           required: true
         - name: Accept
           in: header
@@ -16812,22 +15328,22 @@ paths:
                   value: *ref_13
                 FORMAT_PROPERTY_NAME:
                   description: The format of the supplied property name is not valid.
-                  value: &ref_71
+                  value: &ref_67
                     code: FORMAT_PROPERTY_NAME
                     message: The provided property name is invalid
                 FORMAT_END_DATE:
                   description: The format of the supplied end date is not valid.
-                  value: &ref_72
+                  value: &ref_68
                     code: FORMAT_END_DATE
                     message: The provided end date is invalid
                 FORMAT_END_REASON:
                   description: The format of the supplied end reason is not valid.
-                  value: &ref_73
+                  value: &ref_69
                     code: FORMAT_END_REASON
                     message: The provided end reason is invalid
                 FORMAT_COUNTRY_CODE:
                   description: The format of the supplied Country Code field is not valid.
-                  value: *ref_50
+                  value: *ref_46
                 RULE_INCORRECT_OR_EMPTY_BODY_SUBMITTED:
                   description: An empty or non-matching body was submitted.
                   value: *ref_23
@@ -16841,35 +15357,35 @@ paths:
                   value: *ref_29
                 RULE_DUPLICATE_PROPERTY_NAME:
                   description: The foreign property name already exists for the same country.
-                  value: &ref_74
+                  value: &ref_70
                     code: RULE_DUPLICATE_PROPERTY_NAME
                     message: Foreign property name already exists for the same country
                 RULE_TAX_YEAR_BEFORE_BUSINESS_START:
                   description: The requested tax year is before the first tax year in which the Foreign Property business was reported.
-                  value: &ref_75
+                  value: &ref_71
                     code: RULE_TAX_YEAR_BEFORE_BUSINESS_START
                     message: Foreign property cannot be reported for a tax year before the first tax year of the business
                 RULE_END_DATE_BEFORE_TAX_YEAR_START:
                   description: The end date is before the start of the tax year.
-                  value: &ref_76
+                  value: &ref_72
                     code: RULE_END_DATE_BEFORE_TAX_YEAR_START
                     message: The end date is before the start of the tax year
                 RULE_END_DATE_AFTER_TAX_YEAR_END:
                   description: The end date is after the end of the tax year.
-                  value: &ref_77
+                  value: &ref_73
                     code: RULE_END_DATE_AFTER_TAX_YEAR_END
                     message: The end date is after the end of the tax year
                 RULE_COUNTRY_CODE:
                   description: Not a valid ISO 3166-1 alpha-3 country code.
-                  value: *ref_52
+                  value: *ref_48
                 RULE_PROPERTY_BUSINESS_CEASED:
                   description: This foreign property business income source has ceased.
-                  value: &ref_78
+                  value: &ref_74
                     code: RULE_PROPERTY_BUSINESS_CEASED
                     message: Foreign property business income source has ceased
                 RULE_MISSING_END_DETAILS:
                   description: A foreign property with an end date must have an end reason, and a foreign property with an end reason must have an end date.
-                  value: &ref_79
+                  value: &ref_75
                     code: RULE_MISSING_END_DETAILS
                     message: End date and end reason must be supplied together
                 RULE_INCORRECT_GOV_TEST_SCENARIO:
@@ -16967,7 +15483,7 @@ paths:
                   value: *ref_19
   /individuals/business/property/foreign/{nino}/details/{propId}/{taxYear}:
     put:
-      summary: Update Foreign Property Details [test only]
+      summary: Update Foreign Property Details
       description: |
         This endpoint enables you to update the details of a foreign property for a given National Insurance number, foreign property ID and tax year. Please note that this endpoint is only available for tax years starting from 2026–27 onwards.
 
@@ -17009,7 +15525,7 @@ paths:
             The minimum tax year is 2026-27. No gaps are allowed, for example, 2026-28 is not valid.
 
             The foreign property must fall within the start and end dates of the associated foreign property income source, and the income source should not be ceased.
-          schema: *ref_70
+          schema: *ref_66
           required: true
         - name: Accept
           in: header
@@ -17152,19 +15668,19 @@ paths:
                   value: *ref_11
                 FORMAT_PROPERTY_ID:
                   description: The format of the supplied property ID field is not valid.
-                  value: *ref_53
+                  value: *ref_49
                 FORMAT_TAX_YEAR:
                   description: The format of the supplied taxYear value is not valid.
                   value: *ref_13
                 FORMAT_PROPERTY_NAME:
                   description: The format of the supplied property name is not valid.
-                  value: *ref_71
+                  value: *ref_67
                 FORMAT_END_DATE:
                   description: The format of the supplied end date is not valid.
-                  value: *ref_72
+                  value: *ref_68
                 FORMAT_END_REASON:
                   description: The format of the supplied end reason is not valid.
-                  value: *ref_73
+                  value: *ref_69
                 RULE_INCORRECT_OR_EMPTY_BODY_SUBMITTED:
                   description: An empty or non-matching body was submitted.
                   value: *ref_23
@@ -17178,22 +15694,22 @@ paths:
                   value: *ref_29
                 RULE_DUPLICATE_PROPERTY_NAME:
                   description: The foreign property name already exists for the same country.
-                  value: *ref_74
+                  value: *ref_70
                 RULE_TAX_YEAR_BEFORE_BUSINESS_START:
                   description: The requested tax year is before the first tax year in which the Foreign Property business was reported.
-                  value: *ref_75
+                  value: *ref_71
                 RULE_END_DATE_BEFORE_TAX_YEAR_START:
                   description: The end date is before the start of the tax year.
-                  value: *ref_76
+                  value: *ref_72
                 RULE_END_DATE_AFTER_TAX_YEAR_END:
                   description: The end date is after the end of the tax year.
-                  value: *ref_77
+                  value: *ref_73
                 RULE_PROPERTY_BUSINESS_CEASED:
                   description: This foreign property business income source has ceased.
-                  value: *ref_78
+                  value: *ref_74
                 RULE_MISSING_END_DETAILS:
                   description: A foreign property with an end date must have an end reason, and a foreign property with an end reason must have an end date.
-                  value: *ref_79
+                  value: *ref_75
                 RULE_INCORRECT_GOV_TEST_SCENARIO:
                   description: The request did not match any available Sandbox data. Check that the supplied Gov-Test-Scenario is correct for this endpoint version. This error will only be returned in the Sandbox environment.
                   value: *ref_17
