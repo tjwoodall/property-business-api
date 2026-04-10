@@ -61,12 +61,10 @@ tags:
 paths:
   /individuals/business/property/uk/{nino}/{businessId}/annual/{taxYear}:
     get:
-      summary: Retrieve a UK Property Business Annual Submission
       security:
       - User-Restricted:
         - read:self-assessment
     put:
-      summary: Create and Amend a UK Property Business Annual Submission
       security:
       - User-Restricted:
         - write:self-assessment
@@ -1012,100 +1010,81 @@ paths:
         - write:self-assessment
   /individuals/business/property/uk/{nino}/{businessId}/period/{taxYear}/{submissionId}:
     get:
-      summary: Retrieve a UK Property Income & Expenses Period Summary
       security:
       - User-Restricted:
         - read:self-assessment
     put:
-      summary: Amend a UK Property Income & Expenses Period Summary
       security:
       - User-Restricted:
         - write:self-assessment
   /individuals/business/property/uk/{nino}/{businessId}/cumulative/{taxYear}:
     get:
-      summary: Retrieve a UK Property Cumulative Period Summary
       security:
       - User-Restricted:
         - read:self-assessment
     put:
-      summary: Create and Amend a UK Property Cumulative Period Summary
       security:
       - User-Restricted:
         - write:self-assessment
   /individuals/business/property/uk/annual/furnished-holiday-lettings/{nino}/{taxYear}:
     get:
-      summary: Retrieve a Historic FHL UK Property Business Annual Submission
       security:
       - User-Restricted:
         - read:self-assessment
     put:
-      summary: Create and Amend a Historic FHL UK Property Business Annual Submission
       security:
       - User-Restricted:
         - write:self-assessment
     delete:
-      summary: Delete a Historic FHL UK Property Business Annual Submission
       security:
       - User-Restricted:
         - write:self-assessment
   /individuals/business/property/uk/annual/non-furnished-holiday-lettings/{nino}/{taxYear}:
     get:
-      summary: Retrieve a Historic Non-FHL UK Property Business Annual Submission
       security:
       - User-Restricted:
         - read:self-assessment
     put:
-      summary: Create and Amend a Historic Non-FHL UK Property Business Annual Submission
       security:
       - User-Restricted:
         - write:self-assessment
     delete:
-      summary: Delete a Historic Non-FHL UK Property Business Annual Submission
       security:
       - User-Restricted:
         - write:self-assessment
   /individuals/business/property/uk/period/furnished-holiday-lettings/{nino}:
     get:
-      summary: List Historic FHL UK Property Income & Expenses Period Summaries
       security:
       - User-Restricted:
         - read:self-assessment
     post:
-      summary: Create a Historic FHL UK Property Income & Expenses Period Summary
       security:
       - User-Restricted:
         - write:self-assessment
   /individuals/business/property/uk/period/furnished-holiday-lettings/{nino}/{periodId}:
     get:
-      summary: Retrieve a Historic FHL UK Property Income & Expenses Period Summary
       security:
       - User-Restricted:
         - read:self-assessment
     put:
-      summary: Amend a Historic FHL UK Property Income & Expenses Period Summary
       security:
       - User-Restricted:
         - write:self-assessment
   /individuals/business/property/uk/period/non-furnished-holiday-lettings/{nino}:
     get:
-      summary: List Historic Non-FHL UK Property Income & Expenses Period Summaries
       security:
       - User-Restricted:
         - read:self-assessment
     post:
-      summary: Create a Historic Non-FHL UK Property Income & Expenses Period Summary
       security:
       - User-Restricted:
         - write:self-assessment
   /individuals/business/property/uk/period/non-furnished-holiday-lettings/{nino}/{periodId}:
     get:
-      summary: Retrieve a Historic Non-FHL UK Property Income and Expenses Period
-        Summary
       security:
       - User-Restricted:
         - read:self-assessment
     put:
-      summary: Amend a Historic Non-FHL UK Property Income & Expenses Period Summary
       security:
       - User-Restricted:
         - write:self-assessment
@@ -2040,34 +2019,28 @@ paths:
         - write:self-assessment
   /individuals/business/property/foreign/{nino}/{businessId}/period/{taxYear}/{submissionId}:
     get:
-      summary: Retrieve a Foreign Property Income & Expenses Period Summary
       security:
       - User-Restricted:
         - read:self-assessment
     put:
-      summary: Amend a Foreign Property Income & Expenses Period Summary
       security:
       - User-Restricted:
         - write:self-assessment
   /individuals/business/property/foreign/{nino}/{businessId}/cumulative/{taxYear}:
     get:
-      summary: Retrieve a Foreign Property Cumulative Period Summary
       security:
       - User-Restricted:
         - read:self-assessment
     put:
-      summary: Create and Amend a Foreign Property Cumulative Period Summary
       security:
       - User-Restricted:
         - write:self-assessment
   /individuals/business/property/foreign/{nino}/{businessId}/annual/{taxYear}:
     get:
-      summary: Retrieve a Foreign Property Annual Submission
       security:
       - User-Restricted:
         - read:self-assessment
     put:
-      summary: Create and Amend a Foreign Property Annual Submission
       security:
       - User-Restricted:
         - write:self-assessment
@@ -2718,12 +2691,10 @@ paths:
         - read:self-assessment
   /individuals/business/property/foreign/{nino}/{businessId}/details/{taxYear}:
     get:
-      summary: Retrieve Foreign Property Details
       security:
       - User-Restricted:
         - read:self-assessment
     post:
-      summary: Create Foreign Property Details
       security:
       - User-Restricted:
         - write:self-assessment
