@@ -363,17 +363,17 @@ paths:
                                       properties:
                                         name:
                                           type: string
-                                          description: The name of the building.
+                                          description: The name of the building. Must not be empty or contain only whitespace.
                                           pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                           example: Green Oak’s
                                         number:
                                           type: string
-                                          description: The number of the building.
+                                          description: The number of the building. Must not be empty or contain only whitespace.
                                           pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                           example: '16'
                                         postcode:
                                           type: string
-                                          description: The postcode for the building.
+                                          description: The postcode for the building. Must not be empty or contain only whitespace.
                                           pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                           example: GF4 9JH
                                       required:
@@ -412,17 +412,17 @@ paths:
                                       properties:
                                         name:
                                           type: string
-                                          description: The name of the building.
+                                          description: The name of the building. Must not be empty or contain only whitespace.
                                           pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                           example: Green Oak’s
                                         number:
                                           type: string
-                                          description: The number of the building.
+                                          description: The number of the building. Must not be empty or contain only whitespace.
                                           pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                           example: '16'
                                         postcode:
                                           type: string
-                                          description: The postcode for the building.
+                                          description: The postcode for the building. Must not be empty or contain only whitespace.
                                           pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                           example: GF4 9JH
                                       required:
@@ -540,17 +540,17 @@ paths:
                                       properties:
                                         name:
                                           type: string
-                                          description: The name of the building.
+                                          description: The name of the building. Must not be empty or contain only whitespace.
                                           pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                           example: Green Oak’s
                                         number:
                                           type: string
-                                          description: The number of the building.
+                                          description: The number of the building. Must not be empty or contain only whitespace.
                                           pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                           example: '16'
                                         postcode:
                                           type: string
-                                          description: The postcode for the building.
+                                          description: The postcode for the building. Must not be empty or contain only whitespace.
                                           pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                           example: GF4 9JH
                                       required:
@@ -589,17 +589,17 @@ paths:
                                       properties:
                                         name:
                                           type: string
-                                          description: The name of the building.
+                                          description: The name of the building. Must not be empty or contain only whitespace.
                                           pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                           example: Green Oak’s
                                         number:
                                           type: string
-                                          description: The number of the building.
+                                          description: The number of the building. Must not be empty or contain only whitespace.
                                           pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                           example: '16'
                                         postcode:
                                           type: string
-                                          description: The postcode for the building.
+                                          description: The postcode for the building. Must not be empty or contain only whitespace.
                                           pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                           example: GF4 9JH
                                       required:
@@ -1134,17 +1134,17 @@ paths:
                                     properties:
                                       name:
                                         type: string
-                                        description: The name of the building.
+                                        description: The name of the building. Must not be empty or contain only whitespace.
                                         pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                         example: Green Oak’s
                                       number:
                                         type: string
-                                        description: The number of the building.
+                                        description: The number of the building. Must not be empty or contain only whitespace.
                                         pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                         example: '16'
                                       postcode:
                                         type: string
-                                        description: The postcode for the building.
+                                        description: The postcode for the building. Must not be empty or contain only whitespace.
                                         pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                         example: SW1A 2AA
                                     additionalProperties: false
@@ -1193,17 +1193,17 @@ paths:
                                     properties:
                                       name:
                                         type: string
-                                        description: The name of the building.
+                                        description: The name of the building. Must not be empty or contain only whitespace.
                                         pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                         example: Green Oak’s
                                       number:
                                         type: string
-                                        description: The number of the building.
+                                        description: The number of the building. Must not be empty or contain only whitespace.
                                         pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                         example: '16'
                                       postcode:
                                         type: string
-                                        description: The postcode for the building.
+                                        description: The postcode for the building. Must not be empty or contain only whitespace.
                                         pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                         example: SW1A 2AA
                                     additionalProperties: false
@@ -1352,17 +1352,17 @@ paths:
                                     properties:
                                       name:
                                         type: string
-                                        description: The name of the building.
+                                        description: The name of the building. Must not be empty or contain only whitespace.
                                         pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                         example: Green Oak’s
                                       number:
                                         type: string
-                                        description: The number of the building.
+                                        description: The number of the building. Must not be empty or contain only whitespace.
                                         pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                         example: '16'
                                       postcode:
                                         type: string
-                                        description: The postcode for the building.
+                                        description: The postcode for the building. Must not be empty or contain only whitespace.
                                         pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                         example: SW1A 2AA
                                     additionalProperties: false
@@ -1411,17 +1411,17 @@ paths:
                                     properties:
                                       name:
                                         type: string
-                                        description: The name of the building.
+                                        description: The name of the building. Must not be empty or contain only whitespace.
                                         pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                         example: Green Oak’s
                                       number:
                                         type: string
-                                        description: The number of the building.
+                                        description: The number of the building. Must not be empty or contain only whitespace.
                                         pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                         example: '16'
                                       postcode:
                                         type: string
-                                        description: The postcode for the building.
+                                        description: The postcode for the building. Must not be empty or contain only whitespace.
                                         pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                         example: SW1A 2AA
                                     additionalProperties: false
@@ -13041,17 +13041,17 @@ paths:
                                         properties:
                                           name:
                                             type: string
-                                            description: The name of the building.
+                                            description: The name of the building. Must not be empty or contain only whitespace.
                                             pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                             example: Green Oak’s
                                           number:
                                             type: string
-                                            description: The number of the building.
+                                            description: The number of the building. Must not be empty or contain only whitespace.
                                             pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                             example: '16'
                                           postcode:
                                             type: string
-                                            description: The postcode for the building.
+                                            description: The postcode for the building. Must not be empty or contain only whitespace.
                                             pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                             example: GF4 9JH
                                         additionalProperties: false
@@ -13156,17 +13156,17 @@ paths:
                                         properties:
                                           name:
                                             type: string
-                                            description: The name of the building.
+                                            description: The name of the building. Must not be empty or contain only whitespace.
                                             pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                             example: Green Oak’s
                                           number:
                                             type: string
-                                            description: The number of the building.
+                                            description: The number of the building. Must not be empty or contain only whitespace.
                                             pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                             example: '16'
                                           postcode:
                                             type: string
-                                            description: The postcode for the building.
+                                            description: The postcode for the building. Must not be empty or contain only whitespace.
                                             pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                             example: GF4 9JH
                                         additionalProperties: false
@@ -13272,17 +13272,17 @@ paths:
                                         properties:
                                           name:
                                             type: string
-                                            description: The name of the building.
+                                            description: The name of the building. Must not be empty or contain only whitespace.
                                             pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                             example: Green Oak’s
                                           number:
                                             type: string
-                                            description: The number of the building.
+                                            description: The number of the building. Must not be empty or contain only whitespace.
                                             pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                             example: '16'
                                           postcode:
                                             type: string
-                                            description: The postcode for the building.
+                                            description: The postcode for the building. Must not be empty or contain only whitespace.
                                             pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                             example: GF4 9JH
                                         additionalProperties: false
@@ -13739,17 +13739,17 @@ paths:
                                       properties:
                                         name:
                                           type: string
-                                          description: The name of the building.
+                                          description: The name of the building. Must not be empty or contain only whitespace.
                                           pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                           example: Green Oak’s
                                         number:
                                           type: string
-                                          description: The number of the building.
+                                          description: The number of the building. Must not be empty or contain only whitespace.
                                           pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                           example: '16'
                                         postcode:
                                           type: string
-                                          description: The postcode for the building.
+                                          description: The postcode for the building. Must not be empty or contain only whitespace.
                                           pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                           example: GF4 9JH
                                       additionalProperties: false
@@ -13876,17 +13876,17 @@ paths:
                                       properties:
                                         name:
                                           type: string
-                                          description: The name of the building.
+                                          description: The name of the building. Must not be empty or contain only whitespace.
                                           pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                           example: Green Oak’s
                                         number:
                                           type: string
-                                          description: The number of the building.
+                                          description: The number of the building. Must not be empty or contain only whitespace.
                                           pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                           example: '16'
                                         postcode:
                                           type: string
-                                          description: The postcode for the building.
+                                          description: The postcode for the building. Must not be empty or contain only whitespace.
                                           pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                           example: GF4 9JH
                                       additionalProperties: false
@@ -14015,17 +14015,17 @@ paths:
                                       properties:
                                         name:
                                           type: string
-                                          description: The name of the building.
+                                          description: The name of the building. Must not be empty or contain only whitespace.
                                           pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                           example: Green Oak’s
                                         number:
                                           type: string
-                                          description: The number of the building.
+                                          description: The number of the building. Must not be empty or contain only whitespace.
                                           pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                           example: '16'
                                         postcode:
                                           type: string
-                                          description: The postcode for the building.
+                                          description: The postcode for the building. Must not be empty or contain only whitespace.
                                           pattern: ^[0-9a-zA-Z{À-˿’}\- _&`():.'^]{1,90}$
                                           example: GF4 9JH
                                       additionalProperties: false
@@ -14934,7 +14934,7 @@ paths:
                           format: uuid
                           example: 8e8b8450-dc1b-4360-8109-7067337b42cb
                         propertyName:
-                          description: A customer-friendly name for the foreign property. This name will be unique for each country.
+                          description: A customer-friendly name for the foreign property. This name will be unique for each country. Must not be empty or contain only whitespace.
                           type: string
                           pattern: ^.{1,105}$
                           example: Bob & Bobby Co
@@ -15192,7 +15192,7 @@ paths:
               properties:
                 propertyName:
                   type: string
-                  description: A customer-friendly name for the foreign property. This name must be unique for each country. Uniqueness checks ignore differences in letter case and any leading or trailing spaces.
+                  description: A customer-friendly name for the foreign property. This name must be unique for each country. Uniqueness checks ignore differences in letter case and any leading or trailing spaces. Must not be empty or contain only whitespace.
                   example: Bob & Bobby Co
                   pattern: ^.{1,105}$
                 countryCode:
@@ -15564,7 +15564,7 @@ paths:
               properties:
                 propertyName:
                   type: string
-                  description: A customer-friendly name for the foreign property. This name must be unique for each country. Uniqueness checks ignore differences in letter case and any leading or trailing spaces.
+                  description: A customer-friendly name for the foreign property. This name must be unique for each country. Uniqueness checks ignore differences in letter case and any leading or trailing spaces. Must not be empty or contain only whitespace.
                   example: Bob & Bobby Co
                   pattern: ^.{1,105}$
                 endDate:
