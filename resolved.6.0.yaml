@@ -2797,6 +2797,7 @@ paths:
                   description: A customer-friendly name for the foreign property.
                     This name must be unique for each country. Uniqueness checks ignore
                     differences in letter case and any leading or trailing spaces.
+                    Must not be empty or contain only whitespace.
                   example: Bob & Bobby Co
                 endDate:
                   type: string
@@ -4149,7 +4150,8 @@ components:
           type: string
           description: A customer-friendly name for the foreign property. This name
             must be unique for each country. Uniqueness checks ignore differences
-            in letter case and any leading or trailing spaces.
+            in letter case and any leading or trailing spaces. Must not be empty or
+            contain only whitespace.
           example: Bob & Bobby Co
         endDate:
           type: string
