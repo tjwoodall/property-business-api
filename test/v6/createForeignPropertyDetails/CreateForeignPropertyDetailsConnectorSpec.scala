@@ -61,7 +61,7 @@ class CreateForeignPropertyDetailsConnectorSpec extends ConnectorSpec with Def1_
     protected val connector: CreateForeignPropertyDetailsConnector =
       new CreateForeignPropertyDetailsConnector(
         http = mockHttpClient,
-        appConfig = mockSharedAppConfig
+        appConfig = mockAppConfig
       )
 
     protected val requestBody: Def1_CreateForeignPropertyDetailsRequestBody = def1_CreateForeignPropertyDetailsModel

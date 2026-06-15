@@ -50,7 +50,7 @@ class CreateAmendHistoricFhlUkPropertyAnnualSubmissionConnectorSpec extends Conn
 
     protected val connector = new CreateAmendHistoricFhlUkPropertyAnnualSubmissionConnector(
       http = mockHttpClient,
-      appConfig = mockSharedAppConfig
+      appConfig = mockAppConfig
     )
 
     protected val requestBody: Def1_CreateAmendHistoricFhlUkPropertyAnnualSubmissionRequestBody =

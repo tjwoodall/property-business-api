@@ -69,7 +69,7 @@ class ListPropertyPeriodSummariesConnectorSpec extends ConnectorSpec {
 
     protected val connector: ListPropertyPeriodSummariesConnector = new ListPropertyPeriodSummariesConnector(
       http = mockHttpClient,
-      appConfig = mockSharedAppConfig
+      appConfig = mockAppConfig
     )
 
     protected val request: ListPropertyPeriodSummariesRequestData = ListPropertyPeriodSummariesRequestData(nino, businessId, taxYear)

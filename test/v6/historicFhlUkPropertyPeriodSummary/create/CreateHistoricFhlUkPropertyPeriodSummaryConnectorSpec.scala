@@ -50,7 +50,7 @@ class CreateHistoricFhlUkPropertyPeriodSummaryConnectorSpec extends ConnectorSpe
 
     protected val connector = new CreateHistoricFhlUkPropertyPeriodSummaryConnector(
       http = mockHttpClient,
-      appConfig = mockSharedAppConfig
+      appConfig = mockAppConfig
     )
 
     protected val requestBody: Def1_CreateHistoricFhlUkPiePeriodSummaryRequestBody =

@@ -70,7 +70,7 @@ class RetrieveHistoricNonFhlUkPropertyAnnualSubmissionConnectorSpec extends Conn
     protected val connector: RetrieveHistoricNonFhlUkPropertyAnnualSubmissionConnector =
       new RetrieveHistoricNonFhlUkPropertyAnnualSubmissionConnector(
         http = mockHttpClient,
-        appConfig = mockSharedAppConfig
+        appConfig = mockAppConfig
       )
 
     def stubHttpResponse(outcome: DownstreamOutcome[RetrieveHistoricNonFhlUkPropertyAnnualSubmissionResponse])

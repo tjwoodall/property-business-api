@@ -200,7 +200,7 @@ class RetrieveForeignPropertyPeriodSummaryConnectorSpec extends ConnectorSpec {
 
     protected val connector: RetrieveForeignPropertyPeriodSummaryConnector = new RetrieveForeignPropertyPeriodSummaryConnector(
       http = mockHttpClient,
-      appConfig = mockSharedAppConfig
+      appConfig = mockAppConfig
     )
 
     protected val request: RetrieveForeignPropertyPeriodSummaryRequestData =

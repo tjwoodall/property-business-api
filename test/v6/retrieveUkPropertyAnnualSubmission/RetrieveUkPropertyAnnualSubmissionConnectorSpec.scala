@@ -202,7 +202,7 @@ class RetrieveUkPropertyAnnualSubmissionConnectorSpec extends ConnectorSpec {
 
     protected val connector: RetrieveUkPropertyAnnualSubmissionConnector = new RetrieveUkPropertyAnnualSubmissionConnector(
       http = mockHttpClient,
-      appConfig = mockSharedAppConfig
+      appConfig = mockAppConfig
     )
 
     protected val request: RetrieveUkPropertyAnnualSubmissionRequestData = taxYear.year match {

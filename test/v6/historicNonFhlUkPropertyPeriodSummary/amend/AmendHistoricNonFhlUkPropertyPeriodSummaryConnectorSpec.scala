@@ -58,7 +58,7 @@ class AmendHistoricNonFhlUkPropertyPeriodSummaryConnectorSpec extends ConnectorS
 
     protected val connector: AmendHistoricNonFhlUkPropertyPeriodSummaryConnector = new AmendHistoricNonFhlUkPropertyPeriodSummaryConnector(
       http = mockHttpClient,
-      appConfig = mockSharedAppConfig
+      appConfig = mockAppConfig
     )
 
     private val requestBody: Def1_AmendHistoricNonFhlUkPropertyPeriodSummaryRequestBody =

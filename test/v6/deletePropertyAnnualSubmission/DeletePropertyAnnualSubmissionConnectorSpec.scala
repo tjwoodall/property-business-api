@@ -84,7 +84,7 @@ class DeletePropertyAnnualSubmissionConnectorSpec extends ConnectorSpec {
 
     val connector: DeletePropertyAnnualSubmissionConnector = new DeletePropertyAnnualSubmissionConnector(
       http = mockHttpClient,
-      appConfig = mockSharedAppConfig
+      appConfig = mockAppConfig
     )
 
     protected val request: DeletePropertyAnnualSubmissionRequestData =

@@ -72,7 +72,7 @@ class RetrieveHistoricFhlUkPropertyPeriodSummaryConnectorSpec extends ConnectorS
     protected val connector: RetrieveHistoricFhlUkPropertyPeriodSummaryConnector =
       new RetrieveHistoricFhlUkPropertyPeriodSummaryConnector(
         http = mockHttpClient,
-        appConfig = mockSharedAppConfig
+        appConfig = mockAppConfig
       )
 
     def stubHttpResponse(outcome: DownstreamOutcome[RetrieveHistoricFhlUkPropertyPeriodSummaryResponse])

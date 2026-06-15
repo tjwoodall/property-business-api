@@ -267,7 +267,7 @@ class EnrolmentsAuthServiceSpec extends ServiceSpec with MockAppConfig {
   trait Test {
     val mockAuthConnector: AuthConnector = mock[AuthConnector]
 
-    lazy val enrolmentsAuthService: EnrolmentsAuthService = new EnrolmentsAuthService(mockAuthConnector, mockSharedAppConfig)
+    lazy val enrolmentsAuthService: EnrolmentsAuthService = new EnrolmentsAuthService(mockAuthConnector, mockAppConfig)
 
     object MockedAuthConnector {
 
@@ -280,7 +280,7 @@ class EnrolmentsAuthServiceSpec extends ServiceSpec with MockAppConfig {
     }
 
     def mockConfidenceLevelCheckConfig(authValidationEnabled: Boolean): Unit = {
-      MockedSharedAppConfig.confidenceLevelConfig
+      MockedAppConfig.confidenceLevelConfig
         .anyNumberOfTimes()
         .returns(
           ConfidenceLevelConfig(

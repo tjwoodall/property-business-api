@@ -88,7 +88,7 @@ class CreateForeignPropertyPeriodSummaryConnectorSpec extends ConnectorSpec {
 
     protected val connector: CreateForeignPropertyPeriodSummaryConnector = new CreateForeignPropertyPeriodSummaryConnector(
       http = mockHttpClient,
-      appConfig = mockSharedAppConfig
+      appConfig = mockAppConfig
     )
 
     protected val requestBodyDef1: Def1_CreateForeignPropertyPeriodSummaryRequestBody =

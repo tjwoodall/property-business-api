@@ -36,7 +36,7 @@ class DeleteHistoricFhlUkPropertyAnnualSubmissionConnectorSpec extends Connector
       "using FHL data" in new IfsTest with Test {
         def propertyType: HistoricPropertyType = HistoricPropertyType.Fhl
 
-        MockedSharedAppConfig.featureSwitchConfig.anyNumberOfTimes() returns Configuration("passIntentHeader.enabled" -> true)
+        MockedAppConfig.featureSwitchConfig.anyNumberOfTimes() returns Configuration("passIntentHeader.enabled" -> true)
 
         willPut(
           url = url"$baseUrl/income-tax/nino/$nino/uk-properties/furnished-holiday-lettings/annual-summaries/2022",
@@ -51,7 +51,7 @@ class DeleteHistoricFhlUkPropertyAnnualSubmissionConnectorSpec extends Connector
       "using non-FHL data" in new IfsTest with Test {
         def propertyType: HistoricPropertyType = HistoricPropertyType.NonFhl
 
-        MockedSharedAppConfig.featureSwitchConfig.anyNumberOfTimes() returns Configuration("passIntentHeader.enabled" -> true)
+        MockedAppConfig.featureSwitchConfig.anyNumberOfTimes() returns Configuration("passIntentHeader.enabled" -> true)
 
         willPut(
           url = url"$baseUrl/income-tax/nino/$nino/uk-properties/other/annual-summaries/2022",
@@ -66,7 +66,7 @@ class DeleteHistoricFhlUkPropertyAnnualSubmissionConnectorSpec extends Connector
       "isPassIntentHeader feature switch is off" in new IfsTest with Test {
         def propertyType: HistoricPropertyType = HistoricPropertyType.NonFhl
 
-        MockedSharedAppConfig.featureSwitchConfig.anyNumberOfTimes() returns Configuration("passIntentHeader.enabled" -> true)
+        MockedAppConfig.featureSwitchConfig.anyNumberOfTimes() returns Configuration("passIntentHeader.enabled" -> true)
 
         willPut(url = url"$baseUrl/income-tax/nino/$nino/uk-properties/other/annual-summaries/2022", body = JsObject.empty)
           .returns(Future.successful(expectedOutcome))
@@ -88,7 +88,7 @@ class DeleteHistoricFhlUkPropertyAnnualSubmissionConnectorSpec extends Connector
 
     val connector: DeleteHistoricFhlUkPropertyAnnualSubmissionConnector = new DeleteHistoricFhlUkPropertyAnnualSubmissionConnector(
       http = mockHttpClient,
-      appConfig = mockSharedAppConfig
+      appConfig = mockAppConfig
     )
 
     protected val request: Def1_DeleteHistoricFhlUkPropertyAnnualSubmissionRequestData =

@@ -40,7 +40,7 @@ class CreateUkPropertyPeriodSummaryConnectorSpec extends ConnectorSpec {
 
         val connector: CreateUkPropertyPeriodSummaryConnector = new CreateUkPropertyPeriodSummaryConnector(
           http = mockHttpClient,
-          appConfig = mockSharedAppConfig
+          appConfig = mockAppConfig
         )
 
         willPost(
@@ -60,7 +60,7 @@ class CreateUkPropertyPeriodSummaryConnectorSpec extends ConnectorSpec {
 
         val connector: CreateUkPropertyPeriodSummaryConnector = new CreateUkPropertyPeriodSummaryConnector(
           http = mockHttpClient,
-          appConfig = mockSharedAppConfig
+          appConfig = mockAppConfig
         )
 
         willPost(
@@ -81,7 +81,7 @@ class CreateUkPropertyPeriodSummaryConnectorSpec extends ConnectorSpec {
 
         val connector: CreateUkPropertyPeriodSummaryConnector = new CreateUkPropertyPeriodSummaryConnector(
           http = mockHttpClient,
-          appConfig = mockSharedAppConfig
+          appConfig = mockAppConfig
         )
 
         willPost(

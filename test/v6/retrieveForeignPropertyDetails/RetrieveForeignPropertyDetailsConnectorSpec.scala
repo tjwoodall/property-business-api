@@ -49,7 +49,7 @@ class RetrieveForeignPropertyDetailsConnectorSpec extends ConnectorSpec {
     self: ConnectorTest =>
 
     val connector: RetrieveForeignPropertyDetailsConnector =
-      new RetrieveForeignPropertyDetailsConnector(http = mockHttpClient, appConfig = mockSharedAppConfig)
+      new RetrieveForeignPropertyDetailsConnector(http = mockHttpClient, appConfig = mockAppConfig)
 
     def responseWith(details: Seq[ForeignPropertyDetailsEntry]): Def1_RetrieveForeignPropertyDetailsResponse =
       Def1_RetrieveForeignPropertyDetailsResponse(details)
@@ -84,7 +84,7 @@ class RetrieveForeignPropertyDetailsConnectorSpec extends ConnectorSpec {
       }
 
       "return ForeignResult for None propertyId" in new HipTest with Test {
-        MockedSharedAppConfig.featureSwitchConfig
+        MockedAppConfig.featureSwitchConfig
           .anyNumberOfTimes()
           .returns(
             Configuration("passIntentHeader.enabled" -> false)

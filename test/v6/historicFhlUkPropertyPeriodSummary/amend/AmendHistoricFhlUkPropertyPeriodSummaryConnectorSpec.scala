@@ -53,7 +53,7 @@ class AmendHistoricFhlUkPropertyPeriodSummaryConnectorSpec extends ConnectorSpec
 
     protected val connector = new AmendHistoricFhlUkPropertyPeriodSummaryConnector(
       http = mockHttpClient,
-      appConfig = mockSharedAppConfig
+      appConfig = mockAppConfig
     )
 
     protected val requestBody: Def1_AmendHistoricFhlUkPropertyPeriodSummaryRequestBody =

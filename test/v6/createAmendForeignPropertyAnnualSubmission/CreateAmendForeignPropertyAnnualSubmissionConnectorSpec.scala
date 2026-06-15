@@ -95,7 +95,7 @@ class CreateAmendForeignPropertyAnnualSubmissionConnectorSpec extends ConnectorS
 
     protected val connector = new CreateAmendForeignPropertyAnnualSubmissionConnector(
       http = mockHttpClient,
-      appConfig = mockSharedAppConfig
+      appConfig = mockAppConfig
     )
 
     protected val request: CreateAmendForeignPropertyAnnualSubmissionRequestData = taxYear.year match {

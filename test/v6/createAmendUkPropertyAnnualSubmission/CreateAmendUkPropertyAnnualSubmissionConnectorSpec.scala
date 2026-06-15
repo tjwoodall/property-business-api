@@ -110,7 +110,7 @@ class CreateAmendUkPropertyAnnualSubmissionConnectorSpec extends ConnectorSpec {
 
     protected val connector: CreateAmendUkPropertyAnnualSubmissionConnector = new CreateAmendUkPropertyAnnualSubmissionConnector(
       http = mockHttpClient,
-      appConfig = mockSharedAppConfig
+      appConfig = mockAppConfig
     )
 
     protected val request: CreateAmendUkPropertyAnnualSubmissionRequestData = Def1_CreateAmendUkPropertyAnnualSubmissionRequestData(

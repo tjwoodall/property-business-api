@@ -65,7 +65,7 @@ class VersionRoutingRequestHandlerSpec extends UnitSpec with Inside with MockApp
       "use it" in new Test {
         val maybeAcceptHeader: Option[String] = None
 
-        MockedSharedAppConfig
+        MockedAppConfig
           .endpointsEnabled(Version3)
           .returns(true)
           .anyNumberOfTimes()
@@ -78,7 +78,7 @@ class VersionRoutingRequestHandlerSpec extends UnitSpec with Inside with MockApp
     "the handler isn't found" should {
       "try without the trailing slash" in new Test {
         val maybeAcceptHeader: Option[String] = None
-        MockedSharedAppConfig.endpointsEnabled(Version3).returns(true).anyNumberOfTimes()
+        MockedAppConfig.endpointsEnabled(Version3).returns(true).anyNumberOfTimes()
 
         val result: Option[Handler] = requestHandler.routeRequest(buildRequest(""))
         result shouldBe Some(DefaultHandler)
@@ -99,7 +99,7 @@ class VersionRoutingRequestHandlerSpec extends UnitSpec with Inside with MockApp
     withClue("request ends with a trailing slash...") {
       new Test {
         val maybeAcceptHeader: Option[String] = Some(s"application/vnd.hmrc.$version+json")
-        MockedSharedAppConfig.endpointsEnabled(version).returns(true).anyNumberOfTimes()
+        MockedAppConfig.endpointsEnabled(version).returns(true).anyNumberOfTimes()
 
         val result: Option[Handler] = requestHandler.routeRequest(buildRequest(s"$path/"))
         result shouldBe Some(handler)
@@ -108,7 +108,7 @@ class VersionRoutingRequestHandlerSpec extends UnitSpec with Inside with MockApp
     withClue("request doesn't end with a trailing slash...") {
       new Test {
         val maybeAcceptHeader: Option[String] = Some(s"application/vnd.hmrc.$version+json")
-        MockedSharedAppConfig.endpointsEnabled(version).returns(true).anyNumberOfTimes()
+        MockedAppConfig.endpointsEnabled(version).returns(true).anyNumberOfTimes()
 
         val result: Option[Handler] = requestHandler.routeRequest(buildRequest(s"$path"))
         result shouldBe Some(handler)
@@ -173,7 +173,7 @@ class VersionRoutingRequestHandlerSpec extends UnitSpec with Inside with MockApp
     (() => filters.filters).stubs().returns(Nil)
 
     protected val requestHandler: VersionRoutingRequestHandler =
-      new VersionRoutingRequestHandler(routingMap, errorHandler, httpConfiguration, mockSharedAppConfig, filters, actionBuilder)
+      new VersionRoutingRequestHandler(routingMap, errorHandler, httpConfiguration, mockAppConfig, filters, actionBuilder)
 
     protected def buildRequest(path: String): RequestHeader =
       maybeAcceptHeader

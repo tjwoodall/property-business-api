@@ -75,7 +75,7 @@ trait ControllerTestRunner extends MockEnrolmentsAuthService with MockMtdIdLooku
     MockedEnrolmentsAuthService.authoriseUser()
     MockedIdGenerator.generateCorrelationId.returns(correlationId)
 
-    MockedSharedAppConfig
+    MockedAppConfig
       .deprecationFor(apiVersion)
       .returns(NotDeprecated.valid)
       .anyNumberOfTimes()

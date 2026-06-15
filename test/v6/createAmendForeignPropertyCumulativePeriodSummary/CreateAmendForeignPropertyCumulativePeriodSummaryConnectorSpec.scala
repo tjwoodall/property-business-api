@@ -92,7 +92,7 @@ class CreateAmendForeignPropertyCumulativePeriodSummaryConnectorSpec extends Con
     protected val connector: CreateAmendForeignPropertyCumulativePeriodSummaryConnector =
       new CreateAmendForeignPropertyCumulativePeriodSummaryConnector(
         http = mockHttpClient,
-        appConfig = mockSharedAppConfig
+        appConfig = mockAppConfig
       )
 
     protected val response: Unit = ()

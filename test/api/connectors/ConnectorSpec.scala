@@ -123,13 +123,13 @@ trait ConnectorSpec extends UnitSpec with Status with MimeTypes with HeaderNames
   protected trait DesTest extends StandardConnectorTest {
     val name = "des"
 
-    MockedSharedAppConfig.desDownstreamConfig.anyNumberOfTimes() returns config
+    MockedAppConfig.desDownstreamConfig.anyNumberOfTimes() returns config
   }
 
   protected trait IfsTest extends StandardConnectorTest {
     override val name = "ifs"
 
-    MockedSharedAppConfig.ifsDownstreamConfig.anyNumberOfTimes() returns config
+    MockedAppConfig.ifsDownstreamConfig.anyNumberOfTimes() returns config
   }
 
   protected trait HipTest extends ConnectorTest {
@@ -149,7 +149,7 @@ trait ConnectorSpec extends UnitSpec with Status with MimeTypes with HeaderNames
       "Gov-Test-Scenario"    -> "DEFAULT"
     ) ++ intent.map("intent" -> _)
 
-    MockedSharedAppConfig.hipDownstreamConfig
+    MockedAppConfig.hipDownstreamConfig
       .anyNumberOfTimes() returns BasicAuthDownstreamConfig(this.baseUrl, environment, clientId, clientSecret, Some(allowedHeaders))
 
   }

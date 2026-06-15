@@ -32,10 +32,10 @@ class MtdIdLookupConnectorSpec extends ConnectorSpec {
 
     val connector = new MtdIdLookupConnector(
       http = mockHttpClient,
-      appConfig = mockSharedAppConfig
+      appConfig = mockAppConfig
     )
 
-    MockedSharedAppConfig.mtdIdBaseUrl returns baseUrl
+    MockedAppConfig.mtdIdBaseUrl returns baseUrl
   }
 
   "getMtdId" should {

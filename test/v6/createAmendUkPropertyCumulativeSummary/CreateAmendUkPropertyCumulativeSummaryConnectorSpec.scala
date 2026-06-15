@@ -86,7 +86,7 @@ class CreateAmendUkPropertyCumulativeSummaryConnectorSpec extends ConnectorSpec 
 
     protected val connector: CreateAmendUkPropertyCumulativeSummaryConnector = new CreateAmendUkPropertyCumulativeSummaryConnector(
       http = mockHttpClient,
-      appConfig = mockSharedAppConfig
+      appConfig = mockAppConfig
     )
 
   }

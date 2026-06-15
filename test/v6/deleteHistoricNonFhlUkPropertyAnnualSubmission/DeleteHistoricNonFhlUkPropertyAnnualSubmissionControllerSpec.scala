@@ -104,11 +104,11 @@ class DeleteHistoricNonFhlUkPropertyAnnualSubmissionControllerSpec
       idGenerator = mockIdGenerator
     )
 
-    MockedSharedAppConfig.featureSwitchConfig.anyNumberOfTimes() returns Configuration(
+    MockedAppConfig.featureSwitchConfig.anyNumberOfTimes() returns Configuration(
       "supporting-agents-access-control.enabled" -> true
     )
 
-    MockedSharedAppConfig.endpointAllowsSupportingAgents(controller.endpointName).anyNumberOfTimes() returns false
+    MockedAppConfig.endpointAllowsSupportingAgents(controller.endpointName).anyNumberOfTimes() returns false
 
     protected val requestData: DeleteHistoricNonFhlUkPropertyAnnualSubmissionRequestData =
       Def1_DeleteHistoricNonFhlUkPropertyAnnualSubmissionRequestData(Nino(validNino), taxYear)

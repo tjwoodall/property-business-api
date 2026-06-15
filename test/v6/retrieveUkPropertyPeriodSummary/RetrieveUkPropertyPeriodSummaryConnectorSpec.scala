@@ -163,7 +163,7 @@ class RetrieveUkPropertyPeriodSummaryConnectorSpec extends ConnectorSpec with Re
 
     protected val connector: RetrieveUkPropertyPeriodSummaryConnector = new RetrieveUkPropertyPeriodSummaryConnector(
       http = mockHttpClient,
-      appConfig = mockSharedAppConfig
+      appConfig = mockAppConfig
     )
 
     protected val request: RetrieveUkPropertyPeriodSummaryRequestData =

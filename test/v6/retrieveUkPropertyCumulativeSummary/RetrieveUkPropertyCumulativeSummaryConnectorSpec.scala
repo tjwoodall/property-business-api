@@ -37,7 +37,7 @@ class RetrieveUkPropertyCumulativeSummaryConnectorSpec extends ConnectorSpec {
     self: ConnectorTest =>
 
     val connector: RetrieveUkPropertyCumulativeSummaryConnector =
-      new RetrieveUkPropertyCumulativeSummaryConnector(http = mockHttpClient, appConfig = mockSharedAppConfig)
+      new RetrieveUkPropertyCumulativeSummaryConnector(http = mockHttpClient, appConfig = mockAppConfig)
 
     val requestData: RetrieveUkPropertyCumulativeSummaryRequestData =
       Def1_RetrieveUkPropertyCumulativeSummaryRequestData(Nino(nino), BusinessId(businessId), taxYear = TaxYear.fromMtd("2025-26"))
@@ -51,7 +51,7 @@ class RetrieveUkPropertyCumulativeSummaryConnectorSpec extends ConnectorSpec {
 
     "the request is made and UK property data is returned" should {
       "return UkResult" in new HipTest with Test {
-        MockedSharedAppConfig.featureSwitchConfig.anyNumberOfTimes() returns
+        MockedAppConfig.featureSwitchConfig.anyNumberOfTimes() returns
           Configuration("passIntentHeader.enabled" -> false)
 
         private val response = responseWith(Some(UkProperty(None, None)))
@@ -66,7 +66,7 @@ class RetrieveUkPropertyCumulativeSummaryConnectorSpec extends ConnectorSpec {
 
     "the request is made and non-UK property data is returned (e.g. because the businessId is for a foreign property)" should {
       "return NonUkResult" in new HipTest with Test {
-        MockedSharedAppConfig.featureSwitchConfig.anyNumberOfTimes() returns
+        MockedAppConfig.featureSwitchConfig.anyNumberOfTimes() returns
           Configuration("passIntentHeader.enabled" -> false)
         private val response = responseWith(None)
 
@@ -80,7 +80,7 @@ class RetrieveUkPropertyCumulativeSummaryConnectorSpec extends ConnectorSpec {
 
     "isPassIntentHeader feature switch is on" must {
       "pass UK_PROPERTY intent" in new HipTest with Test {
-        MockedSharedAppConfig.featureSwitchConfig.anyNumberOfTimes() returns
+        MockedAppConfig.featureSwitchConfig.anyNumberOfTimes() returns
           Configuration("passIntentHeader.enabled" -> true)
         private val response = responseWith(None)
 

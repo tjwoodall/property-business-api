@@ -69,7 +69,7 @@ class UpdateForeignPropertyDetailsConnectorSpec extends ConnectorSpec {
 
     protected val connector: UpdateForeignPropertyDetailsConnector = new UpdateForeignPropertyDetailsConnector(
       http = mockHttpClient,
-      appConfig = mockSharedAppConfig
+      appConfig = mockAppConfig
     )
 
     private val requestBody: Def1_UpdateForeignPropertyDetailsRequestBody =

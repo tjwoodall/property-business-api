@@ -39,7 +39,7 @@ class DeleteHistoricNonFhlUkPropertyAnnualSubmissionConnectorSpec extends Connec
 
       "sending a non-FHL request" in new IfsTest with Test {
 
-        MockedSharedAppConfig.featureSwitchConfig.anyNumberOfTimes().returns(Configuration("passIntentHeader.enabled" -> true))
+        MockedAppConfig.featureSwitchConfig.anyNumberOfTimes().returns(Configuration("passIntentHeader.enabled" -> true))
 
         willPut(
           url = url"$baseUrl/income-tax/nino/$nino/uk-properties/other/annual-summaries/2022",
@@ -53,7 +53,7 @@ class DeleteHistoricNonFhlUkPropertyAnnualSubmissionConnectorSpec extends Connec
 
       "isPassIntentHeader feature switch is off" in new IfsTest with Test {
 
-        MockedSharedAppConfig.featureSwitchConfig.anyNumberOfTimes() returns Configuration("passIntentHeader.enabled" -> false)
+        MockedAppConfig.featureSwitchConfig.anyNumberOfTimes() returns Configuration("passIntentHeader.enabled" -> false)
 
         willPut(url = url"$baseUrl/income-tax/nino/$nino/uk-properties/other/annual-summaries/2022", body = JsObject.empty)
           .returns(Future.successful(expectedOutcome))
@@ -70,7 +70,7 @@ class DeleteHistoricNonFhlUkPropertyAnnualSubmissionConnectorSpec extends Connec
 
     val connector: DeleteHistoricNonFhlUkPropertyAnnualSubmissionConnector = new DeleteHistoricNonFhlUkPropertyAnnualSubmissionConnector(
       http = mockHttpClient,
-      appConfig = mockSharedAppConfig
+      appConfig = mockAppConfig
     )
 
     protected val request: DeleteHistoricNonFhlUkPropertyAnnualSubmissionRequestData =

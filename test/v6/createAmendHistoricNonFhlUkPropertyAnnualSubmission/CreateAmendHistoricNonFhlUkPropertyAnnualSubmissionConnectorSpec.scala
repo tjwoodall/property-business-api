@@ -53,7 +53,7 @@ class CreateAmendHistoricNonFhlUkPropertyAnnualSubmissionConnectorSpec extends C
 
     protected val connector = new CreateAmendHistoricNonFhlUkPropertyAnnualSubmissionConnector(
       http = mockHttpClient,
-      appConfig = mockSharedAppConfig
+      appConfig = mockAppConfig
     )
 
     protected val body: Def1_CreateAmendHistoricNonFhlUkPropertyAnnualSubmissionRequestBody =

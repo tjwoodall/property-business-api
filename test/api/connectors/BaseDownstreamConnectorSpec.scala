@@ -63,7 +63,7 @@ class BaseDownstreamConnectorSpec extends UnitSpec with MockHttpClient with Mock
 
   val connector: BaseDownstreamConnector = new BaseDownstreamConnector {
     val http: HttpClientV2   = mockHttpClient
-    val appConfig: AppConfig = mockSharedAppConfig
+    val appConfig: AppConfig = mockAppConfig
   }
 
   private def uri(apiContractHeaders: Seq[(String, String)] = standardContractHeaders, passThroughHeaderNames: Seq[String] = Nil) =

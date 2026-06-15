@@ -95,7 +95,7 @@ class AmendUkPropertyPeriodSummaryConnectorSpec extends ConnectorSpec {
         val request =
           Def2_AmendUkPropertyPeriodSummaryRequestData(Nino(nino), taxYear, BusinessId(businessId), SubmissionId(submissionId), requestBody)
 
-        val connector = new AmendUkPropertyPeriodSummaryConnector(mockHttpClient, mockSharedAppConfig)
+        val connector = new AmendUkPropertyPeriodSummaryConnector(mockHttpClient, mockAppConfig)
 
         val outcome = Right(ResponseWrapper(correlationId, ()))
 
@@ -119,7 +119,7 @@ class AmendUkPropertyPeriodSummaryConnectorSpec extends ConnectorSpec {
         val request =
           Def2_AmendUkPropertyPeriodSummarySubmissionRequestData(Nino(nino), taxYear, BusinessId(businessId), SubmissionId(submissionId), requestBody)
 
-        val connector = new AmendUkPropertyPeriodSummaryConnector(mockHttpClient, mockSharedAppConfig)
+        val connector = new AmendUkPropertyPeriodSummaryConnector(mockHttpClient, mockAppConfig)
 
         val outcome = Right(ResponseWrapper(correlationId, ()))
 
@@ -142,7 +142,7 @@ class AmendUkPropertyPeriodSummaryConnectorSpec extends ConnectorSpec {
 
     protected val connector: AmendUkPropertyPeriodSummaryConnector = new AmendUkPropertyPeriodSummaryConnector(
       http = mockHttpClient,
-      appConfig = mockSharedAppConfig
+      appConfig = mockAppConfig
     )
 
     private val requestBody: Def1_AmendUkPropertyPeriodSummaryRequestBody = Def1_AmendUkPropertyPeriodSummaryRequestBody(None, None)

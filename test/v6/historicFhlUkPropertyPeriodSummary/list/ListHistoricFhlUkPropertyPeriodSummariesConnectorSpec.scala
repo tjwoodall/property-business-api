@@ -50,7 +50,7 @@ class ListHistoricFhlUkPropertyPeriodSummariesConnectorSpec extends ConnectorSpe
 
     protected val connector: ListHistoricFhlUkPropertyPeriodSummariesConnector = new ListHistoricFhlUkPropertyPeriodSummariesConnector(
       http = mockHttpClient,
-      appConfig = mockSharedAppConfig
+      appConfig = mockAppConfig
     )
 
     protected val request: ListHistoricFhlUkPropertyPeriodSummariesRequestData =
