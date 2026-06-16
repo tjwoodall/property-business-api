@@ -20,16 +20,25 @@
             "balancingCharge": {
               "type": "number",
               "description": "If an item for which capital allowance was claimed has been sold, given away or is no longer in use. The value must be between 0 and 99999999999.99 up to 2 decimal places.",
+              "minimum": 0,
+              "maximum": 99999999999.99,
+              "multipleOf": 0.01,
               "example": "5000.99"
             },
             "privateUseAdjustment": {
               "type": "number",
               "description": "Any adjustments that are not solely for the property business. The value must be between 0 and 99999999999.99 up to 2 decimal places.",
+              "minimum": 0,
+              "maximum": 99999999999.99,
+              "multipleOf": 0.01,
               "example": "5000.99"
             },
             "businessPremisesRenovationAllowanceBalancingCharges": {
               "type": "number",
               "description": "Income from the sale or grant of a long lease for a premium of renovated business premises within 7 years of first use. The value must be between 0 and 99999999999.99 up to 2 decimal places.",
+              "minimum": 0,
+              "maximum": 99999999999.99,
+              "multipleOf": 0.01,
               "example": "5000.99"
             },
             "nonResidentLandlord": {
@@ -64,26 +73,41 @@
             "annualInvestmentAllowance": {
               "type": "number",
               "description": "The amount claimed on equipment bought (except cars) up to maximum annual amount. The value must be between 0 and 99999999999.99 up to 2 decimal places.",
+              "minimum": 0,
+              "maximum": 99999999999.99,
+              "multipleOf": 0.01,
               "example": "5000.99"
             },
             "businessPremisesRenovationAllowance": {
               "type": "number",
               "description": "Allowance for renovation or conversion of derelict business properties. The value must be between 0 and 99999999999.99 up to 2 decimal places.",
+              "minimum": 0,
+              "maximum": 99999999999.99,
+              "multipleOf": 0.01,
               "example": "5000.99"
             },
             "otherCapitalAllowance": {
               "type": "number",
               "description": "All other capital allowances. The value must be between 0 and 99999999999.99 up to 2 decimal places.",
+              "minimum": 0,
+              "maximum": 99999999999.99,
+              "multipleOf": 0.01,
               "example": "5000.99"
             },
             "costOfReplacingDomesticItems": {
               "type": "number",
               "description": "Cost of Replacing Domestic Items - formerly Wear and Tear allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.",
+              "minimum": 0,
+              "maximum": 99999999999.99,
+              "multipleOf": 0.01,
               "example": "5000.99"
             },
             "propertyIncomeAllowance": {
               "type": "number",
               "description": "The amount of tax exemption for individuals with income from land or property. The value must be between 0 and 1000.00 up to 2 decimal places.",
+              "minimum": 0,
+              "maximum": 1000.00,
+              "multipleOf": 0.01,
               "example": "100.25"
             },
             "structuredBuildingAllowance": {
@@ -95,6 +119,9 @@
                   "amount": {
                     "type": "number",
                     "description": "The amount of structured building allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.",
+                    "minimum": 0,
+                    "maximum": 99999999999.99,
+                    "multipleOf": 0.01,
                     "example": "5000.99"
                   },
                   "firstYear": {
@@ -103,12 +130,16 @@
                     "properties": {
                       "qualifyingDate": {
                         "type": "string",
+                        "format": "date",
                         "description": "The date qualified for structured building allowance. Must conform to the format YYYY-MM-DD.",
                         "example": "2020-01-01"
                       },
                       "qualifyingAmountExpenditure": {
                         "type": "number",
                         "description": "The amount of qualifying expenditure. The value must be between 0 and 99999999999.99 up to 2 decimal places.",
+                        "minimum": 0,
+                        "maximum": 99999999999.99,
+                        "multipleOf": 0.01,
                         "example": "5000.99"
                       }
                     },
@@ -160,6 +191,9 @@
                   "amount": {
                     "type": "number",
                     "description": "The amount of enhanced structured building allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.",
+                    "minimum": 0,
+                    "maximum": 99999999999.99,
+                    "multipleOf": 0.01,
                     "example": "5000.99"
                   },
                   "firstYear": {
@@ -168,12 +202,16 @@
                     "properties": {
                       "qualifyingDate": {
                         "type": "string",
+                        "format": "date",
                         "description": "The date qualified for enhanced structured building allowance. Must conform to the format YYYY-MM-DD.",
                         "example": "2020-01-01"
                       },
                       "qualifyingAmountExpenditure": {
                         "type": "number",
                         "description": "The amount of qualifying expenditure. The value must be between 0 and 99999999999.99 up to 2 decimal places.",
+                        "minimum": 0,
+                        "maximum": 99999999999.99,
+                        "multipleOf": 0.01,
                         "example": "5000.99"
                       }
                     },
@@ -219,6 +257,9 @@
             "zeroEmissionsCarAllowance": {
               "type": "number",
               "description": "The amount of zero emissions car allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.",
+              "minimum": 0,
+              "maximum": 99999999999.99,
+              "multipleOf": 0.01,
               "example": "5000.99"
             }
           },
