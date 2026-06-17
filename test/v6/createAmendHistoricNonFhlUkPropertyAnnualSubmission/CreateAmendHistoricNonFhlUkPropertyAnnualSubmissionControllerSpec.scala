@@ -16,20 +16,20 @@
 
 package v6.createAmendHistoricNonFhlUkPropertyAnnualSubmission
 
+import api.controllers.{ControllerBaseSpec, ControllerTestRunner}
+import api.models.audit.{AuditEvent, AuditResponse, GenericAuditDetail}
+import api.models.auth.UserDetails
+import api.models.domain.{Nino, TaxYear}
+import api.models.errors.*
+import api.models.outcomes.ResponseWrapper
+import api.services.{MockAuditService, MockEnrolmentsAuthService, MockMtdIdLookupService}
+import api.utils.MockIdGenerator
 import common.models.errors.RuleMisalignedPeriodError
 import play.api.Configuration
 import play.api.libs.json.{JsObject, JsValue, Json}
 import play.api.mvc.Result
 import play.api.test.FakeRequest
-import shared.controllers.{ControllerBaseSpec, ControllerTestRunner}
-import shared.models.audit.{AuditEvent, AuditResponse, GenericAuditDetail}
-import shared.models.auth.UserDetails
-import shared.models.domain.{Nino, TaxYear}
-import shared.models.errors._
-import shared.models.outcomes.ResponseWrapper
-import shared.services.{MockAuditService, MockEnrolmentsAuthService, MockMtdIdLookupService}
-import shared.utils.MockIdGenerator
-import v6.createAmendHistoricNonFhlUkPropertyAnnualSubmission.model.request._
+import v6.createAmendHistoricNonFhlUkPropertyAnnualSubmission.model.request.*
 import v6.createAmendHistoricNonFhlUkPropertyAnnualSubmission.model.response.CreateAmendHistoricNonFhlUkPropertyAnnualSubmissionResponse
 
 import scala.concurrent.ExecutionContext.Implicits.global
@@ -95,11 +95,11 @@ class CreateAmendHistoricNonFhlUkPropertyAnnualSubmissionControllerSpec
         idGenerator = mockIdGenerator
       )
 
-    MockedSharedAppConfig.featureSwitchConfig.anyNumberOfTimes() returns Configuration(
+    MockedAppConfig.featureSwitchConfig.anyNumberOfTimes() returns Configuration(
       "supporting-agents-access-control.enabled" -> true
     )
 
-    MockedSharedAppConfig.endpointAllowsSupportingAgents(controller.endpointName).anyNumberOfTimes() returns false
+    MockedAppConfig.endpointAllowsSupportingAgents(controller.endpointName).anyNumberOfTimes() returns false
 
     protected def callController(): Future[Result] = controller.handleRequest(validNino, taxYear)(fakePutRequest(requestBodyJson))
 

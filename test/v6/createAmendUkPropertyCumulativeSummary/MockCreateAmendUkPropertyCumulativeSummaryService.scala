@@ -16,12 +16,13 @@
 
 package v6.createAmendUkPropertyCumulativeSummary
 
-import shared.controllers.RequestContext
-import shared.services.ServiceOutcome
+import api.controllers.RequestContext
+import api.services.ServiceOutcome
 import org.scalamock.handlers.CallHandler
 import org.scalamock.scalatest.MockFactory
 import org.scalatest.TestSuite
 import v6.createAmendUkPropertyCumulativeSummary.model.request.CreateAmendUkPropertyCumulativeSummaryRequestData
+
 import scala.concurrent.{ExecutionContext, Future}
 
 trait MockCreateAmendUkPropertyCumulativeSummaryService extends TestSuite with MockFactory {

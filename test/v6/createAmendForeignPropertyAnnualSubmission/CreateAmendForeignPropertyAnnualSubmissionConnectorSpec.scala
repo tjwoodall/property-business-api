@@ -16,9 +16,9 @@
 
 package v6.createAmendForeignPropertyAnnualSubmission
 
-import shared.connectors.{ConnectorSpec, DownstreamOutcome}
-import shared.models.domain.{BusinessId, Nino, TaxYear}
-import shared.models.outcomes.ResponseWrapper
+import api.connectors.{ConnectorSpec, DownstreamOutcome}
+import api.models.domain.{BusinessId, Nino, TaxYear}
+import api.models.outcomes.ResponseWrapper
 import uk.gov.hmrc.http.StringContextOps
 import v6.createAmendForeignPropertyAnnualSubmission.def1.model.request.*
 import v6.createAmendForeignPropertyAnnualSubmission.def2.model.request.*
@@ -95,7 +95,7 @@ class CreateAmendForeignPropertyAnnualSubmissionConnectorSpec extends ConnectorS
 
     protected val connector = new CreateAmendForeignPropertyAnnualSubmissionConnector(
       http = mockHttpClient,
-      appConfig = mockSharedAppConfig
+      appConfig = mockAppConfig
     )
 
     protected val request: CreateAmendForeignPropertyAnnualSubmissionRequestData = taxYear.year match {

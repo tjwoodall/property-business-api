@@ -16,11 +16,11 @@
 
 package v6.retrieveUkPropertyAnnualSubmission
 
-import shared.config.SharedAppConfig
-import shared.connectors.DownstreamUri.{HipUri, IfsUri}
-import shared.connectors.httpparsers.StandardDownstreamHttpParser.reads
-import shared.connectors.{BaseDownstreamConnector, DownstreamOutcome, DownstreamUri}
-import shared.models.outcomes.ResponseWrapper
+import api.config.AppConfig
+import api.connectors.DownstreamUri.{HipUri, IfsUri}
+import api.connectors.httpparsers.StandardDownstreamHttpParser.reads
+import api.connectors.{BaseDownstreamConnector, DownstreamOutcome, DownstreamUri}
+import api.models.outcomes.ResponseWrapper
 import uk.gov.hmrc.http.HeaderCarrier
 import uk.gov.hmrc.http.client.HttpClientV2
 import v6.retrieveUkPropertyAnnualSubmission.model.request.RetrieveUkPropertyAnnualSubmissionRequestData
@@ -30,7 +30,7 @@ import javax.inject.{Inject, Singleton}
 import scala.concurrent.{ExecutionContext, Future}
 
 @Singleton
-class RetrieveUkPropertyAnnualSubmissionConnector @Inject() (val http: HttpClientV2, val appConfig: SharedAppConfig) extends BaseDownstreamConnector {
+class RetrieveUkPropertyAnnualSubmissionConnector @Inject() (val http: HttpClientV2, val appConfig: AppConfig) extends BaseDownstreamConnector {
 
   def retrieveUkProperty(request: RetrieveUkPropertyAnnualSubmissionRequestData)(implicit
       hc: HeaderCarrier,

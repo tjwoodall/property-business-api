@@ -16,23 +16,22 @@
 
 package v6.retrieveForeignPropertyCumulativeSummary
 
+import api.config.AppConfig
+import api.controllers.{AuthorisedController, EndpointLogContext, RequestContext, RequestHandler}
+import api.services.{EnrolmentsAuthService, MtdIdLookupService}
+import api.utils.IdGenerator
 import play.api.mvc.{Action, AnyContent, ControllerComponents}
-import shared.config.SharedAppConfig
-import shared.controllers.{AuthorisedController, EndpointLogContext, RequestContext, RequestHandler}
-import shared.services.{EnrolmentsAuthService, MtdIdLookupService}
-import shared.utils.IdGenerator
 
 import javax.inject.{Inject, Singleton}
 import scala.concurrent.ExecutionContext
 
 @Singleton
-class RetrieveForeignPropertyCumulativeSummaryController @Inject() (
-    val authService: EnrolmentsAuthService,
-    val lookupService: MtdIdLookupService,
-    validatorFactory: RetrieveForeignPropertyCumulativeSummaryValidatorFactory,
-    service: RetrieveForeignPropertyCumulativeSummaryService,
-    cc: ControllerComponents,
-    idGenerator: IdGenerator)(implicit ec: ExecutionContext, appConfig: SharedAppConfig)
+class RetrieveForeignPropertyCumulativeSummaryController @Inject() (val authService: EnrolmentsAuthService,
+                                                                    val lookupService: MtdIdLookupService,
+                                                                    validatorFactory: RetrieveForeignPropertyCumulativeSummaryValidatorFactory,
+                                                                    service: RetrieveForeignPropertyCumulativeSummaryService,
+                                                                    cc: ControllerComponents,
+                                                                    idGenerator: IdGenerator)(implicit ec: ExecutionContext, appConfig: AppConfig)
     extends AuthorisedController(cc) {
 
   override val endpointName: String = "retrieve-foreign-property-cumulative-summary"

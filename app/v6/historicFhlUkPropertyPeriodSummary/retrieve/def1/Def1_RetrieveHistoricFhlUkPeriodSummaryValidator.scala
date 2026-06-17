@@ -16,14 +16,14 @@
 
 package v6.historicFhlUkPropertyPeriodSummary.retrieve.def1
 
+import api.controllers.validators.Validator
+import api.controllers.validators.resolvers.*
+import api.models.domain.TaxYear
+import api.models.errors.MtdError
 import cats.data.Validated
 import cats.implicits.*
 import common.controllers.validators.resolvers.ResolvePeriodId
 import config.PropertyBusinessConfig
-import shared.controllers.validators.Validator
-import shared.controllers.validators.resolvers.*
-import shared.models.domain.TaxYear
-import shared.models.errors.MtdError
 import v6.historicFhlUkPropertyPeriodSummary.retrieve.model.request.*
 
 import javax.inject.Inject

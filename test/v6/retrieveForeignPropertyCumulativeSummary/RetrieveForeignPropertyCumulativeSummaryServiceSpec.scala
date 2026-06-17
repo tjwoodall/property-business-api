@@ -16,15 +16,15 @@
 
 package v6.retrieveForeignPropertyCumulativeSummary
 
-import common.models.errors.{RuleTypeOfBusinessIncorrectError, PropertyIdFormatError}
-import shared.models.domain.{BusinessId, Nino, TaxYear}
-import shared.models.errors.*
-import shared.models.outcomes.ResponseWrapper
-import shared.services.ServiceSpec
-import v6.retrieveForeignPropertyCumulativeSummary.model.{ForeignResult, NonForeignResult}
+import api.models.domain.{BusinessId, Nino, TaxYear}
+import api.models.errors.*
+import api.models.outcomes.ResponseWrapper
+import api.services.ServiceSpec
+import common.models.errors.{PropertyIdFormatError, RuleTypeOfBusinessIncorrectError}
 import v6.retrieveForeignPropertyCumulativeSummary.def1.model.Def1_RetrieveForeignPropertyCumulativeSummaryFixture
 import v6.retrieveForeignPropertyCumulativeSummary.def1.model.request.Def1_RetrieveForeignPropertyCumulativeSummaryRequestData
 import v6.retrieveForeignPropertyCumulativeSummary.model.request.RetrieveForeignPropertyCumulativeSummaryRequestData
+import v6.retrieveForeignPropertyCumulativeSummary.model.{ForeignResult, NonForeignResult}
 
 import scala.concurrent.Future
 

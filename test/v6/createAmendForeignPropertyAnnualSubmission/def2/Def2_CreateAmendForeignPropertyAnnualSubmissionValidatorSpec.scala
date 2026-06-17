@@ -16,14 +16,14 @@
 
 package v6.createAmendForeignPropertyAnnualSubmission.def2
 
+import api.models.domain.{BusinessId, Nino, TaxYear}
+import api.models.errors.*
+import api.models.utils.JsonErrorValidators
+import api.utils.UnitSpec
 import common.models.errors.{RuleBothAllowancesSuppliedError, RuleBuildingNameNumberError, RuleDuplicateCountryCodeError}
 import play.api.libs.json.*
-import shared.models.domain.{BusinessId, Nino, TaxYear}
-import shared.models.errors.*
-import shared.models.utils.JsonErrorValidators
-import shared.utils.UnitSpec
-import v6.createAmendForeignPropertyAnnualSubmission.def2.model.request.def2_foreignProperty.*
 import v6.createAmendForeignPropertyAnnualSubmission.def2.model.request.*
+import v6.createAmendForeignPropertyAnnualSubmission.def2.model.request.def2_foreignProperty.*
 import v6.createAmendForeignPropertyAnnualSubmission.model.request.CreateAmendForeignPropertyAnnualSubmissionRequestData
 
 class Def2_CreateAmendForeignPropertyAnnualSubmissionValidatorSpec extends UnitSpec with JsonErrorValidators {

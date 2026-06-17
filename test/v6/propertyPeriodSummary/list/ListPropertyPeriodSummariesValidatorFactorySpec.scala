@@ -16,8 +16,8 @@
 
 package v6.propertyPeriodSummary.list
 
+import api.utils.UnitSpec
 import config.MockPropertyBusinessConfig
-import shared.utils.UnitSpec
 import v6.propertyPeriodSummary.list.def1.Def1_ListPropertyPeriodSummariesValidator
 
 class ListPropertyPeriodSummariesValidatorFactorySpec extends UnitSpec with MockPropertyBusinessConfig {

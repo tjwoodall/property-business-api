@@ -16,11 +16,11 @@
 
 package v6.retrieveForeignPropertyCumulativeSummary
 
+import api.models.domain.{TaxYear, TaxYearPropertyCheckSupport}
+import api.models.errors.{RuleTaxYearNotSupportedError, RuleTaxYearRangeInvalidError, TaxYearFormatError}
+import api.utils.UnitSpec
 import cats.data.Validated.{Invalid, Valid}
 import org.scalatestplus.scalacheck.ScalaCheckDrivenPropertyChecks
-import shared.models.domain.{TaxYear, TaxYearPropertyCheckSupport}
-import shared.models.errors.{RuleTaxYearNotSupportedError, RuleTaxYearRangeInvalidError, TaxYearFormatError}
-import shared.utils.UnitSpec
 
 class RetrieveForeignPropertyCumulativeSummarySchemaSpec extends UnitSpec with ScalaCheckDrivenPropertyChecks with TaxYearPropertyCheckSupport {
 

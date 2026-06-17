@@ -16,11 +16,11 @@
 
 package v6.retrieveForeignPropertyAnnualSubmission.def3
 
+import api.models.domain.{BusinessId, Nino, TaxYear}
+import api.models.errors.*
+import api.utils.UnitSpec
 import common.models.domain.PropertyId
 import common.models.errors.PropertyIdFormatError
-import shared.models.domain.{BusinessId, Nino, TaxYear}
-import shared.models.errors.*
-import shared.utils.UnitSpec
 import v6.retrieveForeignPropertyAnnualSubmission.def3.request.Def3_RetrieveForeignPropertyAnnualSubmissionRequestData
 
 class Def3_RetrieveForeignPropertyAnnualSubmissionValidatorSpec extends UnitSpec {

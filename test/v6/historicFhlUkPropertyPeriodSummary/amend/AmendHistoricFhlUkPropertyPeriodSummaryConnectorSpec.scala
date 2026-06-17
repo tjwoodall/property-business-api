@@ -16,10 +16,10 @@
 
 package v6.historicFhlUkPropertyPeriodSummary.amend
 
+import api.connectors.{ConnectorSpec, DownstreamOutcome}
+import api.models.domain.Nino
+import api.models.outcomes.ResponseWrapper
 import common.models.domain.PeriodId
-import shared.connectors.{ConnectorSpec, DownstreamOutcome}
-import shared.models.domain.Nino
-import shared.models.outcomes.ResponseWrapper
 import uk.gov.hmrc.http.StringContextOps
 import v6.historicFhlUkPropertyPeriodSummary.amend.request.{
   Def1_AmendHistoricFhlUkPropertyPeriodSummaryRequestBody,
@@ -53,7 +53,7 @@ class AmendHistoricFhlUkPropertyPeriodSummaryConnectorSpec extends ConnectorSpec
 
     protected val connector = new AmendHistoricFhlUkPropertyPeriodSummaryConnector(
       http = mockHttpClient,
-      appConfig = mockSharedAppConfig
+      appConfig = mockAppConfig
     )
 
     protected val requestBody: Def1_AmendHistoricFhlUkPropertyPeriodSummaryRequestBody =

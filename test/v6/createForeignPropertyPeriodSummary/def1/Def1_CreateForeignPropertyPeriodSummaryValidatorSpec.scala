@@ -16,16 +16,16 @@
 
 package v6.createForeignPropertyPeriodSummary.def1
 
+import api.models.domain.{BusinessId, Nino, TaxYear}
+import api.models.errors.*
+import api.models.utils.JsonErrorValidators
+import api.utils.UnitSpec
 import common.models.errors.{RuleBothExpensesSuppliedError, RuleDuplicateCountryCodeError, RuleToDateBeforeFromDateError}
 import config.MockPropertyBusinessConfig
-import play.api.libs.json._
-import shared.models.domain.{BusinessId, Nino, TaxYear}
-import shared.models.errors._
-import shared.models.utils.JsonErrorValidators
-import shared.utils.UnitSpec
-import v6.createForeignPropertyPeriodSummary.def1.model.request.Def1_foreignFhlEea._
-import v6.createForeignPropertyPeriodSummary.def1.model.request.Def1_foreignPropertyEntry._
-import v6.createForeignPropertyPeriodSummary.model.request._
+import play.api.libs.json.*
+import v6.createForeignPropertyPeriodSummary.def1.model.request.Def1_foreignFhlEea.*
+import v6.createForeignPropertyPeriodSummary.def1.model.request.Def1_foreignPropertyEntry.*
+import v6.createForeignPropertyPeriodSummary.model.request.*
 
 class Def1_CreateForeignPropertyPeriodSummaryValidatorSpec extends UnitSpec with MockPropertyBusinessConfig with JsonErrorValidators {
   private implicit val correlationId: String = "1234"

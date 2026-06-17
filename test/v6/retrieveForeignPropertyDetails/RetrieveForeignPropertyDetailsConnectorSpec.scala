@@ -16,11 +16,11 @@
 
 package v6.retrieveForeignPropertyDetails
 
+import api.connectors.ConnectorSpec
+import api.models.domain.{BusinessId, Nino, TaxYear, Timestamp}
+import api.models.outcomes.ResponseWrapper
 import common.models.domain.PropertyId
 import play.api.Configuration
-import shared.connectors.ConnectorSpec
-import shared.models.domain.{BusinessId, Nino, TaxYear, Timestamp}
-import shared.models.outcomes.ResponseWrapper
 import uk.gov.hmrc.http.StringContextOps
 import v6.retrieveForeignPropertyDetails.def1.model.request.Def1_RetrieveForeignPropertyDetailsRequestData
 import v6.retrieveForeignPropertyDetails.def1.model.response.{Def1_RetrieveForeignPropertyDetailsResponse, ForeignPropertyDetailsEntry}
@@ -49,7 +49,7 @@ class RetrieveForeignPropertyDetailsConnectorSpec extends ConnectorSpec {
     self: ConnectorTest =>
 
     val connector: RetrieveForeignPropertyDetailsConnector =
-      new RetrieveForeignPropertyDetailsConnector(http = mockHttpClient, appConfig = mockSharedAppConfig)
+      new RetrieveForeignPropertyDetailsConnector(http = mockHttpClient, appConfig = mockAppConfig)
 
     def responseWith(details: Seq[ForeignPropertyDetailsEntry]): Def1_RetrieveForeignPropertyDetailsResponse =
       Def1_RetrieveForeignPropertyDetailsResponse(details)
@@ -84,7 +84,7 @@ class RetrieveForeignPropertyDetailsConnectorSpec extends ConnectorSpec {
       }
 
       "return ForeignResult for None propertyId" in new HipTest with Test {
-        MockedSharedAppConfig.featureSwitchConfig
+        MockedAppConfig.featureSwitchConfig
           .anyNumberOfTimes()
           .returns(
             Configuration("passIntentHeader.enabled" -> false)

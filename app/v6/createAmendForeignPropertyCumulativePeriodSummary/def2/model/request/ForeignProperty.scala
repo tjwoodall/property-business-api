@@ -16,9 +16,9 @@
 
 package v6.createAmendForeignPropertyCumulativePeriodSummary.def2.model.request
 
+import api.utils.EmptinessChecker
+import api.utils.EmptinessChecker.field
 import play.api.libs.json.{Json, OFormat}
-import shared.utils.EmptinessChecker
-import shared.utils.EmptinessChecker.field
 
 case class ForeignProperty(
     propertyId: String,

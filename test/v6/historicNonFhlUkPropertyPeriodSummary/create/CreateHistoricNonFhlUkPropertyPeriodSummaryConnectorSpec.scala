@@ -16,9 +16,9 @@
 
 package v6.historicNonFhlUkPropertyPeriodSummary.create
 
-import shared.connectors.{ConnectorSpec, DownstreamOutcome}
-import shared.models.domain.Nino
-import shared.models.outcomes.ResponseWrapper
+import api.connectors.{ConnectorSpec, DownstreamOutcome}
+import api.models.domain.Nino
+import api.models.outcomes.ResponseWrapper
 import uk.gov.hmrc.http.StringContextOps
 import v6.historicNonFhlUkPropertyPeriodSummary.create.model.request.{
   Def1_CreateHistoricNonFhlUkPropertyPeriodSummaryRequestBody,
@@ -52,7 +52,7 @@ class CreateHistoricNonFhlUkPropertyPeriodSummaryConnectorSpec extends Connector
 
     protected val connector: CreateHistoricNonFhlUkPropertyPeriodSummaryConnector = new CreateHistoricNonFhlUkPropertyPeriodSummaryConnector(
       http = mockHttpClient,
-      appConfig = mockSharedAppConfig
+      appConfig = mockAppConfig
     )
 
     protected val requestBody: Def1_CreateHistoricNonFhlUkPropertyPeriodSummaryRequestBody =

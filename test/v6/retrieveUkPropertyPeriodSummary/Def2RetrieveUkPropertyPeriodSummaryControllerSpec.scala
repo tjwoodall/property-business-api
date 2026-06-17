@@ -16,15 +16,15 @@
 
 package v6.retrieveUkPropertyPeriodSummary
 
+import api.controllers.{ControllerBaseSpec, ControllerTestRunner}
+import api.models.domain.{BusinessId, Nino, TaxYear}
+import api.models.errors.*
+import api.models.outcomes.ResponseWrapper
 import common.models.domain.SubmissionId
 import play.api.Configuration
 import play.api.mvc.Result
-import shared.controllers.{ControllerBaseSpec, ControllerTestRunner}
-import shared.models.domain.{BusinessId, Nino, TaxYear}
-import shared.models.errors._
-import shared.models.outcomes.ResponseWrapper
 import v6.retrieveUkPropertyPeriodSummary.def2.model.Def2_RetrieveUkPropertyPeriodSummaryFixture
-import v6.retrieveUkPropertyPeriodSummary.model.request._
+import v6.retrieveUkPropertyPeriodSummary.model.request.*
 import v6.retrieveUkPropertyPeriodSummary.model.response.RetrieveUkPropertyPeriodSummaryResponse
 
 import scala.concurrent.ExecutionContext.Implicits.global
@@ -84,11 +84,11 @@ class Def2RetrieveUkPropertyPeriodSummaryControllerSpec
       idGenerator = mockIdGenerator
     )
 
-    MockedSharedAppConfig.featureSwitchConfig.anyNumberOfTimes() returns Configuration(
+    MockedAppConfig.featureSwitchConfig.anyNumberOfTimes() returns Configuration(
       "supporting-agents-access-control.enabled" -> true
     )
 
-    MockedSharedAppConfig.endpointAllowsSupportingAgents(controller.endpointName).anyNumberOfTimes() returns false
+    MockedAppConfig.endpointAllowsSupportingAgents(controller.endpointName).anyNumberOfTimes() returns false
 
     protected def callController(): Future[Result] = controller.handleRequest(validNino, businessId, taxYear, submissionId)(fakeGetRequest)
 

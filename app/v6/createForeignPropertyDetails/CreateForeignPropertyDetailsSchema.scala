@@ -16,12 +16,12 @@
 
 package v6.createForeignPropertyDetails
 
+import api.controllers.validators.resolvers.ResolveTaxYearMinimum
+import api.models.domain.TaxYear
+import api.models.errors.MtdError
+import api.schema.DownstreamReadable
 import cats.data.Validated
 import play.api.libs.json.Reads
-import shared.controllers.validators.resolvers.ResolveTaxYearMinimum
-import shared.models.domain.TaxYear
-import shared.models.errors.MtdError
-import shared.schema.DownstreamReadable
 import v6.createForeignPropertyDetails.def1.model.response.Def1_CreateForeignPropertyDetailsResponse
 import v6.createForeignPropertyDetails.model.response.CreateForeignPropertyDetailsResponse
 

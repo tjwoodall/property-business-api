@@ -16,8 +16,8 @@
 
 package v6.historicFhlUkPropertyPeriodSummary.retrieve.def1.response
 
+import api.utils.UnitSpec
 import play.api.libs.json.Json
-import shared.utils.UnitSpec
 import v6.historicFhlUkPropertyPeriodSummary.retrieve.def1.model.response.{PeriodIncome, RentARoomIncome}
 
 class PeriodIncomeSpec extends UnitSpec {

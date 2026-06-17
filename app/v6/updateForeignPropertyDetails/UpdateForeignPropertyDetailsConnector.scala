@@ -16,10 +16,10 @@
 
 package v6.updateForeignPropertyDetails
 
-import shared.config.SharedAppConfig
-import shared.connectors.DownstreamUri.HipUri
-import shared.connectors.httpparsers.StandardDownstreamHttpParser.readsEmpty
-import shared.connectors.{BaseDownstreamConnector, DownstreamOutcome}
+import api.config.AppConfig
+import api.connectors.DownstreamUri.HipUri
+import api.connectors.httpparsers.StandardDownstreamHttpParser.readsEmpty
+import api.connectors.{BaseDownstreamConnector, DownstreamOutcome}
 import uk.gov.hmrc.http.HeaderCarrier
 import uk.gov.hmrc.http.client.HttpClientV2
 import v6.updateForeignPropertyDetails.model.request.UpdateForeignPropertyDetailsRequestData
@@ -28,7 +28,7 @@ import javax.inject.{Inject, Singleton}
 import scala.concurrent.{ExecutionContext, Future}
 
 @Singleton
-class UpdateForeignPropertyDetailsConnector @Inject() (val http: HttpClientV2, val appConfig: SharedAppConfig) extends BaseDownstreamConnector {
+class UpdateForeignPropertyDetailsConnector @Inject() (val http: HttpClientV2, val appConfig: AppConfig) extends BaseDownstreamConnector {
 
   def update(request: UpdateForeignPropertyDetailsRequestData)(implicit
       hc: HeaderCarrier,

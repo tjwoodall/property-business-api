@@ -16,16 +16,16 @@
 
 package v6.historicNonFhlUkPropertyPeriodSummary.create.def1
 
+import api.controllers.validators.Validator
+import api.models.domain.Nino
+import api.models.errors.*
+import api.models.utils.JsonErrorValidators
+import api.utils.UnitSpec
 import common.models.errors.{RuleBothExpensesSuppliedError, RuleToDateBeforeFromDateError}
 import config.MockPropertyBusinessConfig
-import play.api.libs.json._
-import shared.controllers.validators.Validator
-import shared.models.domain.Nino
-import shared.models.errors._
-import shared.models.utils.JsonErrorValidators
-import shared.utils.UnitSpec
-import v6.historicNonFhlUkPropertyPeriodSummary.create.def1.model.request._
-import v6.historicNonFhlUkPropertyPeriodSummary.create.model.request._
+import play.api.libs.json.*
+import v6.historicNonFhlUkPropertyPeriodSummary.create.def1.model.request.*
+import v6.historicNonFhlUkPropertyPeriodSummary.create.model.request.*
 
 class Def1_CreateHistoricNonFhlUkPropertyPeriodSummaryValidatorSpec extends UnitSpec with MockPropertyBusinessConfig with JsonErrorValidators {
 

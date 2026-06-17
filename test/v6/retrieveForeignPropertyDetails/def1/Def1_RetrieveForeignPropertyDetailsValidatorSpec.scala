@@ -16,11 +16,11 @@
 
 package v6.retrieveForeignPropertyDetails.def1
 
+import api.models.domain.{BusinessId, Nino, TaxYear}
+import api.models.errors.*
+import api.utils.UnitSpec
 import common.models.domain.PropertyId
 import common.models.errors.PropertyIdFormatError
-import shared.models.domain.{BusinessId, Nino, TaxYear}
-import shared.models.errors.*
-import shared.utils.UnitSpec
 import v6.retrieveForeignPropertyDetails.def1.model.request.Def1_RetrieveForeignPropertyDetailsRequestData
 
 class Def1_RetrieveForeignPropertyDetailsValidatorSpec extends UnitSpec {

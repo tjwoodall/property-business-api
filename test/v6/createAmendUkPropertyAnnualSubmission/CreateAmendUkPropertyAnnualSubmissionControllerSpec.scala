@@ -16,18 +16,18 @@
 
 package v6.createAmendUkPropertyAnnualSubmission
 
+import api.controllers.{ControllerBaseSpec, ControllerTestRunner}
+import api.models.audit.{AuditEvent, AuditResponse, GenericAuditDetail}
+import api.models.domain.{BusinessId, Nino, TaxYear}
+import api.models.errors.*
+import api.models.outcomes.ResponseWrapper
+import api.services.MockAuditService
 import play.api.Configuration
 import play.api.libs.json.{JsValue, Json}
 import play.api.mvc.Result
 import play.api.test.FakeRequest
-import shared.controllers.{ControllerBaseSpec, ControllerTestRunner}
-import shared.models.audit.{AuditEvent, AuditResponse, GenericAuditDetail}
-import shared.models.domain.{BusinessId, Nino, TaxYear}
-import shared.models.errors._
-import shared.models.outcomes.ResponseWrapper
-import shared.services.MockAuditService
-import v6.createAmendUkPropertyAnnualSubmission.def1.model.request.ukFhlProperty._
-import v6.createAmendUkPropertyAnnualSubmission.def1.model.request.ukProperty._
+import v6.createAmendUkPropertyAnnualSubmission.def1.model.request.ukFhlProperty.*
+import v6.createAmendUkPropertyAnnualSubmission.def1.model.request.ukProperty.*
 import v6.createAmendUkPropertyAnnualSubmission.def1.model.request.ukPropertyRentARoom.CreateAmendUkPropertyAdjustmentsRentARoom
 import v6.createAmendUkPropertyAnnualSubmission.def1.model.request.{
   Def1_CreateAmendUkPropertyAnnualSubmissionRequestBody,
@@ -99,11 +99,11 @@ class CreateAmendUkPropertyAnnualSubmissionControllerSpec
 
     protected def callController(): Future[Result] = controller.handleRequest(validNino, businessId, taxYear)(fakePutRequest(requestBodyJson))
 
-    MockedSharedAppConfig.featureSwitchConfig.anyNumberOfTimes() returns Configuration(
+    MockedAppConfig.featureSwitchConfig.anyNumberOfTimes() returns Configuration(
       "supporting-agents-access-control.enabled" -> true
     )
 
-    MockedSharedAppConfig.endpointAllowsSupportingAgents(controller.endpointName).anyNumberOfTimes() returns false
+    MockedAppConfig.endpointAllowsSupportingAgents(controller.endpointName).anyNumberOfTimes() returns false
 
     protected def event(auditResponse: AuditResponse, requestBody: Option[JsValue]): AuditEvent[GenericAuditDetail] =
       AuditEvent(

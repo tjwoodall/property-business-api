@@ -16,12 +16,12 @@
 
 package v6.createAmendForeignPropertyAnnualSubmission
 
+import api.controllers.validators.resolvers.ResolveTaxYearMinimum
+import api.models.domain.TaxYear
+import api.models.errors.MtdError
 import cats.data.Validated
 import cats.data.Validated.Valid
 import config.PropertyBusinessConfig
-import shared.controllers.validators.resolvers.ResolveTaxYearMinimum
-import shared.models.domain.TaxYear
-import shared.models.errors.MtdError
 
 import scala.math.Ordered.orderingToOrdered
 

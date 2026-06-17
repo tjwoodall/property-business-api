@@ -16,10 +16,10 @@
 
 package v6.deleteHistoricFhlUkPropertyAnnualSubmission
 
+import api.controllers.validators.Validator
+import api.utils.UnitSpec
 import common.models.domain.HistoricPropertyType
 import config.MockPropertyBusinessConfig
-import shared.controllers.validators.Validator
-import shared.utils.UnitSpec
 import v6.deleteHistoricFhlUkPropertyAnnualSubmission.def1.Def1_DeleteHistoricFhlUkPropertyAnnualSubmissionValidator
 import v6.deleteHistoricFhlUkPropertyAnnualSubmission.model.request.DeleteHistoricFhlUkPropertyAnnualSubmissionRequestData
 

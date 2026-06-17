@@ -16,8 +16,8 @@
 
 package v6.updateForeignPropertyDetails.model.request
 
+import api.utils.JsonWritesUtil.writesFrom
 import play.api.libs.json.OWrites
-import shared.utils.JsonWritesUtil.writesFrom
 import v6.updateForeignPropertyDetails.def1.model.request.Def1_UpdateForeignPropertyDetailsRequestBody
 
 trait UpdateForeignPropertyDetailsRequestBody

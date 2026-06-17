@@ -16,8 +16,8 @@
 
 package v6.retrieveUkPropertyPeriodSummary
 
+import api.utils.UnitSpec
 import config.MockPropertyBusinessConfig
-import shared.utils.UnitSpec
 import v6.retrieveUkPropertyPeriodSummary.def1.Def1_RetrieveUkPropertyPeriodSummaryValidator
 import v6.retrieveUkPropertyPeriodSummary.def2.Def2_RetrieveUkPropertyPeriodSummaryValidator
 

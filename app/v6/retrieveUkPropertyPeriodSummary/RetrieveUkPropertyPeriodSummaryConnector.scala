@@ -16,11 +16,11 @@
 
 package v6.retrieveUkPropertyPeriodSummary
 
-import shared.config.SharedAppConfig
-import shared.connectors.DownstreamUri.{HipUri, IfsUri}
-import shared.connectors.httpparsers.StandardDownstreamHttpParser.reads
-import shared.connectors.{BaseDownstreamConnector, DownstreamOutcome}
-import shared.models.outcomes.ResponseWrapper
+import api.config.AppConfig
+import api.connectors.DownstreamUri.{HipUri, IfsUri}
+import api.connectors.httpparsers.StandardDownstreamHttpParser.reads
+import api.connectors.{BaseDownstreamConnector, DownstreamOutcome}
+import api.models.outcomes.ResponseWrapper
 import uk.gov.hmrc.http.HeaderCarrier
 import uk.gov.hmrc.http.client.HttpClientV2
 import v6.retrieveUkPropertyPeriodSummary.model.request.*
@@ -31,7 +31,7 @@ import javax.inject.{Inject, Singleton}
 import scala.concurrent.{ExecutionContext, Future}
 
 @Singleton
-class RetrieveUkPropertyPeriodSummaryConnector @Inject() (val http: HttpClientV2, val appConfig: SharedAppConfig) extends BaseDownstreamConnector {
+class RetrieveUkPropertyPeriodSummaryConnector @Inject() (val http: HttpClientV2, val appConfig: AppConfig) extends BaseDownstreamConnector {
 
   def retrieveUkPropertyPeriodSummary(request: RetrieveUkPropertyPeriodSummaryRequestData)(implicit
       hc: HeaderCarrier,

@@ -16,15 +16,15 @@
 
 package v6.historicFhlUkPropertyPeriodSummary.list
 
+import api.controllers.{ControllerBaseSpec, ControllerTestRunner}
+import api.models.domain.Nino
+import api.models.errors.{ErrorWrapper, NinoFormatError, RuleTaxYearNotSupportedError}
+import api.models.outcomes.ResponseWrapper
+import api.services.{MockAuditService, MockEnrolmentsAuthService, MockMtdIdLookupService}
+import api.utils.MockIdGenerator
 import play.api.Configuration
 import play.api.libs.json.Json
 import play.api.mvc.Result
-import shared.controllers.{ControllerBaseSpec, ControllerTestRunner}
-import shared.models.domain.Nino
-import shared.models.errors.{ErrorWrapper, NinoFormatError, RuleTaxYearNotSupportedError}
-import shared.models.outcomes.ResponseWrapper
-import shared.services.{MockAuditService, MockEnrolmentsAuthService, MockMtdIdLookupService}
-import shared.utils.MockIdGenerator
 import v6.historicFhlUkPropertyPeriodSummary.list.def1.model.response.SubmissionPeriod
 import v6.historicFhlUkPropertyPeriodSummary.list.model.request.{
   Def1_ListHistoricFhlUkPropertyPeriodSummariesRequestData,
@@ -89,11 +89,11 @@ class ListHistoricFhlUkPropertyPeriodSummariesControllerSpec
       idGenerator = mockIdGenerator
     )
 
-    MockedSharedAppConfig.featureSwitchConfig.anyNumberOfTimes() returns Configuration(
+    MockedAppConfig.featureSwitchConfig.anyNumberOfTimes() returns Configuration(
       "supporting-agents-access-control.enabled" -> true
     )
 
-    MockedSharedAppConfig.endpointAllowsSupportingAgents(controller.endpointName).anyNumberOfTimes() returns false
+    MockedAppConfig.endpointAllowsSupportingAgents(controller.endpointName).anyNumberOfTimes() returns false
 
     protected def callController(): Future[Result] = controller.handleRequest(validNino)(fakeGetRequest)
 

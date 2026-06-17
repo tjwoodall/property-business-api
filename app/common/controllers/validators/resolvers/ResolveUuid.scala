@@ -16,10 +16,10 @@
 
 package common.controllers.validators.resolvers
 
+import api.controllers.validators.resolvers.ResolverSupport
+import api.models.errors.MtdError
 import cats.data.Validated
 import cats.data.Validated.{Invalid, Valid}
-import shared.controllers.validators.resolvers.ResolverSupport
-import shared.models.errors.MtdError
 
 import scala.util.matching.Regex
 

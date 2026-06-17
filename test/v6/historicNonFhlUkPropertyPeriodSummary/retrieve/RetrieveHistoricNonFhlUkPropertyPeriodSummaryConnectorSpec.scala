@@ -16,12 +16,12 @@
 
 package v6.historicNonFhlUkPropertyPeriodSummary.retrieve
 
+import api.connectors.{ConnectorSpec, DownstreamOutcome}
+import api.models.domain.Nino
+import api.models.errors.{DownstreamErrorCode, DownstreamErrors}
+import api.models.outcomes.ResponseWrapper
 import common.models.domain.PeriodId
 import org.scalamock.handlers.CallHandler
-import shared.connectors.{ConnectorSpec, DownstreamOutcome}
-import shared.models.domain.Nino
-import shared.models.errors.{DownstreamErrorCode, DownstreamErrors}
-import shared.models.outcomes.ResponseWrapper
 import uk.gov.hmrc.http.StringContextOps
 import v6.historicNonFhlUkPropertyPeriodSummary.retrieve.model.request.{
   Def1_RetrieveHistoricNonFhlUkPropertyPeriodSummaryRequestData,
@@ -72,7 +72,7 @@ class RetrieveHistoricNonFhlUkPropertyPeriodSummaryConnectorSpec extends Connect
 
     protected val connector: RetrieveHistoricNonFhlUkPropertyPeriodSummaryConnector = new RetrieveHistoricNonFhlUkPropertyPeriodSummaryConnector(
       http = mockHttpClient,
-      appConfig = mockSharedAppConfig
+      appConfig = mockAppConfig
     )
 
     def stubHttpResponse(outcome: DownstreamOutcome[RetrieveHistoricNonFhlUkPropertyPeriodSummaryResponse])

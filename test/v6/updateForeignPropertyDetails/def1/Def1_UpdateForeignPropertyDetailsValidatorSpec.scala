@@ -16,13 +16,13 @@
 
 package v6.updateForeignPropertyDetails.def1
 
+import api.models.domain.*
+import api.models.errors.*
+import api.models.utils.JsonErrorValidators
+import api.utils.UnitSpec
 import common.models.domain.PropertyId
-import play.api.libs.json.*
-import shared.models.domain.*
-import shared.models.errors.*
 import common.models.errors.*
-import shared.models.utils.JsonErrorValidators
-import shared.utils.UnitSpec
+import play.api.libs.json.*
 import v6.updateForeignPropertyDetails.def1.model.Def1_UpdateForeignPropertyDetailsFixtures.*
 import v6.updateForeignPropertyDetails.def1.model.request.Def1_UpdateForeignPropertyDetailsRequestData
 import v6.updateForeignPropertyDetails.model.request.UpdateForeignPropertyDetailsRequestData

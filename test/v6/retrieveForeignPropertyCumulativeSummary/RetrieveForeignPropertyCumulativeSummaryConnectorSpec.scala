@@ -16,11 +16,11 @@
 
 package v6.retrieveForeignPropertyCumulativeSummary
 
+import api.connectors.ConnectorSpec
+import api.models.domain.{BusinessId, Nino, TaxYear, Timestamp}
+import api.models.outcomes.ResponseWrapper
 import common.models.domain.PropertyId
 import play.api.Configuration
-import shared.connectors.ConnectorSpec
-import shared.models.domain.{BusinessId, Nino, TaxYear, Timestamp}
-import shared.models.outcomes.ResponseWrapper
 import uk.gov.hmrc.http.StringContextOps
 import v6.retrieveForeignPropertyCumulativeSummary.def1.model.request.Def1_RetrieveForeignPropertyCumulativeSummaryRequestData
 import v6.retrieveForeignPropertyCumulativeSummary.def1.model.response.{Def1_RetrieveForeignPropertyCumulativeSummaryResponse, ForeignPropertyEntry}
@@ -55,7 +55,7 @@ class RetrieveForeignPropertyCumulativeSummaryConnectorSpec extends ConnectorSpe
     "return a valid response" when {
       "the request is made and FOREIGN property data is returned for TYS 25-26" which {
         "returns ForeignResult" in new HipTest with Test {
-          MockedSharedAppConfig.featureSwitchConfig.anyNumberOfTimes().returns(Configuration("passIntentHeader.enabled" -> false))
+          MockedAppConfig.featureSwitchConfig.anyNumberOfTimes().returns(Configuration("passIntentHeader.enabled" -> false))
 
           private val response = responseWith(Some(Seq(ForeignPropertyEntry("AFG", None, None))))
           willGet(url = url"$baseUrl/itsa/income-tax/v1/25-26/business/periodic/property/$nino/$businessId") returns
@@ -68,7 +68,7 @@ class RetrieveForeignPropertyCumulativeSummaryConnectorSpec extends ConnectorSpe
 
       "the request is made and FOREIGN property data is returned for TYS 26-27" which {
         "returns ForeignResult" in new HipTest with Test {
-          MockedSharedAppConfig.featureSwitchConfig.anyNumberOfTimes().returns(Configuration("passIntentHeader.enabled" -> false))
+          MockedAppConfig.featureSwitchConfig.anyNumberOfTimes().returns(Configuration("passIntentHeader.enabled" -> false))
 
           override val requestData: RetrieveForeignPropertyCumulativeSummaryRequestData =
             Def2_RetrieveForeignPropertyCumulativeSummaryRequestData(
@@ -95,7 +95,7 @@ class RetrieveForeignPropertyCumulativeSummaryConnectorSpec extends ConnectorSpe
 
       "the request is made and non-FOREIGN property data is returned (e.g. because the businessId is not for a foreign property)" which {
         "returns NonForeignResult" in new HipTest with Test {
-          MockedSharedAppConfig.featureSwitchConfig.anyNumberOfTimes().returns(Configuration("passIntentHeader.enabled" -> false))
+          MockedAppConfig.featureSwitchConfig.anyNumberOfTimes().returns(Configuration("passIntentHeader.enabled" -> false))
           private val response = responseWith(None)
 
           willGet(url = url"$baseUrl/itsa/income-tax/v1/25-26/business/periodic/property/$nino/$businessId") returns
@@ -108,7 +108,7 @@ class RetrieveForeignPropertyCumulativeSummaryConnectorSpec extends ConnectorSpe
 
       "isPassIntentHeader feature switch is on" must {
         "pass FOREIGN_PROPERTY intent" in new HipTest with Test {
-          MockedSharedAppConfig.featureSwitchConfig.anyNumberOfTimes().returns(Configuration("passIntentHeader.enabled" -> true))
+          MockedAppConfig.featureSwitchConfig.anyNumberOfTimes().returns(Configuration("passIntentHeader.enabled" -> true))
 
           private val response = responseWith(None)
 

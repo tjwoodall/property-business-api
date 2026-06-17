@@ -16,15 +16,14 @@
 
 package v6.retrieveForeignPropertyPeriodSummary
 
+import api.controllers.EndpointLogContext
+import api.models.domain.*
+import api.models.errors.*
+import api.models.outcomes.ResponseWrapper
+import api.utils.UnitSpec
 import common.models.domain.SubmissionId
 import common.models.errors.{RuleTypeOfBusinessIncorrectError, SubmissionIdFormatError}
-import shared.controllers.EndpointLogContext
-import shared.models.domain._
-import shared.models.errors._
-import shared.models.outcomes.ResponseWrapper
-import shared.utils.UnitSpec
 import uk.gov.hmrc.http.HeaderCarrier
-import v6.retrieveForeignPropertyPeriodSummary.model.{ForeignResult, NonForeignResult}
 import v6.retrieveForeignPropertyPeriodSummary.model.request.{
   Def1_RetrieveForeignPropertyPeriodSummaryRequestData,
   RetrieveForeignPropertyPeriodSummaryRequestData
@@ -33,6 +32,7 @@ import v6.retrieveForeignPropertyPeriodSummary.model.response.{
   Def1_RetrieveForeignPropertyPeriodSummaryResponse,
   RetrieveForeignPropertyPeriodSummaryResponse
 }
+import v6.retrieveForeignPropertyPeriodSummary.model.{ForeignResult, NonForeignResult}
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future

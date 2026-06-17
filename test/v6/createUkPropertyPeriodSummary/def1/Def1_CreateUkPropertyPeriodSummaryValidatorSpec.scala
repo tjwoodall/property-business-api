@@ -16,17 +16,17 @@
 
 package v6.createUkPropertyPeriodSummary.def1
 
+import api.models.domain.{BusinessId, Nino, TaxYear}
+import api.models.errors.*
+import api.models.utils.JsonErrorValidators
+import api.utils.UnitSpec
 import common.models.errors.{RuleBothExpensesSuppliedError, RuleToDateBeforeFromDateError}
 import config.MockPropertyBusinessConfig
-import play.api.libs.json._
-import shared.models.domain.{BusinessId, Nino, TaxYear}
-import shared.models.errors._
-import shared.models.utils.JsonErrorValidators
-import shared.utils.UnitSpec
-import v6.createUkPropertyPeriodSummary.def1.model.request.def1_ukFhlProperty._
-import v6.createUkPropertyPeriodSummary.def1.model.request.def1_ukNonFhlProperty._
-import v6.createUkPropertyPeriodSummary.def1.model.request.def1_ukPropertyRentARoom._
-import v6.createUkPropertyPeriodSummary.model.request._
+import play.api.libs.json.*
+import v6.createUkPropertyPeriodSummary.def1.model.request.def1_ukFhlProperty.*
+import v6.createUkPropertyPeriodSummary.def1.model.request.def1_ukNonFhlProperty.*
+import v6.createUkPropertyPeriodSummary.def1.model.request.def1_ukPropertyRentARoom.*
+import v6.createUkPropertyPeriodSummary.model.request.*
 
 class Def1_CreateUkPropertyPeriodSummaryValidatorSpec extends UnitSpec with MockPropertyBusinessConfig with JsonErrorValidators {
   private implicit val correlationId: String = "1234"

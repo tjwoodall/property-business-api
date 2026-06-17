@@ -16,10 +16,10 @@
 
 package v6.createAmendUkPropertyCumulativeSummary
 
-import shared.config.SharedAppConfig
-import shared.connectors.DownstreamUri.HipUri
-import shared.connectors.httpparsers.StandardDownstreamHttpParser.readsEmpty
-import shared.connectors.{BaseDownstreamConnector, DownstreamOutcome, DownstreamUri}
+import api.config.AppConfig
+import api.connectors.DownstreamUri.HipUri
+import api.connectors.httpparsers.StandardDownstreamHttpParser.readsEmpty
+import api.connectors.{BaseDownstreamConnector, DownstreamOutcome, DownstreamUri}
 import uk.gov.hmrc.http.HeaderCarrier
 import uk.gov.hmrc.http.client.HttpClientV2
 import v6.createAmendUkPropertyCumulativeSummary.model.request.CreateAmendUkPropertyCumulativeSummaryRequestData
@@ -28,8 +28,7 @@ import javax.inject.{Inject, Singleton}
 import scala.concurrent.{ExecutionContext, Future}
 
 @Singleton
-class CreateAmendUkPropertyCumulativeSummaryConnector @Inject() (val http: HttpClientV2, val appConfig: SharedAppConfig)
-    extends BaseDownstreamConnector {
+class CreateAmendUkPropertyCumulativeSummaryConnector @Inject() (val http: HttpClientV2, val appConfig: AppConfig) extends BaseDownstreamConnector {
 
   def createAmendUkPropertyCumulativeSummary(request: CreateAmendUkPropertyCumulativeSummaryRequestData)(implicit
       hc: HeaderCarrier,

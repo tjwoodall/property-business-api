@@ -16,12 +16,12 @@
 
 package v6.retrieveUkPropertyPeriodSummary
 
+import api.connectors.{ConnectorSpec, DownstreamOutcome}
+import api.models.domain.*
+import api.models.errors.{DownstreamErrorCode, DownstreamErrors}
+import api.models.outcomes.ResponseWrapper
 import common.models.domain.SubmissionId
 import org.scalamock.handlers.CallHandler
-import shared.connectors.{ConnectorSpec, DownstreamOutcome}
-import shared.models.domain.*
-import shared.models.errors.{DownstreamErrorCode, DownstreamErrors}
-import shared.models.outcomes.ResponseWrapper
 import uk.gov.hmrc.http.StringContextOps
 import v6.fixtures.retrieveUkPropertyPeriodSummary.ResponseModelsFixture
 import v6.retrieveUkPropertyPeriodSummary.def1.model.response.{Def1_Retrieve_UkFhlProperty, Def1_Retrieve_UkNonFhlProperty}
@@ -163,7 +163,7 @@ class RetrieveUkPropertyPeriodSummaryConnectorSpec extends ConnectorSpec with Re
 
     protected val connector: RetrieveUkPropertyPeriodSummaryConnector = new RetrieveUkPropertyPeriodSummaryConnector(
       http = mockHttpClient,
-      appConfig = mockSharedAppConfig
+      appConfig = mockAppConfig
     )
 
     protected val request: RetrieveUkPropertyPeriodSummaryRequestData =

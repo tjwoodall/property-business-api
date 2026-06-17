@@ -16,14 +16,14 @@
 
 package v6.createAmendUkPropertyAnnualSubmission.def2
 
+import api.models.domain.{BusinessId, Nino, TaxYear}
+import api.models.errors.*
+import api.models.utils.JsonErrorValidators
+import api.utils.UnitSpec
 import common.models.errors.{RuleBothAllowancesSuppliedError, RuleBuildingNameNumberError}
 import config.MockPropertyBusinessConfig
-import play.api.libs.json._
-import shared.models.domain.{BusinessId, Nino, TaxYear}
-import shared.models.errors._
-import shared.models.utils.JsonErrorValidators
-import shared.utils.UnitSpec
-import v6.createAmendUkPropertyAnnualSubmission.def2.model.request._
+import play.api.libs.json.*
+import v6.createAmendUkPropertyAnnualSubmission.def2.model.request.*
 
 class Def2_CreateAmendUkPropertyAnnualSubmissionValidatorSpec extends UnitSpec with MockPropertyBusinessConfig with JsonErrorValidators {
   private implicit val correlationId: String = "1234"

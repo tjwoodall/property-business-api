@@ -16,27 +16,27 @@
 
 package definition
 
+import api.config.Deprecation.NotDeprecated
+import api.config.MockAppConfig
+import api.definition.*
+import api.definition.APIStatus.BETA
+import api.routing.*
+import api.utils.UnitSpec
 import cats.implicits.catsSyntaxValidatedId
-import shared.config.Deprecation.NotDeprecated
-import shared.config.MockSharedAppConfig
-import shared.definition.*
-import shared.definition.APIStatus.BETA
-import shared.routing.*
-import shared.utils.UnitSpec
 
-class PropertyBusinessApiDefinitionFactorySpec extends UnitSpec with MockSharedAppConfig {
+class PropertyBusinessApiDefinitionFactorySpec extends UnitSpec with MockAppConfig {
 
   "definition" when {
     "called" should {
       "return a valid Definition case class" in {
         List(Version6).foreach { version =>
-          MockedSharedAppConfig.apiGatewayContext.returns("individuals/business/property").anyNumberOfTimes()
-          MockedSharedAppConfig.deprecationFor(version).returns(NotDeprecated.valid).anyNumberOfTimes()
-          MockedSharedAppConfig.apiStatus(version) returns "BETA"
-          MockedSharedAppConfig.endpointsEnabled(version) returns true
+          MockedAppConfig.apiGatewayContext.returns("individuals/business/property").anyNumberOfTimes()
+          MockedAppConfig.deprecationFor(version).returns(NotDeprecated.valid).anyNumberOfTimes()
+          MockedAppConfig.apiStatus(version) returns "BETA"
+          MockedAppConfig.endpointsEnabled(version) returns true
         }
 
-        val apiDefinitionFactory = new PropertyBusinessApiDefinitionFactory(mockSharedAppConfig)
+        val apiDefinitionFactory = new PropertyBusinessApiDefinitionFactory(mockAppConfig)
 
         apiDefinitionFactory.definition shouldBe
           Definition(

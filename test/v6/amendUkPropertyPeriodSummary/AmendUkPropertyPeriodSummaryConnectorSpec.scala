@@ -16,14 +16,14 @@
 
 package v6.amendUkPropertyPeriodSummary
 
+import api.connectors.{ConnectorSpec, DownstreamOutcome}
+import api.models.domain.{BusinessId, Nino, TaxYear}
+import api.models.errors.{DownstreamErrorCode, DownstreamErrors}
+import api.models.outcomes.ResponseWrapper
 import common.models.domain.SubmissionId
 import org.scalamock.handlers.CallHandler
-import shared.connectors.{ConnectorSpec, DownstreamOutcome}
-import shared.models.domain.{BusinessId, Nino, TaxYear}
-import shared.models.errors.{DownstreamErrorCode, DownstreamErrors}
-import shared.models.outcomes.ResponseWrapper
 import uk.gov.hmrc.http.StringContextOps
-import v6.amendUkPropertyPeriodSummary.model.request._
+import v6.amendUkPropertyPeriodSummary.model.request.*
 
 import scala.concurrent.Future
 
@@ -95,7 +95,7 @@ class AmendUkPropertyPeriodSummaryConnectorSpec extends ConnectorSpec {
         val request =
           Def2_AmendUkPropertyPeriodSummaryRequestData(Nino(nino), taxYear, BusinessId(businessId), SubmissionId(submissionId), requestBody)
 
-        val connector = new AmendUkPropertyPeriodSummaryConnector(mockHttpClient, mockSharedAppConfig)
+        val connector = new AmendUkPropertyPeriodSummaryConnector(mockHttpClient, mockAppConfig)
 
         val outcome = Right(ResponseWrapper(correlationId, ()))
 
@@ -119,7 +119,7 @@ class AmendUkPropertyPeriodSummaryConnectorSpec extends ConnectorSpec {
         val request =
           Def2_AmendUkPropertyPeriodSummarySubmissionRequestData(Nino(nino), taxYear, BusinessId(businessId), SubmissionId(submissionId), requestBody)
 
-        val connector = new AmendUkPropertyPeriodSummaryConnector(mockHttpClient, mockSharedAppConfig)
+        val connector = new AmendUkPropertyPeriodSummaryConnector(mockHttpClient, mockAppConfig)
 
         val outcome = Right(ResponseWrapper(correlationId, ()))
 
@@ -142,7 +142,7 @@ class AmendUkPropertyPeriodSummaryConnectorSpec extends ConnectorSpec {
 
     protected val connector: AmendUkPropertyPeriodSummaryConnector = new AmendUkPropertyPeriodSummaryConnector(
       http = mockHttpClient,
-      appConfig = mockSharedAppConfig
+      appConfig = mockAppConfig
     )
 
     private val requestBody: Def1_AmendUkPropertyPeriodSummaryRequestBody = Def1_AmendUkPropertyPeriodSummaryRequestBody(None, None)

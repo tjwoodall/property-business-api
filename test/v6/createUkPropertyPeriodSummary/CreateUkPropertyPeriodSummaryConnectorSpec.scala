@@ -16,9 +16,9 @@
 
 package v6.createUkPropertyPeriodSummary
 
-import shared.connectors.{ConnectorSpec, DownstreamOutcome}
-import shared.models.domain.{BusinessId, Nino, TaxYear}
-import shared.models.outcomes.ResponseWrapper
+import api.connectors.{ConnectorSpec, DownstreamOutcome}
+import api.models.domain.{BusinessId, Nino, TaxYear}
+import api.models.outcomes.ResponseWrapper
 import uk.gov.hmrc.http.StringContextOps
 import v6.createUkPropertyPeriodSummary.model.request.*
 import v6.createUkPropertyPeriodSummary.model.response.CreateUkPropertyPeriodSummaryResponse
@@ -40,7 +40,7 @@ class CreateUkPropertyPeriodSummaryConnectorSpec extends ConnectorSpec {
 
         val connector: CreateUkPropertyPeriodSummaryConnector = new CreateUkPropertyPeriodSummaryConnector(
           http = mockHttpClient,
-          appConfig = mockSharedAppConfig
+          appConfig = mockAppConfig
         )
 
         willPost(
@@ -60,7 +60,7 @@ class CreateUkPropertyPeriodSummaryConnectorSpec extends ConnectorSpec {
 
         val connector: CreateUkPropertyPeriodSummaryConnector = new CreateUkPropertyPeriodSummaryConnector(
           http = mockHttpClient,
-          appConfig = mockSharedAppConfig
+          appConfig = mockAppConfig
         )
 
         willPost(
@@ -81,7 +81,7 @@ class CreateUkPropertyPeriodSummaryConnectorSpec extends ConnectorSpec {
 
         val connector: CreateUkPropertyPeriodSummaryConnector = new CreateUkPropertyPeriodSummaryConnector(
           http = mockHttpClient,
-          appConfig = mockSharedAppConfig
+          appConfig = mockAppConfig
         )
 
         willPost(

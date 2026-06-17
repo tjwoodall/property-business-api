@@ -16,10 +16,10 @@
 
 package v6.historicNonFhlUkPropertyPeriodSummary.create.model.request
 
+import api.utils.EmptinessChecker
+import api.utils.EmptinessChecker.field
 import play.api.libs.functional.syntax.toFunctionalBuilderOps
 import play.api.libs.json.{JsPath, Json, OWrites, Reads}
-import shared.utils.EmptinessChecker
-import shared.utils.EmptinessChecker.field
 import v6.historicNonFhlUkPropertyPeriodSummary.create.def1.model.request.{UkNonFhlPropertyExpenses, UkNonFhlPropertyIncome}
 
 sealed trait CreateHistoricNonFhlUkPropertyPeriodSummaryRequestBody {

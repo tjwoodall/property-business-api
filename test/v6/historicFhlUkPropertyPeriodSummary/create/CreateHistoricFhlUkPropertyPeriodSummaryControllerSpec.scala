@@ -16,21 +16,21 @@
 
 package v6.historicFhlUkPropertyPeriodSummary.create
 
+import api.controllers.{ControllerBaseSpec, ControllerTestRunner}
+import api.models.audit.*
+import api.models.auth.UserDetails
+import api.models.domain.Nino
+import api.models.errors.*
+import api.models.outcomes.ResponseWrapper
+import api.services.{MockAuditService, MockEnrolmentsAuthService, MockMtdIdLookupService}
+import api.utils.MockIdGenerator
 import common.models.domain.PeriodId
 import common.models.errors.RuleMisalignedPeriodError
 import play.api.Configuration
 import play.api.libs.json.{JsValue, Json}
 import play.api.mvc.Result
 import play.api.test.FakeRequest
-import shared.controllers.{ControllerBaseSpec, ControllerTestRunner}
-import shared.models.audit._
-import shared.models.auth.UserDetails
-import shared.models.domain.Nino
-import shared.models.errors._
-import shared.models.outcomes.ResponseWrapper
-import shared.services.{MockAuditService, MockEnrolmentsAuthService, MockMtdIdLookupService}
-import shared.utils.MockIdGenerator
-import v6.historicFhlUkPropertyPeriodSummary.create.model.request._
+import v6.historicFhlUkPropertyPeriodSummary.create.model.request.*
 import v6.historicFhlUkPropertyPeriodSummary.create.model.response.CreateHistoricFhlUkPropertyPeriodSummaryResponse
 
 import scala.concurrent.ExecutionContext.Implicits.global
@@ -95,11 +95,11 @@ class CreateHistoricFhlUkPropertyPeriodSummaryControllerSpec
       idGenerator = mockIdGenerator
     )
 
-    MockedSharedAppConfig.featureSwitchConfig.anyNumberOfTimes() returns Configuration(
+    MockedAppConfig.featureSwitchConfig.anyNumberOfTimes() returns Configuration(
       "supporting-agents-access-control.enabled" -> true
     )
 
-    MockedSharedAppConfig.endpointAllowsSupportingAgents(controller.endpointName).anyNumberOfTimes() returns false
+    MockedAppConfig.endpointAllowsSupportingAgents(controller.endpointName).anyNumberOfTimes() returns false
 
     protected def callController(): Future[Result] = controller.handleRequest(validNino)(fakePutRequest(requestBodyJson))
 

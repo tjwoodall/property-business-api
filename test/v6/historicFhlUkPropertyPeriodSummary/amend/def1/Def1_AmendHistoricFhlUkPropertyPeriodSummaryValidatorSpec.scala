@@ -16,18 +16,18 @@
 
 package v6.historicFhlUkPropertyPeriodSummary.amend.def1
 
+import api.models.domain.Nino
+import api.models.errors.*
+import api.models.utils.JsonErrorValidators
+import api.utils.UnitSpec
 import common.models.domain.PeriodId
 import common.models.errors.{PeriodIdFormatError, RuleBothExpensesSuppliedError}
 import config.MockPropertyBusinessConfig
 import play.api.libs.json.{JsNumber, JsObject, JsValue, Json}
-import shared.models.domain.Nino
-import shared.models.errors._
-import shared.models.utils.JsonErrorValidators
-import shared.utils.UnitSpec
-import v6.createAmendHistoricNonFhlUkPropertyAnnualSubmission.def1.model.request._
+import v6.createAmendHistoricNonFhlUkPropertyAnnualSubmission.def1.model.request.*
 import v6.historicFhlUkPropertyPeriodSummary.amend.AmendHistoricFhlUkPropertyPeriodSummaryValidatorFactory
 import v6.historicFhlUkPropertyPeriodSummary.amend.def1.model.request.{UkFhlPropertyExpenses, UkFhlPropertyIncome}
-import v6.historicFhlUkPropertyPeriodSummary.amend.request._
+import v6.historicFhlUkPropertyPeriodSummary.amend.request.*
 
 class Def1_AmendHistoricFhlUkPropertyPeriodSummaryValidatorSpec extends UnitSpec with MockPropertyBusinessConfig with JsonErrorValidators {
   private implicit val correlationId: String = "1234"

@@ -16,8 +16,8 @@
 
 package v6.createAmendHistoricNonFhlUkPropertyAnnualSubmission.model.response
 
+import api.utils.UnitSpec
 import play.api.libs.json.{JsObject, JsValue, Json}
-import shared.utils.UnitSpec
 
 class CreateAmendHistoricNonFhlUkPropertyAnnualSubmissionResponseSpec extends UnitSpec {
 

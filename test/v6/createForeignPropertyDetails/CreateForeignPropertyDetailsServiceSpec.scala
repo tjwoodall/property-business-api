@@ -16,11 +16,11 @@
 
 package v6.createForeignPropertyDetails
 
+import api.models.domain.*
+import api.models.errors.*
+import api.models.outcomes.ResponseWrapper
+import api.services.ServiceSpec
 import common.models.errors.*
-import shared.models.domain.*
-import shared.models.errors.*
-import shared.models.outcomes.ResponseWrapper
-import shared.services.ServiceSpec
 import v6.createForeignPropertyDetails.def1.model.Def1_CreateForeignPropertyDetailsFixtures
 import v6.createForeignPropertyDetails.def1.model.request.Def1_CreateForeignPropertyDetailsRequestData
 import v6.createForeignPropertyDetails.def1.model.response.Def1_CreateForeignPropertyDetailsResponse

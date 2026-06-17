@@ -16,11 +16,11 @@
 
 package v6.deleteHistoricNonFhlUkPropertyAnnualSubmission
 
+import api.connectors.{ConnectorSpec, DownstreamOutcome}
+import api.models.domain.{Nino, TaxYear}
+import api.models.outcomes.ResponseWrapper
 import play.api.Configuration
 import play.api.libs.json.JsObject
-import shared.connectors.{ConnectorSpec, DownstreamOutcome}
-import shared.models.domain.{Nino, TaxYear}
-import shared.models.outcomes.ResponseWrapper
 import uk.gov.hmrc.http.StringContextOps
 import v6.deleteHistoricNonFhlUkPropertyAnnualSubmission.model.request.{
   Def1_DeleteHistoricNonFhlUkPropertyAnnualSubmissionRequestData,
@@ -39,7 +39,7 @@ class DeleteHistoricNonFhlUkPropertyAnnualSubmissionConnectorSpec extends Connec
 
       "sending a non-FHL request" in new IfsTest with Test {
 
-        MockedSharedAppConfig.featureSwitchConfig.anyNumberOfTimes().returns(Configuration("passIntentHeader.enabled" -> true))
+        MockedAppConfig.featureSwitchConfig.anyNumberOfTimes().returns(Configuration("passIntentHeader.enabled" -> true))
 
         willPut(
           url = url"$baseUrl/income-tax/nino/$nino/uk-properties/other/annual-summaries/2022",
@@ -53,7 +53,7 @@ class DeleteHistoricNonFhlUkPropertyAnnualSubmissionConnectorSpec extends Connec
 
       "isPassIntentHeader feature switch is off" in new IfsTest with Test {
 
-        MockedSharedAppConfig.featureSwitchConfig.anyNumberOfTimes() returns Configuration("passIntentHeader.enabled" -> false)
+        MockedAppConfig.featureSwitchConfig.anyNumberOfTimes() returns Configuration("passIntentHeader.enabled" -> false)
 
         willPut(url = url"$baseUrl/income-tax/nino/$nino/uk-properties/other/annual-summaries/2022", body = JsObject.empty)
           .returns(Future.successful(expectedOutcome))
@@ -70,7 +70,7 @@ class DeleteHistoricNonFhlUkPropertyAnnualSubmissionConnectorSpec extends Connec
 
     val connector: DeleteHistoricNonFhlUkPropertyAnnualSubmissionConnector = new DeleteHistoricNonFhlUkPropertyAnnualSubmissionConnector(
       http = mockHttpClient,
-      appConfig = mockSharedAppConfig
+      appConfig = mockAppConfig
     )
 
     protected val request: DeleteHistoricNonFhlUkPropertyAnnualSubmissionRequestData =

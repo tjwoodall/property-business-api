@@ -16,11 +16,11 @@
 
 package v6.historicFhlUkPropertyPeriodSummary.retrieve
 
+import api.controllers.RequestContext
+import api.models.errors.*
+import api.services.{BaseService, ServiceOutcome}
 import cats.implicits.*
 import common.models.errors.PeriodIdFormatError
-import shared.controllers.RequestContext
-import shared.models.errors.*
-import shared.services.{BaseService, ServiceOutcome}
 import v6.historicFhlUkPropertyPeriodSummary.retrieve.model.request.RetrieveHistoricFhlUkPropertyPeriodSummaryRequestData
 import v6.historicFhlUkPropertyPeriodSummary.retrieve.model.response.RetrieveHistoricFhlUkPropertyPeriodSummaryResponse
 

@@ -16,8 +16,8 @@
 
 package v6.createForeignPropertyPeriodSummary.model.response
 
+import api.utils.UnitSpec
 import play.api.libs.json.Json
-import shared.utils.UnitSpec
 
 class CreateForeignPropertyPeriodSummaryResponseSpec extends UnitSpec {
 

@@ -16,17 +16,17 @@
 
 package v6.retrieveUkPropertyAnnualSubmission
 
+import api.controllers.{ControllerBaseSpec, ControllerTestRunner}
+import api.models.domain.{BusinessId, Nino, TaxYear, Timestamp}
+import api.models.errors.*
+import api.models.outcomes.ResponseWrapper
 import play.api.Configuration
 import play.api.libs.json.{JsValue, Json}
 import play.api.mvc.Result
-import shared.controllers.{ControllerBaseSpec, ControllerTestRunner}
-import shared.models.domain.{BusinessId, Nino, TaxYear, Timestamp}
-import shared.models.errors._
-import shared.models.outcomes.ResponseWrapper
 import v6.retrieveUkPropertyAnnualSubmission.def1.model.request.Def1_RetrieveUkPropertyAnnualSubmissionRequestData
 import v6.retrieveUkPropertyAnnualSubmission.def1.model.response.Def1_RetrieveUkPropertyAnnualSubmissionResponse
-import v6.retrieveUkPropertyAnnualSubmission.def1.model.response.ukFhlProperty._
-import v6.retrieveUkPropertyAnnualSubmission.def1.model.response.ukProperty._
+import v6.retrieveUkPropertyAnnualSubmission.def1.model.response.ukFhlProperty.*
+import v6.retrieveUkPropertyAnnualSubmission.def1.model.response.ukProperty.*
 import v6.retrieveUkPropertyAnnualSubmission.model.request.RetrieveUkPropertyAnnualSubmissionRequestData
 import v6.retrieveUkPropertyAnnualSubmission.model.response.RetrieveUkPropertyAnnualSubmissionResponse
 
@@ -84,11 +84,11 @@ class RetrieveUkPropertyAnnualSubmissionControllerSpec
       idGenerator = mockIdGenerator
     )
 
-    MockedSharedAppConfig.featureSwitchConfig.anyNumberOfTimes() returns Configuration(
+    MockedAppConfig.featureSwitchConfig.anyNumberOfTimes() returns Configuration(
       "supporting-agents-access-control.enabled" -> true
     )
 
-    MockedSharedAppConfig.endpointAllowsSupportingAgents(controller.endpointName).anyNumberOfTimes() returns false
+    MockedAppConfig.endpointAllowsSupportingAgents(controller.endpointName).anyNumberOfTimes() returns false
 
     protected def callController(): Future[Result] = controller.handleRequest(validNino, businessId, taxYear)(fakeGetRequest)
 

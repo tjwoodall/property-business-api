@@ -16,9 +16,9 @@
 
 package v6.createAmendForeignPropertyCumulativePeriodSummary
 
-import shared.connectors.{ConnectorSpec, DownstreamOutcome}
-import shared.models.domain.{BusinessId, Nino, TaxYear}
-import shared.models.outcomes.ResponseWrapper
+import api.connectors.{ConnectorSpec, DownstreamOutcome}
+import api.models.domain.{BusinessId, Nino, TaxYear}
+import api.models.outcomes.ResponseWrapper
 import uk.gov.hmrc.http.StringContextOps
 import v6.createAmendForeignPropertyCumulativePeriodSummary.def1.model.Def1_CreateAmendForeignPropertyCumulativePeriodSummaryFixtures
 import v6.createAmendForeignPropertyCumulativePeriodSummary.def1.model.request.{
@@ -92,7 +92,7 @@ class CreateAmendForeignPropertyCumulativePeriodSummaryConnectorSpec extends Con
     protected val connector: CreateAmendForeignPropertyCumulativePeriodSummaryConnector =
       new CreateAmendForeignPropertyCumulativePeriodSummaryConnector(
         http = mockHttpClient,
-        appConfig = mockSharedAppConfig
+        appConfig = mockAppConfig
       )
 
     protected val response: Unit = ()

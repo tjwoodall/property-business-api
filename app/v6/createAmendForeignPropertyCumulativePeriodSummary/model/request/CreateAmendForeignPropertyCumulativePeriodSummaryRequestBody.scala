@@ -16,8 +16,8 @@
 
 package v6.createAmendForeignPropertyCumulativePeriodSummary.model.request
 
+import api.utils.JsonWritesUtil.writesFrom
 import play.api.libs.json.OWrites
-import shared.utils.JsonWritesUtil.writesFrom
 import v6.createAmendForeignPropertyCumulativePeriodSummary.def1.model.request.Def1_CreateAmendForeignPropertyCumulativePeriodSummaryRequestBody
 import v6.createAmendForeignPropertyCumulativePeriodSummary.def2.model.request.Def2_CreateAmendForeignPropertyCumulativePeriodSummaryRequestBody
 

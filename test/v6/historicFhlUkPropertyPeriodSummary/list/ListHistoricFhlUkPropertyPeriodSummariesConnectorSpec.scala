@@ -16,9 +16,9 @@
 
 package v6.historicFhlUkPropertyPeriodSummary.list
 
-import shared.connectors.{ConnectorSpec, DownstreamOutcome}
-import shared.models.domain.Nino
-import shared.models.outcomes.ResponseWrapper
+import api.connectors.{ConnectorSpec, DownstreamOutcome}
+import api.models.domain.Nino
+import api.models.outcomes.ResponseWrapper
 import uk.gov.hmrc.http.StringContextOps
 import v6.historicFhlUkPropertyPeriodSummary.list.def1.model.response.SubmissionPeriod
 import v6.historicFhlUkPropertyPeriodSummary.list.model.request.{
@@ -50,7 +50,7 @@ class ListHistoricFhlUkPropertyPeriodSummariesConnectorSpec extends ConnectorSpe
 
     protected val connector: ListHistoricFhlUkPropertyPeriodSummariesConnector = new ListHistoricFhlUkPropertyPeriodSummariesConnector(
       http = mockHttpClient,
-      appConfig = mockSharedAppConfig
+      appConfig = mockAppConfig
     )
 
     protected val request: ListHistoricFhlUkPropertyPeriodSummariesRequestData =
