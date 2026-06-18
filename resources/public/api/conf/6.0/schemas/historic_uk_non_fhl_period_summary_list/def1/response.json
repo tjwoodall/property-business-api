@@ -18,11 +18,13 @@
             },
             "fromDate": {
               "type": "string",
+              "format": "date",
               "description": "The first day that the income, expenses and deduction period summary covers.\n\nMust conform to the format: YYYY-MM-DD.",
               "example": "2020-01-01"
             },
             "toDate": {
               "type": "string",
+              "format": "date",
               "description": "The last day that the income, expenses and deduction period summary covers.\n\nMust conform to the format: YYYY-MM-DD",
               "example": "2020-01-01"
             }
