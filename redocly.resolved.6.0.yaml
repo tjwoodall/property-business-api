@@ -189,6 +189,7 @@ paths:
                     properties:
                       submittedOn:
                         type: string
+                        format: date-time
                         description: The date the UK property was submitted, in the format `YYYY-MM-DDThh:mm:ss.SSSZ`
                         example: '2020-07-07T10:59:47.544Z'
                       ukFhlProperty:
@@ -202,10 +203,16 @@ paths:
                               privateUseAdjustment:
                                 type: number
                                 description: Any adjustments that are not solely for the property business. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               balancingCharge:
                                 type: number
                                 description: If an item for which capital allowance was claimed has been sold, given away or is no longer in use. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               periodOfGraceAdjustment:
                                 type: boolean
@@ -214,6 +221,9 @@ paths:
                               businessPremisesRenovationAllowanceBalancingCharges:
                                 type: number
                                 description: Income from the sale or grant of a long lease for a premium of renovated business premises within 7 years of first use. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               nonResidentLandlord:
                                 type: boolean
@@ -240,26 +250,44 @@ paths:
                               annualInvestmentAllowance:
                                 type: number
                                 description: The amount claimed on equipment bought (except cars) up to maximum annual amount. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               businessPremisesRenovationAllowance:
                                 type: number
                                 description: The allowance amount for renovation or conversion of derelict business properties. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               otherCapitalAllowance:
                                 type: number
                                 description: All other capital allowances. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               propertyIncomeAllowance:
                                 type: number
                                 description: The amount of tax exemption for individuals with income from land or property. The value must be between 0 and 1000.00 up to 2 decimal places.
+                                minimum: 0
+                                maximum: 1000
+                                multipleOf: 0.01
                                 example: '100.25'
                               electricChargePointAllowance:
                                 type: number
                                 description: The expenditure incurred on electric charge-point equipment. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               zeroEmissionsCarAllowance:
                                 type: number
                                 description: The amount of zero emissions car allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                             additionalProperties: false
                         additionalProperties: false
@@ -274,14 +302,23 @@ paths:
                               balancingCharge:
                                 type: number
                                 description: If an item for which capital allowance was claimed has been sold, given away or is no longer in use. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               privateUseAdjustment:
                                 type: number
                                 description: Any adjustments that are not solely for the property business. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               businessPremisesRenovationAllowanceBalancingCharges:
                                 type: number
                                 description: Income from the sale or grant of a long lease for a premium of renovated business premises within 7 years of first use. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               nonResidentLandlord:
                                 type: boolean
@@ -307,30 +344,51 @@ paths:
                               annualInvestmentAllowance:
                                 type: number
                                 description: The amount claimed on equipment bought (except cars) up to maximum annual amount. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               zeroEmissionsGoodsVehicleAllowance:
                                 type: number
                                 description: The amount of zero emissions goods vehicle allowance for goods vehicles purchased for business use. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               businessPremisesRenovationAllowance:
                                 type: number
                                 description: Allowance for renovation or conversion of derelict business properties. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               otherCapitalAllowance:
                                 type: number
                                 description: All other capital allowances. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               costOfReplacingDomesticItems:
                                 type: number
                                 description: Cost of Replacing Domestic Items - formerly Wear and Tear allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               propertyIncomeAllowance:
                                 type: number
                                 description: The amount of tax exemption for individuals with income from land or property. The value must be between 0 and 1000.00 up to 2 decimal places.
+                                minimum: 0
+                                maximum: 1000
+                                multipleOf: 0.01
                                 example: '100.25'
                               electricChargePointAllowance:
                                 type: number
                                 description: The expenditure incurred on electric charge-point equipment. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               structuredBuildingAllowance:
                                 type: array
@@ -341,6 +399,9 @@ paths:
                                     amount:
                                       type: number
                                       description: The amount of structured building allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                      minimum: 0
+                                      maximum: 99999999999.99
+                                      multipleOf: 0.01
                                       example: '5000.99'
                                     firstYear:
                                       type: object
@@ -348,11 +409,15 @@ paths:
                                       properties:
                                         qualifyingDate:
                                           type: string
+                                          format: date
                                           description: The date qualified for structured building allowance. Must conform to the format YYYY-MM-DD.
                                           example: '2020-01-01'
                                         qualifyingAmountExpenditure:
                                           type: number
                                           description: The amount of qualifying expenditure. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                          minimum: 0
+                                          maximum: 99999999999.99
+                                          multipleOf: 0.01
                                           example: '5000.99'
                                       required:
                                         - qualifyingDate
@@ -390,6 +455,9 @@ paths:
                                     amount:
                                       type: number
                                       description: The amount of enhanced structured building allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                      minimum: 0
+                                      maximum: 99999999999.99
+                                      multipleOf: 0.01
                                       example: '5000.99'
                                     firstYear:
                                       type: object
@@ -397,11 +465,15 @@ paths:
                                       properties:
                                         qualifyingDate:
                                           type: string
+                                          format: date
                                           description: The date qualified for enhanced structured building allowance. Must conform to the format YYYY-MM-DD.
                                           example: '2020-01-01'
                                         qualifyingAmountExpenditure:
                                           type: number
                                           description: The amount of qualifying expenditure. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                          minimum: 0
+                                          maximum: 99999999999.99
+                                          multipleOf: 0.01
                                           example: '5000.99'
                                       required:
                                         - qualifyingDate
@@ -433,6 +505,9 @@ paths:
                               zeroEmissionsCarAllowance:
                                 type: number
                                 description: The amount of zero emissions car allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                             additionalProperties: false
                         additionalProperties: false
@@ -446,6 +521,7 @@ paths:
                     properties:
                       submittedOn:
                         type: string
+                        format: date-time
                         description: The date the UK property was submitted, in the format `YYYY-MM-DDThh:mm:ss.SSSZ`
                         example: '2025-07-07T10:59:47.544Z'
                       ukProperty:
@@ -459,14 +535,23 @@ paths:
                               balancingCharge:
                                 type: number
                                 description: If an item for which capital allowance was claimed has been sold, given away or is no longer in use. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               privateUseAdjustment:
                                 type: number
                                 description: Any adjustments that are not solely for the property business. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               businessPremisesRenovationAllowanceBalancingCharges:
                                 type: number
                                 description: Income from the sale or grant of a long lease for a premium of renovated business premises within 7 years of first use. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               nonResidentLandlord:
                                 type: boolean
@@ -492,22 +577,37 @@ paths:
                               annualInvestmentAllowance:
                                 type: number
                                 description: The amount claimed on equipment bought (except cars) up to maximum annual amount. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               businessPremisesRenovationAllowance:
                                 type: number
                                 description: Allowance for renovation or conversion of derelict business properties. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               otherCapitalAllowance:
                                 type: number
                                 description: All other capital allowances. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               costOfReplacingDomesticItems:
                                 type: number
                                 description: Cost of Replacing Domestic Items - formerly Wear and Tear allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               propertyIncomeAllowance:
                                 type: number
                                 description: The amount of tax exemption for individuals with income from land or property. The value must be between 0 and 1000.00 up to 2 decimal places.
+                                minimum: 0
+                                maximum: 1000
+                                multipleOf: 0.01
                                 example: '100.25'
                               structuredBuildingAllowance:
                                 type: array
@@ -518,6 +618,9 @@ paths:
                                     amount:
                                       type: number
                                       description: The amount of structured building allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                      minimum: 0
+                                      maximum: 99999999999.99
+                                      multipleOf: 0.01
                                       example: '5000.99'
                                     firstYear:
                                       type: object
@@ -525,11 +628,15 @@ paths:
                                       properties:
                                         qualifyingDate:
                                           type: string
+                                          format: date
                                           description: The date qualified for structured building allowance. Must conform to the format YYYY-MM-DD.
                                           example: '2020-01-01'
                                         qualifyingAmountExpenditure:
                                           type: number
                                           description: The amount of qualifying expenditure. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                          minimum: 0
+                                          maximum: 99999999999.99
+                                          multipleOf: 0.01
                                           example: '5000.99'
                                       required:
                                         - qualifyingDate
@@ -567,6 +674,9 @@ paths:
                                     amount:
                                       type: number
                                       description: The amount of enhanced structured building allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                      minimum: 0
+                                      maximum: 99999999999.99
+                                      multipleOf: 0.01
                                       example: '5000.99'
                                     firstYear:
                                       type: object
@@ -574,11 +684,15 @@ paths:
                                       properties:
                                         qualifyingDate:
                                           type: string
+                                          format: date
                                           description: The date qualified for enhanced structured building allowance. Must conform to the format YYYY-MM-DD.
                                           example: '2020-01-01'
                                         qualifyingAmountExpenditure:
                                           type: number
                                           description: The amount of qualifying expenditure. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                          minimum: 0
+                                          maximum: 99999999999.99
+                                          multipleOf: 0.01
                                           example: '5000.99'
                                       required:
                                         - qualifyingDate
@@ -610,6 +724,9 @@ paths:
                               zeroEmissionsCarAllowance:
                                 type: number
                                 description: The amount of zero emissions car allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                             additionalProperties: false
                         additionalProperties: false
@@ -1115,6 +1232,7 @@ paths:
                                     properties:
                                       qualifyingDate:
                                         type: string
+                                        format: date
                                         description: The date qualified for structured building allowance. Must conform to the format YYYY-MM-DD.
                                         example: '2020-01-01'
                                       qualifyingAmountExpenditure:
@@ -1174,6 +1292,7 @@ paths:
                                     properties:
                                       qualifyingDate:
                                         type: string
+                                        format: date
                                         description: The date qualified for enhanced structured building allowance. Must conform to the format YYYY-MM-DD.
                                         example: '2020-01-01'
                                       qualifyingAmountExpenditure:
@@ -1333,6 +1452,7 @@ paths:
                                     properties:
                                       qualifyingDate:
                                         type: string
+                                        format: date
                                         description: The date qualified for structured building allowance. Must conform to the format YYYY-MM-DD.
                                         example: '2020-01-01'
                                       qualifyingAmountExpenditure:
@@ -1392,6 +1512,7 @@ paths:
                                     properties:
                                       qualifyingDate:
                                         type: string
+                                        format: date
                                         description: The date qualified for enhanced structured building allowance. Must conform to the format YYYY-MM-DD.
                                         example: '2020-01-01'
                                       qualifyingAmountExpenditure:
@@ -1761,10 +1882,12 @@ paths:
                     fromDate:
                       description: The first day that the income and expenses period summary covers. Must conform to the format YYYY-MM-DD (Our systems only accept dates between 1900-01-01 and 2100-01-01)
                       type: string
+                      format: date
                       example: '2020-01-01'
                     toDate:
                       description: The last day that the income and expenses period summary covers. Must conform to the format YYYY-MM-DD (Our systems only accept dates between 1900-01-01 and 2100-01-01)
                       type: string
+                      format: date
                       example: '2020-01-31'
                     ukFhlProperty:
                       description: |-
@@ -1779,10 +1902,16 @@ paths:
                             periodAmount:
                               description: Total rents from property, ground rents and rent charges but not rent-a-room. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             taxDeducted:
                               description: The tax deducted from the income. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             rentARoom:
                               description: Object holding the rents received for the period.
@@ -1791,6 +1920,9 @@ paths:
                                 rentsReceived:
                                   description: Total rents received from properties. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                   type: number
+                                  minimum: 0
+                                  maximum: 99999999999.99
+                                  multipleOf: 0.01
                                   example: '5000.99'
                               additionalProperties: false
                         expenses:
@@ -1800,30 +1932,51 @@ paths:
                             premisesRunningCosts:
                               description: Rent, rates, insurance, ground rents and other costs. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             repairsAndMaintenance:
                               description: Property repairs and maintenance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             financialCosts:
                               description: Loan interest and other financial costs. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             professionalFees:
                               description: Legal, management and other professional fees. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             costOfServices:
                               description: Cost of services provided, including wages. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             travelCosts:
                               description: Car, van and travel costs incurred in running a property business. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             other:
                               description: Other allowable property expenses. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             rentARoom:
                               description: Object holding the amount claimed for the period.
@@ -1832,10 +1985,16 @@ paths:
                                 amountClaimed:
                                   description: The amount of UK Furnished Holiday Lettings rent claimed.The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                   type: number
+                                  minimum: 0
+                                  maximum: 99999999999.99
+                                  multipleOf: 0.01
                                   example: '5000.99'
                             consolidatedExpenses:
                               type: number
                               description: The sum of all allowable expenses for the specified period. You can either submit a consolidatedExpenses value or individual expenses (premisesRunningCosts, repairsAndMaintenance, financialCosts, professionalFees, costOfServices, other, travelCosts, rentARoom). The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                           additionalProperties: false
                     ukNonFhlProperty:
@@ -1849,22 +2008,37 @@ paths:
                             premiumsOfLeaseGrant:
                               description: Premiums received for the grant of a lease and other lump sums to possess a property. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             reversePremiums:
                               description: Amount paid by a landlord or outgoing tenant to induce a new tenant to enter into a leasehold agreement. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             periodAmount:
                               description: Total rents from property (but not ground rents, rent charges and rent-a-room rental income). The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             taxDeducted:
                               description: Tax already deducted from the rental income. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             otherIncome:
                               description: Total amount of rent and any income for services provided to tenants. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             rentARoom:
                               description: Object holding the rents received for the period.
@@ -1875,7 +2049,11 @@ paths:
                                     Total rents received from properties.
                                     The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                   type: number
+                                  minimum: 0
+                                  maximum: 99999999999.99
+                                  multipleOf: 0.01
                                   example: '5000.99'
+                              additionalProperties: false
                           additionalProperties: false
                         expenses:
                           description: Object holding the expenses for the period.
@@ -1884,38 +2062,65 @@ paths:
                             premisesRunningCosts:
                               description: Rent, rates, insurance, ground rents and other costs. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             repairsAndMaintenance:
                               description: Property repairs and maintenance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             financialCosts:
                               description: Loan interest and other financial costs. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             professionalFees:
                               description: Legal, management and other professional fees. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             costOfServices:
                               description: Cost of services provided, including wages. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             other:
                               description: Other allowable property expenses. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             residentialFinancialCost:
                               description: The residential financial cost deductible from rental income (tax relief). The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             travelCosts:
                               description: Car, van and travel costs incurred in running a property business. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             residentialFinancialCostsCarriedForward:
                               description: Amount of residential financial costs carried forward. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             rentARoom:
                               description: Object holding the amount claimed for the period.
@@ -1924,10 +2129,16 @@ paths:
                                 amountClaimed:
                                   description: The amount of UK Furnished Holiday Lettings rent claimed. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                   type: number
+                                  minimum: 0
+                                  maximum: 99999999999.99
+                                  multipleOf: 0.01
                                   example: '5000.99'
                             consolidatedExpenses:
                               type: number
                               description: The sum of all allowable expenses for the specified period. You can either submit a consolidatedExpenses value or individual expenses (premisesRunningCosts, repairsAndMaintenance, financialCosts, professionalFees, costOfServices, other, residentialFinancialCost, travelCosts, residentialFinancialCostsCarriedForward, rentARoom). The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                           additionalProperties: false
                       additionalProperties: false
@@ -1942,10 +2153,12 @@ paths:
                     fromDate:
                       description: The first day that the income and expenses period summary covers. Must conform to the format YYYY-MM-DD (Our systems only accept dates between 1900-01-01 and 2100-01-01)
                       type: string
+                      format: date
                       example: '2020-01-01'
                     toDate:
                       description: The last day that the income and expenses period summary covers. Must conform to the format YYYY-MM-DD (Our systems only accept dates between 1900-01-01 and 2100-01-01)
                       type: string
+                      format: date
                       example: '2020-01-31'
                     ukFhlProperty:
                       description: |-
@@ -1960,10 +2173,16 @@ paths:
                             periodAmount:
                               description: Total rents from property, ground rents and rent charges but not rent-a-room. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             taxDeducted:
                               description: The tax deducted from the income. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             rentARoom:
                               description: Object holding the rents received for the period.
@@ -1972,6 +2191,9 @@ paths:
                                 rentsReceived:
                                   description: Total rents received from properties. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                   type: number
+                                  minimum: 0
+                                  maximum: 99999999999.99
+                                  multipleOf: 0.01
                                   example: '5000.99'
                               additionalProperties: false
                         expenses:
@@ -1981,44 +2203,71 @@ paths:
                             premisesRunningCosts:
                               description: Rent, rates, insurance, ground rents and other costs. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: -99999999999.99
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             repairsAndMaintenance:
                               description: Property repairs and maintenance. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: -99999999999.99
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             financialCosts:
                               description: Loan interest and other financial costs. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: -99999999999.99
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             professionalFees:
                               description: Legal, management and other professional fees. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: -99999999999.99
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             costOfServices:
                               description: Cost of services provided, including wages. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: -99999999999.99
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             travelCosts:
                               description: Car, van and travel costs incurred in running a property business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: -99999999999.99
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             other:
                               description: Other allowable property expenses. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: -99999999999.99
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             rentARoom:
                               description: Object holding the amount claimed for the period.
                               type: object
                               properties:
                                 amountClaimed:
-                                  description: The amount of UK Furnished Holiday Lettings rent claimed.The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                  description: The amount of UK Furnished Holiday Lettings rent claimed. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                   type: number
+                                  minimum: 0
+                                  maximum: 99999999999.99
+                                  multipleOf: 0.01
                                   example: '5000.99'
                             consolidatedExpenses:
                               type: number
                               description: |-
                                 The sum of all allowable expenses for the specified period. Can be submitted with rentARoom for tax year 2024-25.
                                 The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
+                              minimum: -99999999999.99
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                           additionalProperties: false
                     ukNonFhlProperty:
@@ -2032,22 +2281,37 @@ paths:
                             premiumsOfLeaseGrant:
                               description: Premiums received for the grant of a lease and other lump sums to possess a property. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             reversePremiums:
                               description: Amount paid by a landlord or outgoing tenant to induce a new tenant to enter into a leasehold agreement. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             periodAmount:
                               description: Total rents from property (but not ground rents, rent charges and rent-a-room rental income). The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             taxDeducted:
                               description: Tax already deducted from the rental income. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             otherIncome:
                               description: Total amount of rent and any income for services provided to tenants. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             rentARoom:
                               description: Object holding the rents received for the period.
@@ -2058,6 +2322,9 @@ paths:
                                     Total rents received from properties.
                                     The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                   type: number
+                                  minimum: 0
+                                  maximum: 99999999999.99
+                                  multipleOf: 0.01
                                   example: '5000.99'
                           additionalProperties: false
                         expenses:
@@ -2067,38 +2334,65 @@ paths:
                             premisesRunningCosts:
                               description: Rent, rates, insurance, ground rents and other costs. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: -99999999999.99
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             repairsAndMaintenance:
                               description: Property repairs and maintenance. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: -99999999999.99
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             financialCosts:
                               description: Loan interest and other financial costs. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: -99999999999.99
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             professionalFees:
                               description: Legal, management and other professional fees. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: -99999999999.99
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             costOfServices:
                               description: Cost of services provided, including wages. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: -99999999999.99
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             other:
                               description: Other allowable property expenses. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: -99999999999.99
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             residentialFinancialCost:
                               description: The residential financial cost deductible from rental income (tax relief). The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             travelCosts:
                               description: Car, van and travel costs incurred in running a property business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: -99999999999.99
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             residentialFinancialCostsCarriedForward:
                               description: Amount of residential financial costs carried forward. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             rentARoom:
                               description: Object holding the amount claimed for the period.
@@ -2107,12 +2401,18 @@ paths:
                                 amountClaimed:
                                   description: The amount of UK Furnished Holiday Lettings rent claimed. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                   type: number
+                                  minimum: 0
+                                  maximum: 99999999999.99
+                                  multipleOf: 0.01
                                   example: '5000.99'
                             consolidatedExpenses:
                               type: number
                               description: |-
                                 The sum of all allowable expenses for the specified period. Can be submitted with residentialFinancialCost, residentialFinancialCostsCarriedForward and rentARoom for tax year 2024-25.
                                 The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
+                              minimum: -99999999999.99
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                           additionalProperties: false
                       additionalProperties: false
@@ -2498,14 +2798,17 @@ paths:
                     properties:
                       submittedOn:
                         type: string
+                        format: date-time
                         description: The date the UK property were submitted, in the format `YYYY-MM-DDThh:mm:ss.SSSZ`
                         example: '2020-07-07T10:59:47.544Z'
                       fromDate:
                         type: string
+                        format: date
                         description: The first day that the income and expenses period summary covers. Must conform to the format YYYY-MM-DD
                         example: '2020-01-01'
                       toDate:
                         type: string
+                        format: date
                         description: The last day that the income and expenses period summary covers. Must conform to the format YYYY-MM-DD
                         example: '2020-01-31'
                       ukFhlProperty:
@@ -2773,14 +3076,17 @@ paths:
                     properties:
                       submittedOn:
                         type: string
+                        format: date-time
                         description: The date the UK property were submitted, in the format `YYYY-MM-DDThh:mm:ss.SSSZ`
                         example: '2020-07-07T10:59:47.544Z'
                       fromDate:
                         type: string
+                        format: date
                         description: The first day that the income and expenses period summary covers. Must conform to the format YYYY-MM-DD
                         example: '2020-01-01'
                       toDate:
                         type: string
+                        format: date
                         description: The last day that the income and expenses period summary covers. Must conform to the format YYYY-MM-DD
                         example: '2020-01-31'
                       ukFhlProperty:
@@ -5355,14 +5661,23 @@ paths:
                       lossBroughtForward:
                         type: number
                         description: Loss brought forward from earlier years. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
                         example: '2000.99'
                       privateUseAdjustment:
                         type: number
                         description: Private use adjustment on an asset by a sole trader or partner in a partnership, the asset is put in to a single-asset pool and allowances are restricted on the business to private-use ratio. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
                         example: '1000.45'
                       balancingCharge:
                         type: number
                         description: Balancing charge on sale or cessation of business use (where you have disposed of assets for more than their tax value). The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
                         example: '1000.45'
                       periodOfGraceAdjustment:
                         type: boolean
@@ -5371,6 +5686,9 @@ paths:
                       businessPremisesRenovationAllowanceBalancingCharges:
                         type: number
                         description: Income from the sale or grant of a long lease for a premium of renovated business premises within 7 years of first use. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
                         example: '5000.99'
                       nonResidentLandlord:
                         type: boolean
@@ -5396,18 +5714,30 @@ paths:
                       annualInvestmentAllowance:
                         type: number
                         description: The amount claimed on equipment bought (except cars) up to the maximum annual amount. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
                         example: '5000.99'
                       businessPremisesRenovationAllowance:
                         type: number
                         description: The allowance amount for renovation or conversion of derelict business properties. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
                         example: '5000.99'
                       otherCapitalAllowance:
                         type: number
                         description: All other capital allowances. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
                         example: '5000.99'
                       propertyIncomeAllowance:
                         type: number
                         description: The amount of tax exemption for individuals with income from land or property. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
                         example: '100.25'
               examples:
                 example:
@@ -6231,18 +6561,30 @@ paths:
                       lossBroughtForward:
                         type: number
                         description: Loss brought forward from earlier years. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
                         example: '2000.99'
                       privateUseAdjustment:
                         type: number
                         description: Private use adjustment on an asset by a sole trader or partner in a partnership, the asset is put in to a single-asset pool and allowances are restricted on the business to private-use ratio. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
                         example: '1000.45'
                       balancingCharge:
                         type: number
                         description: Balancing charge on sale or cessation of business use (where you have disposed of assets for more than their tax value). The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
                         example: '1000.45'
                       businessPremisesRenovationAllowanceBalancingCharges:
                         type: number
                         description: Income from the sale or grant of a long lease for a premium of renovated business premises within 7 years of first use. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
                         example: '5000.99'
                       nonResidentLandlord:
                         type: boolean
@@ -6267,26 +6609,44 @@ paths:
                       annualInvestmentAllowance:
                         type: number
                         description: The amount claimed on equipment bought (except cars) up to the maximum annual amount. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
                         example: '5000.99'
                       zeroEmissionGoodsVehicleAllowance:
                         type: number
                         description: The number of zero-emissions goods vehicle allowance for goods vehicles purchased for business use. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
                         example: '5000.99'
                       businessPremisesRenovationAllowance:
                         type: number
                         description: The allowance amount for renovation or conversion of derelict business properties. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
                         example: '5000.99'
                       otherCapitalAllowance:
                         type: number
                         description: All other capital allowances. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
                         example: '5000.99'
                       costOfReplacingDomesticGoods:
                         type: number
                         description: Cost of Replacing Domestic Items - formerly Wear and Tear allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
                         example: '5000.99'
                       propertyIncomeAllowance:
                         type: number
                         description: The amount of tax exemption for individuals with income from land or property. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
                         example: '100.25'
               examples:
                 example:
@@ -6764,6 +7124,7 @@ paths:
                           example: 2017-04-06_2017-07-04
                         fromDate:
                           type: string
+                          format: date
                           description: |-
                             The first day that the income, expenses and deduction period summary covers.
 
@@ -6771,6 +7132,7 @@ paths:
                           example: '2017-04-06'
                         toDate:
                           type: string
+                          format: date
                           description: |-
                             The last day that the income, expenses and deduction period summary covers.
 
@@ -6940,10 +7302,12 @@ paths:
                 fromDate:
                   description: The first day that the income and expenses period summary covers. Must conform to the format YYYY-MM-DD (Our systems only accept dates between 1900-01-01 and 2100-01-01)
                   type: string
+                  format: date
                   example: '2020-01-01'
                 toDate:
                   description: The last day that the income and expenses period summary covers. Must conform to the format YYYY-MM-DD (Our systems only accept dates between 1900-01-01 and 2100-01-01)
                   type: string
+                  format: date
                   example: '2020-01-31'
                 income:
                   description: Object containing the details about income
@@ -6952,10 +7316,16 @@ paths:
                     periodAmount:
                       description: Total rents from property, ground rents and rent charges but not rent-a-room. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                       type: number
+                      minimum: 0
+                      maximum: 99999999999.99
+                      multipleOf: 0.01
                       example: '5000.99'
                     taxDeducted:
                       description: Tax already deducted from the rental income. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                       type: number
+                      minimum: 0
+                      maximum: 99999999999.99
+                      multipleOf: 0.01
                       example: '5000.99'
                     rentARoom:
                       description: Object holding rents received for the period
@@ -6964,6 +7334,9 @@ paths:
                         rentsReceived:
                           description: Total rents received from properties. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
+                          minimum: 0
+                          maximum: 99999999999.99
+                          multipleOf: 0.01
                           example: '5000.99'
                 expenses:
                   description: Object holding the expenses for the period
@@ -6972,34 +7345,58 @@ paths:
                     premisesRunningCosts:
                       description: Rent, rates, insurance, ground rents and other costs. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                       type: number
+                      minimum: 0
+                      maximum: 99999999999.99
+                      multipleOf: 0.01
                       example: '5000.99'
                     repairsAndMaintenance:
                       description: Property repairs and maintenance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                       type: number
+                      minimum: 0
+                      maximum: 99999999999.99
+                      multipleOf: 0.01
                       example: '5000.99'
                     financialCosts:
                       description: Loan interest and other financial costs. The value must be between 0 and 99999999999.99 up to 2 decimal places
                       type: number
+                      minimum: 0
+                      maximum: 99999999999.99
+                      multipleOf: 0.01
                       example: '5000.99'
                     professionalFees:
                       description: Legal, management and other professional fees. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                       type: number
+                      minimum: 0
+                      maximum: 99999999999.99
+                      multipleOf: 0.01
                       example: '5000.99'
                     costOfServices:
                       description: Cost of services provided, including wages. The value must be between 0 and 99999999999.99 up to 2 decimal places
                       type: number
+                      minimum: 0
+                      maximum: 99999999999.99
+                      multipleOf: 0.01
                       example: '5000.99'
                     other:
                       description: Other allowable property expenses. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                       type: number
+                      minimum: 0
+                      maximum: 99999999999.99
+                      multipleOf: 0.01
                       example: '5000.99'
                     consolidatedExpenses:
                       description: The sum of all allowable expenses for the specified period. You can either submit a consolidatedExpenses value or individual expenses (premisesRunningCosts, repairsAndMaintenance, financialCosts, professionalFees, costOfServices, other, travelCosts, rentARoom). The value must be between 0 and 99999999999.99 up to 2 decimal places.
                       type: number
+                      minimum: 0
+                      maximum: 99999999999.99
+                      multipleOf: 0.01
                       example: '5000.99'
                     travelCosts:
                       description: Car, van and travel costs incurred in running a property business. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                       type: number
+                      minimum: 0
+                      maximum: 99999999999.99
+                      multipleOf: 0.01
                       example: '5000.99'
                     rentARoom:
                       description: Object holding the amount claimed for the period
@@ -7008,6 +7405,9 @@ paths:
                         amountClaimed:
                           description: The amount of UK Furnished Holiday Lettings rent claimed. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
+                          minimum: 0
+                          maximum: 99999999999.99
+                          multipleOf: 0.01
                           example: '5000.99'
             examples:
               full-expense-request:
@@ -7323,12 +7723,18 @@ paths:
                       description: |-
                         Total rents from property, ground rents and rent charges but not rent-a-room.
                         The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                      minimum: 0
+                      maximum: 99999999999.99
+                      multipleOf: 0.01
                       example: '1123.45'
                     taxDeducted:
                       type: number
                       description: |-
                         Tax already deducted from the rental income.
                         The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                      minimum: 0
+                      maximum: 99999999999.99
+                      multipleOf: 0.01
                       example: '2134.53'
                     rentARoom:
                       type: object
@@ -7339,6 +7745,9 @@ paths:
                           description: |-
                             Total rents received from properties.
                             The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                          minimum: 0
+                          maximum: 99999999999.99
+                          multipleOf: 0.01
                           example: '5167.56'
                 expenses:
                   type: object
@@ -7349,48 +7758,72 @@ paths:
                       description: |-
                         Rent, rates, insurance, ground rents and other costs.
                         The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                      minimum: 0
+                      maximum: 99999999999.99
+                      multipleOf: 0.01
                       example: '5167.53'
                     repairsAndMaintenance:
                       type: number
                       description: |-
                         Property repairs and maintenance.
                         The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                      minimum: 0
+                      maximum: 99999999999.99
+                      multipleOf: 0.01
                       example: '424.65'
                     financialCosts:
                       type: number
                       description: |-
                         Loan interest and other financial costs.
                         The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                      minimum: 0
+                      maximum: 99999999999.99
+                      multipleOf: 0.01
                       example: '853.56'
                     professionalFees:
                       type: number
                       description: |-
                         Legal, management and other professional fees.
                         The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                      minimum: 0
+                      maximum: 99999999999.99
+                      multipleOf: 0.01
                       example: '835.78'
                     costOfServices:
                       type: number
                       description: |-
                         Cost of services provided, including wages.
                         The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                      minimum: 0
+                      maximum: 99999999999.99
+                      multipleOf: 0.01
                       example: '978.34'
                     other:
                       type: number
                       description: |-
                         Other allowable property expenses.
                         The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                      minimum: 0
+                      maximum: 99999999999.99
+                      multipleOf: 0.01
                       example: '382.34'
                     consolidatedExpenses:
                       type: number
                       description: |-
                         The sum of all allowable expenses for the specified period. You can either submit a consolidatedExpenses value or individual expenses (premisesRunningCosts, repairsAndMaintenance, financialCosts, professionalFees, costOfServices, other, travelCosts, rentARoom).
                         The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                      minimum: 0
+                      maximum: 99999999999.99
+                      multipleOf: 0.01
                       example: '5000.99'
                     travelCosts:
                       type: number
                       description: |-
                         Car, van and travel costs incurred in running a property business.
                         The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                      minimum: 0
+                      maximum: 99999999999.99
+                      multipleOf: 0.01
                       example: '135.78'
                     rentARoom:
                       type: object
@@ -7401,6 +7834,9 @@ paths:
                           description: |-
                             The amount of UK Furnished Holiday Lettings rent claimed.
                             The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                          minimum: 0
+                          maximum: 99999999999.99
+                          multipleOf: 0.01
                           example: '945.9'
             examples:
               full-expenses-request:
@@ -7682,10 +8118,12 @@ paths:
                 properties:
                   fromDate:
                     type: string
+                    format: date
                     description: The first day that the income and expenses period summary covers. Must conform to the format YYYY-MM-DD
                     example: '2020-01-01'
                   toDate:
                     type: string
+                    format: date
                     description: The last day that the income and expenses period summary covers. Must conform to the format YYYY-MM-DD
                     example: '2020-01-31'
                   income:
@@ -7696,13 +8134,19 @@ paths:
                         description: |-
                           Total rents from property, ground rents and rent charges but not rent-a-room.
                           The value must be between 0 and 99999999999.99 up to 2 decimal places.
-                        examples: '5000.99'
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
+                        example: '5000.99'
                       taxDeducted:
                         type: number
                         description: |-
                           Tax already deducted from the rental income.
                           The value must be between 0 and 99999999999.99 up to 2 decimal places.
-                        examples: '5000.99'
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
+                        example: '5000.99'
                       rentARoom:
                         type: object
                         properties:
@@ -7711,7 +8155,10 @@ paths:
                             description: |-
                               Total rents received from properties.
                               The value must be between 0 and 99999999999.99 up to 2 decimal places.
-                            examples: '5000.99'
+                            minimum: 0
+                            maximum: 99999999999.99
+                            multipleOf: 0.01
+                            example: '5000.99'
                         additionalProperties: false
                     additionalProperties: false
                   expenses:
@@ -7722,49 +8169,73 @@ paths:
                         description: |-
                           Rent, rates, insurance, ground rents and other costs.
                           The value must be between 0 and 99999999999.99 up to 2 decimal places.
-                        examples: '5167.53'
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
+                        example: '5167.53'
                       repairsAndMaintenance:
                         type: number
                         description: |-
                           Property repairs and maintenance.
                           The value must be between 0 and 99999999999.99 up to 2 decimal places.
-                        examples: '424.65'
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
+                        example: '424.65'
                       financialCosts:
                         type: number
                         description: |-
                           Loan interest and other financial costs.
                           The value must be between 0 and 99999999999.99 up to 2 decimal places.
-                        examples: '853.56'
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
+                        example: '853.56'
                       professionalFees:
                         type: number
                         description: |-
                           Legal, management and other professional fees.
                           The value must be between 0 and 99999999999.99 up to 2 decimal places.
-                        examples: '835.78'
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
+                        example: '835.78'
                       costOfServices:
                         type: number
                         description: |-
                           Cost of services provided, including wages.
                           The value must be between 0 and 99999999999.99 up to 2 decimal places.
-                        examples: '978.34'
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
+                        example: '978.34'
                       other:
                         type: number
                         description: |-
                           Other allowable property expenses.
                           The value must be between 0 and 99999999999.99 up to 2 decimal places.
-                        examples: '382.34'
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
+                        example: '382.34'
                       consolidatedExpenses:
                         type: number
                         description: |-
                           The sum of all allowable expenses for the specified period. If consolidatedExpenses is returned, values for individual expenses (premisesRunningCosts, repairsAndMaintenance, financialCosts, professionalFees, costOfServices, other, travelCosts, rentARoom) are not returned. 
                           The value must be between 0 and 99999999999.99 up to 2 decimal places.
-                        examples: '5000.99'
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
+                        example: '5000.99'
                       travelCosts:
                         type: number
                         description: |-
                           Car, van and travel costs incurred in running a property business.
                           The value must be between 0 and 99999999999.99 up to 2 decimal places.
-                        examples: '135.78'
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
+                        example: '135.78'
                       rentARoom:
                         type: object
                         description: Object holding the amount claimed for the period
@@ -7774,7 +8245,10 @@ paths:
                             description: |-
                               The amount of UK Furnished Holiday Lettings rent claimed.
                               The value must be between 0 and 99999999999.99 up to 2 decimal places.
-                            examples: '945.9'
+                            minimum: 0
+                            maximum: 99999999999.99
+                            multipleOf: 0.01
+                            example: '945.9'
                         additionalProperties: false
                     additionalProperties: false
                 required:
@@ -8027,6 +8501,7 @@ paths:
                           example: 2017-04-06_2017-07-04
                         fromDate:
                           type: string
+                          format: date
                           description: |-
                             The first day that the income, expenses and deduction period summary covers.
 
@@ -8034,6 +8509,7 @@ paths:
                           example: '2020-01-01'
                         toDate:
                           type: string
+                          format: date
                           description: |-
                             The last day that the income, expenses and deduction period summary covers.
 
@@ -8209,10 +8685,12 @@ paths:
                 fromDate:
                   description: The first day that the income and expenses period summary covers. Must conform to the format YYYY-MM-DD (Our systems only accept dates between 1900-01-01 and 2100-01-01)
                   type: string
+                  format: date
                   example: '2020-01-01'
                 toDate:
                   description: The last day that the income and expenses period summary covers. Must conform to the format YYYY-MM-DD (Our systems only accept dates between 1900-01-01 and 2100-01-01)
                   type: string
+                  format: date
                   example: '2020-01-01'
                 income:
                   description: Object containing the details about income
@@ -8223,30 +8701,45 @@ paths:
                         Total rents from property, ground rents and rent charges but not rent-a-room.
                         The value must be between 0 and 99999999999.99 up to 2 decimal places.
                       type: number
+                      minimum: 0
+                      maximum: 99999999999.99
+                      multipleOf: 0.01
                       example: '5000.99'
                     premiumsOfLeaseGrant:
                       description: |-
                         Premiums received for the grant of a lease and other lump sums to possess a property.
                         The value must be between 0 and 99999999999.99 up to 2 decimal places.
                       type: number
+                      minimum: 0
+                      maximum: 99999999999.99
+                      multipleOf: 0.01
                       example: '5000.99'
                     reversePremiums:
                       description: |-
                         Amount paid by a landlord or outgoing tenant to induce a new tenant to enter into a leasehold agreement.
                         The value must be between 0 and 99999999999.99 up to 2 decimal places.
                       type: number
+                      minimum: 0
+                      maximum: 99999999999.99
+                      multipleOf: 0.01
                       example: '5000.99'
                     otherIncome:
                       description: |-
                         Total amount of rent and any income for services provided to tenants.
                         The value must be between 0 and 99999999999.99 up to 2 decimal places.
                       type: number
+                      minimum: 0
+                      maximum: 99999999999.99
+                      multipleOf: 0.01
                       example: '5000.99'
                     taxDeducted:
                       description: |-
                         Tax already deducted from the rental income.
                         The value must be between 0 and 99999999999.99 up to 2 decimal places.
                       type: number
+                      minimum: 0
+                      maximum: 99999999999.99
+                      multipleOf: 0.01
                       example: '5000.99'
                     rentARoom:
                       description: Objects holding rents received for the period
@@ -8257,6 +8750,9 @@ paths:
                             Total rents received from properties.
                             The value must be between 0 and 99999999999.99 up to 2 decimal places.
                           type: number
+                          minimum: 0
+                          maximum: 99999999999.99
+                          multipleOf: 0.01
                           example: '5000.99'
                 expenses:
                   description: Object holding deductions for the period
@@ -8267,58 +8763,88 @@ paths:
                         Rent, rates, insurance, ground rents and other costs.
                         The value must be between 0 and 99999999999.99 up to 2 decimal places.
                       type: number
+                      minimum: 0
+                      maximum: 99999999999.99
+                      multipleOf: 0.01
                       example: '5000.99'
                     repairsAndMaintenance:
                       type: number
                       description: |-
                         Property repairs and maintenance.
                         The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                      minimum: 0
+                      maximum: 99999999999.99
+                      multipleOf: 0.01
                       example: '5000.99'
                     financialCosts:
                       description: |-
                         Loan interest and other financial costs.
                         The value must be between 0 and 99999999999.99 up to 2 decimal places.
                       type: number
+                      minimum: 0
+                      maximum: 99999999999.99
+                      multipleOf: 0.01
                       example: '5000.99'
                     professionalFees:
                       description: |-
                         Legal, management and other professional fees.
                         The value must be between 0 and 99999999999.99 up to 2 decimal places.
                       type: number
+                      minimum: 0
+                      maximum: 99999999999.99
+                      multipleOf: 0.01
                       example: '5000.99'
                     costOfServices:
                       description: |-
                         Cost of services provided, including wages.
                         The value must be between 0 and 99999999999.99 up to 2 decimal places.
                       type: number
+                      minimum: 0
+                      maximum: 99999999999.99
+                      multipleOf: 0.01
                       example: '5000.99'
                     other:
                       description: |-
                         Other allowable property expenses.
                         The value must be between 0 and 99999999999.99 up to 2 decimal places.
                       type: number
+                      minimum: 0
+                      maximum: 99999999999.99
+                      multipleOf: 0.01
                       example: '682.34'
                     consolidatedExpenses:
                       description: |-
                         The sum of all allowable expenses for the specified period. You can either submit a consolidatedExpenses value or individual expenses (premisesRunningCosts, repairsAndMaintenance, financialCosts, professionalFees, costOfServices, other, travelCosts, residentialFinancialCostsCarriedForward, residentialFinancialCost, rentARoom).
                         The value must be between 0 and 99999999999.99 up to 2 decimal places.
                       type: number
+                      minimum: 0
+                      maximum: 99999999999.99
+                      multipleOf: 0.01
                       example: '5000.99'
                     travelCosts:
                       description: |-
                         Car, van and travel costs incurred in running a property business.
                         The value must be between 0 and 99999999999.99 up to 2 decimal places.
                       type: number
+                      minimum: 0
+                      maximum: 99999999999.99
+                      multipleOf: 0.01
                       example: '5000.99'
                     residentialFinancialCostsCarriedForward:
                       description: |-
                         Amount of residential financial costs carried forward.
                         The value must be between 0 and 99999999999.99 up to 2 decimal places.
                       type: number
+                      minimum: 0
+                      maximum: 99999999999.99
+                      multipleOf: 0.01
                       example: '5000.99'
                     residentialFinancialCost:
                       description: Captures residential financial cost that can be deductible from rental income (tax relief). The value must be between 0 and 99999999999.99 up to 2 decimal places.
                       type: number
+                      minimum: 0
+                      maximum: 99999999999.99
+                      multipleOf: 0.01
                       example: '1000.45'
                     rentARoom:
                       description: Object holding the amount claimed for the period
@@ -8329,6 +8855,9 @@ paths:
                           description: |-
                             The amount of UK Furnished Holiday Lettings rent claimed.
                             The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                          minimum: 0
+                          maximum: 99999999999.99
+                          multipleOf: 0.01
                           example: '5000.99'
               required: &ref_43
                 - fromDate
@@ -8652,10 +9181,12 @@ paths:
                 properties:
                   fromDate:
                     type: string
+                    format: date
                     description: The first day that the income and expenses period summary covers. Must conform to the format YYYY-MM-DD
                     example: '2020-01-01'
                   toDate:
                     type: string
+                    format: date
                     description: The last day that the income and expenses period summary covers. Must conform to the format YYYY-MM-DD
                     example: '2020-01-31'
                   income:
@@ -8667,30 +9198,45 @@ paths:
                         description: |-
                           Total rents from property, ground rents and rent charges but not rent-a-room.
                           The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
                         example: '5000.99'
                       premiumsOfLeaseGrant:
                         type: number
                         description: |-
                           Total rents from property, ground rents and rent charges but not rent-a-room.
                           The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
                         example: '5000.99'
                       reversePremiums:
                         type: number
                         description: |-
                           Total rents from property, ground rents and rent charges but not rent-a-room.
                           The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
                         example: '5000.99'
                       otherIncome:
                         type: number
                         description: |-
                           Total rents from property, ground rents and rent charges but not rent-a-room.
                           The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
                         example: '5000.99'
                       taxDeducted:
                         type: number
                         description: |-
                           Tax already deducted from the rental income.
                           The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
                         example: '5000.99'
                       rentARoom:
                         type: object
@@ -8701,6 +9247,9 @@ paths:
                             description: |-
                               Total rents received from properties.
                               The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                            minimum: 0
+                            maximum: 99999999999.99
+                            multipleOf: 0.01
                             example: '5000.99'
                   expenses:
                     type: object
@@ -8711,58 +9260,88 @@ paths:
                         description: |-
                           Rent, rates, insurance, ground rents and other costs.
                           The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
                         example: '5000.99'
                       repairsAndMaintenance:
                         type: number
                         description: |-
                           Property repairs and maintenance.
                           The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
                         example: '5000.99'
                       financialCosts:
                         type: number
                         description: |-
                           Loan interest and other financial costs.
                           The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
                         example: '5000.99'
                       professionalFees:
                         type: number
                         description: |-
                           Legal, management and other professional fees.
                           The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
                         example: '5000.99'
                       costOfServices:
                         type: number
                         description: |-
                           Cost of services provided, including wages.
                           The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
                         example: '5000.99'
                       other:
                         type: number
                         description: |-
                           Other allowable property expenses.
                           The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
                         example: '5000.99'
                       consolidatedExpenses:
                         type: number
                         description: |-
                           The sum of all allowable expenses for the specified period. If consolidatedExpenses is returned, values for individual expenses (premisesRunningCosts, repairsAndMaintenance, financialCosts, professionalFees, costOfServices, other, travelCosts, residentialFinancialCostsCarriedForward, residentialFinancialCost, rentARoom) are not returned. 
                           The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
                         example: '5000.99'
                       travelCosts:
                         type: number
                         description: |-
                           Car, van and travel costs incurred in running a property business.
                           The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
                         example: '5000.99'
                       residentialFinancialCostsCarriedForward:
                         type: number
                         description: |-
                           Amount of residential financial costs carried forward.
                           The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
                         example: '5000.99'
                       residentialFinancialCost:
                         type: number
                         description: Captures residential financial cost that can be deductible from rental income (tax relief). The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                        minimum: 0
+                        maximum: 99999999999.99
+                        multipleOf: 0.01
                         example: '1000.45'
                       rentARoom:
                         type: object
@@ -8773,6 +9352,9 @@ paths:
                             description: |-
                               The amount of UK Furnished Holiday Lettings rent claimed.
                               The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                            minimum: 0
+                            maximum: 99999999999.99
+                            multipleOf: 0.01
                             example: '5000.99'
                 required:
                   - fromDate
@@ -9289,10 +9871,12 @@ paths:
                     fromDate:
                       description: The first day that the income and expenses period summary covers. Must conform to the format YYYY-MM-DD (Our systems only accept dates between 1900-01-01 and 2100-01-01)
                       type: string
+                      format: date
                       example: '2020-01-01'
                     toDate:
                       description: The last day that the income and expenses period summary covers. Must conform to the format YYYY-MM-DD (Our systems only accept dates between 1900-01-01 and 2100-01-01)
                       type: string
+                      format: date
                       example: '2020-01-31'
                     foreignFhlEea:
                       description: Object holding the income and expenses of the user's Furnished Holiday Lettings (FHL) in the European Economic Area (EEA) for the period.
@@ -9305,6 +9889,9 @@ paths:
                             rentAmount:
                               description: Total rent and other income from property. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                           required:
                             - rentAmount
@@ -9316,34 +9903,58 @@ paths:
                             premisesRunningCosts:
                               description: Rent, rates, insurance, ground rents and other costs. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             repairsAndMaintenance:
                               description: Property repairs and maintenance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             financialCosts:
                               description: Loan interest and other financial costs. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             professionalFees:
                               description: Legal, management and other professional fees. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             costOfServices:
                               description: Cost of services provided, including wages. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             travelCosts:
                               description: Car, van and travel costs incurred in running a property business. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             other:
                               description: Other allowable property expenses. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             consolidatedExpenses:
                               description: The sum of all allowable expenses for the specified period. You can either submit a consolidatedExpenses value or individual expenses (premisesRunningCosts, repairsAndMaintenance, financialCosts, professionalFees, costOfServices, travelCosts, other).The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                           additionalProperties: false
                       additionalProperties: false
@@ -9368,6 +9979,9 @@ paths:
                                   rentAmount:
                                     description: Total rent and other income from property. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                     type: number
+                                    minimum: 0
+                                    maximum: 99999999999.99
+                                    multipleOf: 0.01
                                     example: '5000.99'
                                 required:
                                   - rentAmount
@@ -9379,18 +9993,30 @@ paths:
                               premiumsOfLeaseGrant:
                                 description: Premiums received for the grant of a lease and other lump sums to possess a property. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                 type: number
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               otherPropertyIncome:
                                 description: Other income from property, such as rent charges and ground rents, income from letting others tip waste on your land, and income for the use of a caravan or houseboat at a fixed location. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                 type: number
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               foreignTaxPaidOrDeducted:
                                 description: The total amount of foreign tax paid or deducted from your income. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                 type: number
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               specialWithholdingTaxOrUkTaxPaid:
                                 description: Tax withheld (in UK Pounds) on certain payments to UK residents or UK Tax paid from rental Income (applies to non-resident landlords only). The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                 type: number
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                             required:
                               - rentIncome
@@ -9403,42 +10029,72 @@ paths:
                               premisesRunningCosts:
                                 description: Rent, rates, insurance, ground rents and other costs. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                 type: number
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               repairsAndMaintenance:
                                 description: Property repairs and maintenance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                 type: number
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               financialCosts:
                                 description: Loan interest and other financial costs. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                 type: number
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               professionalFees:
                                 description: Legal, management and other professional fees. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                 type: number
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               travelCosts:
                                 description: Car, van and travel costs incurred in running a property business. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                 type: number
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               costOfServices:
                                 description: Cost of services provided, including wages. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                 type: number
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               residentialFinancialCost:
                                 description: The residential financial cost deductible from rental income (tax relief). The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                 type: number
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               broughtFwdResidentialFinancialCost:
                                 description: Amount of relief brought forward for restricted residential financial costs. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                 type: number
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               other:
                                 description: Other allowable property expenses. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                 type: number
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               consolidatedExpenses:
                                 type: number
                                 description: The sum of all allowable expenses for the specified period. You can either submit a consolidatedExpenses value or individual expenses (premisesRunningCosts, repairsAndMaintenance, financialCosts, professionalFees, costOfServices, travelCosts, other). The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                             additionalProperties: false
                         required:
@@ -9458,10 +10114,12 @@ paths:
                     fromDate:
                       description: The first day that the income and expenses period summary covers. Must conform to the format YYYY-MM-DD (Our systems only accept dates between 1900-01-01 and 2100-01-01)
                       type: string
+                      format: date
                       example: '2024-04-06'
                     toDate:
                       description: The last day that the income and expenses period summary covers. Must conform to the format YYYY-MM-DD (Our systems only accept dates between 1900-01-01 and 2100-01-01)
                       type: string
+                      format: date
                       example: '2025-01-05'
                     foreignFhlEea:
                       description: Object holding the income and expenses of the user's Furnished Holiday Lettings (FHL) in the European Economic Area (EEA) for the period.
@@ -9474,6 +10132,9 @@ paths:
                             rentAmount:
                               description: Total rent and other income from property. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: 0
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                           required:
                             - rentAmount
@@ -9485,34 +10146,58 @@ paths:
                             premisesRunningCosts:
                               description: Rent, rates, insurance, ground rents and other costs. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: -99999999999.99
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             repairsAndMaintenance:
                               description: Property repairs and maintenance. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: -99999999999.99
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             financialCosts:
                               description: Loan interest and other financial costs. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: -99999999999.99
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             professionalFees:
                               description: Legal, management and other professional fees. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: -99999999999.99
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             costOfServices:
                               description: Cost of services provided, including wages. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: -99999999999.99
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             travelCosts:
                               description: Car, van and travel costs incurred in running a property business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: -99999999999.99
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             other:
                               description: Other allowable property expenses. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: -99999999999.99
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                             consolidatedExpenses:
                               description: The sum of all allowable expenses for the specified period. You can either submit a consolidatedExpenses value or individual expenses (premisesRunningCosts, repairsAndMaintenance, financialCosts, professionalFees, costOfServices, travelCosts, other).The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                               type: number
+                              minimum: -99999999999.99
+                              maximum: 99999999999.99
+                              multipleOf: 0.01
                               example: '5000.99'
                           additionalProperties: false
                       additionalProperties: false
@@ -9537,6 +10222,9 @@ paths:
                                   rentAmount:
                                     description: Total rent and other income from property. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                     type: number
+                                    minimum: 0
+                                    maximum: 99999999999.99
+                                    multipleOf: 0.01
                                     example: '5000.99'
                                 required:
                                   - rentAmount
@@ -9548,18 +10236,30 @@ paths:
                               premiumsOfLeaseGrant:
                                 description: Premiums received for the grant of a lease and other lump sums to possess a property. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                 type: number
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               otherPropertyIncome:
                                 description: Other income from property, such as rent charges and ground rents, income from letting others tip waste on your land, and income for the use of a caravan or houseboat at a fixed location. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                 type: number
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               foreignTaxPaidOrDeducted:
                                 description: The total amount of foreign tax paid or deducted from your income. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                 type: number
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               specialWithholdingTaxOrUkTaxPaid:
                                 description: Tax withheld (in UK Pounds) on certain payments to UK residents or UK Tax paid from rental Income (applies to non-resident landlords only). The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                 type: number
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                             required:
                               - rentIncome
@@ -9572,42 +10272,72 @@ paths:
                               premisesRunningCosts:
                                 description: Rent, rates, insurance, ground rents and other costs. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                                 type: number
+                                minimum: -99999999999.99
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               repairsAndMaintenance:
                                 description: Property repairs and maintenance. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                                 type: number
+                                minimum: -99999999999.99
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               financialCosts:
                                 description: Loan interest and other financial costs. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                                 type: number
+                                minimum: -99999999999.99
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               professionalFees:
                                 description: Legal, management and other professional fees. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                                 type: number
+                                minimum: -99999999999.99
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               travelCosts:
                                 description: Car, van and travel costs incurred in running a property business. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                                 type: number
+                                minimum: -99999999999.99
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               costOfServices:
                                 description: Cost of services provided, including wages. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                                 type: number
+                                minimum: -99999999999.99
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               residentialFinancialCost:
                                 description: The residential financial cost deductible from rental income (tax relief). The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                 type: number
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               broughtFwdResidentialFinancialCost:
                                 description: Amount of relief brought forward for restricted residential financial costs. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                 type: number
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               other:
                                 description: Other allowable property expenses. The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
                                 type: number
+                                minimum: -99999999999.99
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               consolidatedExpenses:
                                 type: number
                                 description: The sum of all allowable expenses for the specified period. You can either submit a consolidatedExpenses value or individual expenses (premisesRunningCosts, repairsAndMaintenance, financialCosts, professionalFees, costOfServices, travelCosts, other). The value must be between -99999999999.99 and 99999999999.99 up to 2 decimal places.
+                                minimum: -99999999999.99
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                             additionalProperties: false
                         required:
@@ -10002,14 +10732,17 @@ paths:
                       submittedOn:
                         description: The date the foreign property were submitted, in the format `YYYY-MM-DDThh:mm:ss.SSSZ`
                         type: string
+                        format: date-time
                         example: '2021-06-17T10:59:47.544Z'
                       fromDate:
                         description: The first day that the income and expenses period summary covers. Must conform to the format YYYY-MM-DD
                         type: string
+                        format: date
                         example: '2020-01-01'
                       toDate:
                         description: The last day that the income and expenses period summary covers. Must conform to the format YYYY-MM-DD
                         type: string
+                        format: date
                         example: '2020-01-31'
                       foreignFhlEea:
                         type: object
@@ -10154,9 +10887,6 @@ paths:
                                 foreignTaxCreditRelief:
                                   type: boolean
                                   description: A boolean indicating whether Foreign Tax Credit Relief (FTCR) has been claimed.
-                                  multipleOf: 0.01
-                                  minimum: 0
-                                  maximum: 99999999999.99
                                   example: '5000.99'
                                 premiumsOfLeaseGrant:
                                   type: number
@@ -10324,14 +11054,17 @@ paths:
                       submittedOn:
                         description: The date the foreign property were submitted, in the format `YYYY-MM-DDThh:mm:ss.SSSZ`
                         type: string
+                        format: date-time
                         example: '2024-06-17T10:59:47.544Z'
                       fromDate:
                         description: The first day that the income and expenses period summary covers. Must conform to the format YYYY-MM-DD
                         type: string
+                        format: date
                         example: '2024-04-06'
                       toDate:
                         description: The last day that the income and expenses period summary covers. Must conform to the format YYYY-MM-DD
                         type: string
+                        format: date
                         example: '2024-04-05'
                       foreignFhlEea:
                         type: object
@@ -10476,9 +11209,6 @@ paths:
                                 foreignTaxCreditRelief:
                                   type: boolean
                                   description: A boolean indicating whether Foreign Tax Credit Relief (FTCR) has been claimed.
-                                  multipleOf: 0.01
-                                  minimum: 0
-                                  maximum: 99999999999.99
                                   example: '5000.99'
                                 premiumsOfLeaseGrant:
                                   type: number
@@ -12904,6 +13634,7 @@ paths:
                     properties:
                       submittedOn:
                         type: string
+                        format: date-time
                         description: The date the foreign property was submitted, in the format `YYYY-MM-DDThh:mm:ss.SSSZ`
                         example: '2022-06-17T10:59:47.544Z'
                       foreignFhlEea:
@@ -12917,10 +13648,16 @@ paths:
                               privateUseAdjustment:
                                 type: number
                                 description: Any adjustments that are not solely for the property business. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               balancingCharge:
                                 type: number
                                 description: If an item for which capital allowance was claimed has been sold, given away or is no longer in use. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               periodOfGraceAdjustment:
                                 type: boolean
@@ -12934,22 +13671,37 @@ paths:
                               annualInvestmentAllowance:
                                 type: number
                                 description: The amount claimed on equipment bought (except cars) up to maximum annual amount. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               otherCapitalAllowance:
                                 type: number
                                 description: All other capital allowances. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               electricChargePointAllowance:
                                 type: number
                                 description: The expenditure incurred on electric charge-point equipment. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               zeroEmissionsCarAllowance:
                                 type: number
                                 description: The amount of zero emissions car allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                minimum: 0
+                                maximum: 99999999999.99
+                                multipleOf: 0.01
                                 example: '5000.99'
                               propertyIncomeAllowance:
                                 type: number
                                 description: The amount of tax exemption for individuals with income from land or property. The value must be between 0 and 1000.00 up to 2 decimal places.
+                                minimum: 0
+                                maximum: 1000
+                                multipleOf: 0.01
                                 example: '100.25'
                             additionalProperties: false
                         additionalProperties: false
@@ -12971,10 +13723,16 @@ paths:
                                 privateUseAdjustment:
                                   type: number
                                   description: Any adjustments that are not solely for the property business. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                  minimum: 0
+                                  maximum: 99999999999.99
+                                  multipleOf: 0.01
                                   example: '5000.99'
                                 balancingCharge:
                                   type: number
                                   description: If an item for which capital allowance was claimed has been sold, given away or is no longer in use. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                  minimum: 0
+                                  maximum: 99999999999.99
+                                  multipleOf: 0.01
                                   example: '5000.99'
                               additionalProperties: false
                             allowances:
@@ -12984,30 +13742,51 @@ paths:
                                 annualInvestmentAllowance:
                                   type: number
                                   description: The amount claimed on equipment bought (except cars) up to maximum annual amount. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                  minimum: 0
+                                  maximum: 99999999999.99
+                                  multipleOf: 0.01
                                   example: '5000.99'
                                 costOfReplacingDomesticItems:
                                   type: number
                                   description: Cost of Replacing Domestic Items - formerly Wear and Tear allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                  minimum: 0
+                                  maximum: 99999999999.99
+                                  multipleOf: 0.01
                                   example: '5000.99'
                                 zeroEmissionsGoodsVehicleAllowance:
                                   type: number
                                   description: The amount of zero emissions goods vehicle allowance for goods vehicles purchased for business use. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                  minimum: 0
+                                  maximum: 99999999999.99
+                                  multipleOf: 0.01
                                   example: '5000.99'
                                 otherCapitalAllowance:
                                   type: number
                                   description: All other capital allowances. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                  minimum: 0
+                                  maximum: 99999999999.99
+                                  multipleOf: 0.01
                                   example: '5000.99'
                                 electricChargePointAllowance:
                                   type: number
                                   description: The expenditure incurred on electric charge-point equipment. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                  minimum: 0
+                                  maximum: 99999999999.99
+                                  multipleOf: 0.01
                                   example: '5000.99'
                                 zeroEmissionsCarAllowance:
                                   type: number
                                   description: The amount of zero emissions car allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                  minimum: 0
+                                  maximum: 99999999999.99
+                                  multipleOf: 0.01
                                   example: '5000.99'
                                 propertyIncomeAllowance:
                                   type: number
                                   description: The amount of tax exemption for individuals with income from land or property. The value must be between 0 and 1000.00 up to 2 decimal places.
+                                  minimum: 0
+                                  maximum: 1000
+                                  multipleOf: 0.01
                                   example: '100.25'
                                 structuredBuildingAllowance:
                                   type: array
@@ -13018,6 +13797,9 @@ paths:
                                       amount:
                                         type: number
                                         description: The amount of structured building allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                        minimum: 0
+                                        maximum: 99999999999.99
+                                        multipleOf: 0.01
                                         example: '5000.99'
                                       firstYear:
                                         type: object
@@ -13025,11 +13807,15 @@ paths:
                                         properties:
                                           qualifyingDate:
                                             type: string
+                                            format: date
                                             description: The date qualified for structured building allowance. Must conform to the format YYYY-MM-DD.
                                             example: '2020-01-01'
                                           qualifyingAmountExpenditure:
                                             type: number
                                             description: The amount of qualifying expenditure. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                            minimum: 0
+                                            maximum: 99999999999.99
+                                            multipleOf: 0.01
                                             example: '5000.99'
                                         additionalProperties: false
                                         required:
@@ -13074,6 +13860,7 @@ paths:
                     properties:
                       submittedOn:
                         type: string
+                        format: date-time
                         description: The date the foreign property was submitted, in the format `YYYY-MM-DDThh:mm:ss.SSSZ`
                         example: '2025-06-17T10:59:47.544Z'
                       foreignProperty:
@@ -13094,10 +13881,16 @@ paths:
                                 privateUseAdjustment:
                                   type: number
                                   description: Any adjustments that are not solely for the property business. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                  minimum: 0
+                                  maximum: 99999999999.99
+                                  multipleOf: 0.01
                                   example: '5000.99'
                                 balancingCharge:
                                   type: number
                                   description: If an item for which capital allowance was claimed has been sold, given away or is no longer in use. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                  minimum: 0
+                                  maximum: 99999999999.99
+                                  multipleOf: 0.01
                                   example: '5000.99'
                               additionalProperties: false
                             allowances:
@@ -13107,22 +13900,37 @@ paths:
                                 annualInvestmentAllowance:
                                   type: number
                                   description: The amount claimed on equipment bought (except cars) up to maximum annual amount. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                  minimum: 0
+                                  maximum: 99999999999.99
+                                  multipleOf: 0.01
                                   example: '5000.99'
                                 costOfReplacingDomesticItems:
                                   type: number
                                   description: Cost of Replacing Domestic Items - formerly Wear and Tear allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                  minimum: 0
+                                  maximum: 99999999999.99
+                                  multipleOf: 0.01
                                   example: '5000.99'
                                 otherCapitalAllowance:
                                   type: number
                                   description: All other capital allowances. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                  minimum: 0
+                                  maximum: 99999999999.99
+                                  multipleOf: 0.01
                                   example: '5000.99'
                                 zeroEmissionsCarAllowance:
                                   type: number
                                   description: The amount of zero emissions car allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                  minimum: 0
+                                  maximum: 99999999999.99
+                                  multipleOf: 0.01
                                   example: '5000.99'
                                 propertyIncomeAllowance:
                                   type: number
                                   description: The amount of tax exemption for individuals with income from land or property. The value must be between 0 and 1000.00 up to 2 decimal places.
+                                  minimum: 0
+                                  maximum: 1000
+                                  multipleOf: 0.01
                                   example: '100.25'
                                 structuredBuildingAllowance:
                                   type: array
@@ -13133,6 +13941,9 @@ paths:
                                       amount:
                                         type: number
                                         description: The amount of structured building allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                        minimum: 0
+                                        maximum: 99999999999.99
+                                        multipleOf: 0.01
                                         example: '5000.99'
                                       firstYear:
                                         type: object
@@ -13140,11 +13951,15 @@ paths:
                                         properties:
                                           qualifyingDate:
                                             type: string
+                                            format: date
                                             description: The date qualified for structured building allowance. Must conform to the format YYYY-MM-DD.
                                             example: '2020-01-01'
                                           qualifyingAmountExpenditure:
                                             type: number
                                             description: The amount of qualifying expenditure. The value must be between 0 and 99999999999.99 up to 2 decimal places.
+                                            minimum: 0
+                                            maximum: 99999999999.99
+                                            multipleOf: 0.01
                                             example: '5000.99'
                                         additionalProperties: false
                                         required:
@@ -13190,6 +14005,7 @@ paths:
                     properties:
                       submittedOn:
                         type: string
+                        format: date-time
                         description: The date the foreign property was submitted, in the format `YYYY-MM-DDThh:mm:ss.SSSZ`
                         example: '2026-06-17T10:59:47.544Z'
                       foreignProperty:
@@ -13211,10 +14027,16 @@ paths:
                                   type: number
                                   description: Any adjustments that are not solely for the property business. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                   example: '5000.99'
+                                  minimum: 0
+                                  maximum: 99999999999.99
+                                  multipleOf: 0.01
                                 balancingCharge:
                                   type: number
                                   description: If an item for which capital allowance was claimed has been sold, given away or is no longer in use. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                   example: '5000.99'
+                                  minimum: 0
+                                  maximum: 99999999999.99
+                                  multipleOf: 0.01
                               additionalProperties: false
                             allowances:
                               type: object
@@ -13224,22 +14046,37 @@ paths:
                                   type: number
                                   description: The amount claimed on equipment bought (except cars) up to maximum annual amount. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                   example: '5000.99'
+                                  minimum: 0
+                                  maximum: 99999999999.99
+                                  multipleOf: 0.01
                                 costOfReplacingDomesticItems:
                                   type: number
                                   description: Cost of Replacing Domestic Items - formerly Wear and Tear allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                   example: '5000.99'
+                                  minimum: 0
+                                  maximum: 99999999999.99
+                                  multipleOf: 0.01
                                 otherCapitalAllowance:
                                   type: number
                                   description: All other capital allowances. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                   example: '5000.99'
+                                  minimum: 0
+                                  maximum: 99999999999.99
+                                  multipleOf: 0.01
                                 zeroEmissionsCarAllowance:
                                   type: number
                                   description: The amount of zero emissions car allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                   example: '5000.99'
+                                  minimum: 0
+                                  maximum: 99999999999.99
+                                  multipleOf: 0.01
                                 propertyIncomeAllowance:
                                   type: number
                                   description: The amount of tax exemption for individuals with income from land or property. The value must be between 0 and 1000.00 up to 2 decimal places.
                                   example: '100.25'
+                                  minimum: 0
+                                  maximum: 1000
+                                  multipleOf: 0.01
                                 structuredBuildingAllowance:
                                   type: array
                                   description: Details about structured building allowance.
@@ -13250,18 +14087,25 @@ paths:
                                         type: number
                                         description: The amount of structured building allowance. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                         example: '5000.99'
+                                        minimum: 0
+                                        maximum: 99999999999.99
+                                        multipleOf: 0.01
                                       firstYear:
                                         type: object
                                         description: Object holding structured building allowance details.
                                         properties:
                                           qualifyingDate:
                                             type: string
+                                            format: date
                                             description: The date qualified for structured building allowance. Must conform to the format YYYY-MM-DD.
                                             example: '2020-01-01'
                                           qualifyingAmountExpenditure:
                                             type: number
                                             description: The amount of qualifying expenditure. The value must be between 0 and 99999999999.99 up to 2 decimal places.
                                             example: '5000.99'
+                                            minimum: 0
+                                            maximum: 99999999999.99
+                                            multipleOf: 0.01
                                         additionalProperties: false
                                         required:
                                           - qualifyingDate
@@ -13720,6 +14564,7 @@ paths:
                                       properties:
                                         qualifyingDate:
                                           type: string
+                                          format: date
                                           description: The date qualified for structured building allowance. Must conform to the format YYYY-MM-DD.
                                           example: '2020-03-29'
                                         qualifyingAmountExpenditure:
@@ -13857,6 +14702,7 @@ paths:
                                       properties:
                                         qualifyingDate:
                                           type: string
+                                          format: date
                                           description: The date qualified for structured building allowance. Must conform to the format YYYY-MM-DD.
                                           example: '2020-03-29'
                                         qualifyingAmountExpenditure:
@@ -13996,6 +14842,7 @@ paths:
                                       properties:
                                         qualifyingDate:
                                           type: string
+                                          format: date
                                           description: The date qualified for structured building allowance. Must conform to the format YYYY-MM-DD.
                                           example: '2020-03-29'
                                         qualifyingAmountExpenditure:
@@ -14653,10 +15500,12 @@ paths:
                         fromDate:
                           description: 'The first day that the income and expenses period summary covers. Must conform to the format: YYYY-MM-DD.'
                           type: string
+                          format: date
                           example: '2021-08-18'
                         toDate:
                           description: 'The last day that the income and expenses period summary covers. Must conform to the format: YYYY-MM-DD.'
                           type: string
+                          format: date
                           example: '2021-09-18'
                       required:
                         - submissionId
