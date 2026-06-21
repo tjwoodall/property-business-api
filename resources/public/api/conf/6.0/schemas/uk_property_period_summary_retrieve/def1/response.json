@@ -6,16 +6,19 @@
   "properties": {
     "submittedOn": {
       "type": "string",
+      "format": "date-time",
       "description": "The date the UK property were submitted, in the format `YYYY-MM-DDThh:mm:ss.SSSZ`",
       "example": "2020-07-07T10:59:47.544Z"
     },
     "fromDate": {
       "type": "string",
+      "format": "date",
       "description": "The first day that the income and expenses period summary covers. Must conform to the format YYYY-MM-DD",
       "example": "2020-01-01"
     },
     "toDate": {
       "type": "string",
+      "format": "date",
       "description": "The last day that the income and expenses period summary covers. Must conform to the format YYYY-MM-DD",
       "example": "2020-01-31"
     },

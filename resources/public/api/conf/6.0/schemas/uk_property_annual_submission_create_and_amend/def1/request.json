@@ -271,6 +271,7 @@
                     "properties": {
                       "qualifyingDate": {
                         "type": "string",
+                        "format": "date",
                         "description": "The date qualified for structured building allowance. Must conform to the format YYYY-MM-DD.",
                         "example": "2020-01-01"
                       },
@@ -346,6 +347,7 @@
                     "properties": {
                       "qualifyingDate": {
                         "type": "string",
+                        "format": "date",
                         "description": "The date qualified for enhanced structured building allowance. Must conform to the format YYYY-MM-DD.",
                         "example": "2020-01-01"
                       },
