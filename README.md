@@ -9,9 +9,9 @@ The Property Business API allows software packages to create, retrieve, amend an
 ## Requirements
 
 - Scala 3.x.x
-- Java 11
-- sbt 1.9.7
-- [Service Manager](https://github.com/hmrc/service-manager)
+- Java 21
+- sbt 1.10.x
+- [Service Manager 2](https://github.com/hmrc/sm2)
 
 ## Running the microservice
 
