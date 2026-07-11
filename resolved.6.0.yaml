@@ -1496,6 +1496,7 @@ paths:
                       type: object
                       properties:
                         countryCode:
+                          pattern: "^[A-Z]{3}$"
                           type: string
                           description: A three-letter code that represents a country
                             name. This must be an ISO 3166-1 Alpha-3 value.
@@ -1814,6 +1815,7 @@ paths:
                       type: object
                       properties:
                         countryCode:
+                          pattern: "^[A-Z]{3}$"
                           type: string
                           description: A three-letter code that represents a country
                             name. This must be an ISO 3166-1 Alpha-3 value.
@@ -4256,6 +4258,7 @@ components:
             type: object
             properties:
               countryCode:
+                pattern: "^[A-Z]{3}$"
                 type: string
                 description: A three-letter code that represents a country name. This
                   must be an ISO 3166-1 Alpha-3 value.
@@ -4562,6 +4565,7 @@ components:
             type: object
             properties:
               countryCode:
+                pattern: "^[A-Z]{3}$"
                 type: string
                 description: A three-letter code that represents a country name. This
                   must be an ISO 3166-1 Alpha-3 value.
