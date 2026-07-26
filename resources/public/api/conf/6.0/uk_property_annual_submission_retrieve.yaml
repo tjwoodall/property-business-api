@@ -53,18 +53,14 @@ responses:
             
         examples:
           "Property Allowance response for TY 2024-25 and before":
-            value:
-              $ref: './examples/uk_property_annual_submission_retrieve/def1/property_allowance_response.json'
+            externalValue: './examples/uk_property_annual_submission_retrieve/def1/property_allowance_response.json'
           "All Other Allowances response for TY 2024-25 and before":
-            value:
-              $ref: './examples/uk_property_annual_submission_retrieve/def1/all_other_allowances_response.json'
+            externalValue: './examples/uk_property_annual_submission_retrieve/def1/all_other_allowances_response.json'
           
           "Property Allowance response for TY 2025-26 and after":
-            value:
-              $ref: './examples/uk_property_annual_submission_retrieve/def2/property_allowance_response.json'
+            externalValue: './examples/uk_property_annual_submission_retrieve/def2/property_allowance_response.json'
           "All Other Allowances response for TY 2025-26 and after":
-            value:
-              $ref: './examples/uk_property_annual_submission_retrieve/def2/all_other_allowances_response.json'
+            externalValue: './examples/uk_property_annual_submission_retrieve/def2/all_other_allowances_response.json'
           
           
   "400":
