@@ -3133,7 +3133,7 @@ paths:
                 endDate:
                   type: string
                   description: |-
-                    The date on which income is no longer received from the property. The end date must not be later than the end of the relevant tax year. A property with an end date must always have an associated end reason.
+                    The date on which income is no longer received from the property. The end date must not be later than the end of the relevant tax year. A property with an end date must always have an associated end reason. For properties which have been added to the list in error, the endDate should be the date the property was added.
 
                      Must conform to the format `YYYY-MM-DD`
                   format: date
@@ -4818,7 +4818,7 @@ components:
         endDate:
           type: string
           description: |-
-            The date on which income is no longer received from the property. The end date must not be later than the end of the relevant tax year. A property with an end date must always have an associated end reason.
+            The date on which income is no longer received from the property. The end date must not be later than the end of the relevant tax year. A property with an end date must always have an associated end reason. For properties which have been added to the list in error, the endDate should be the date the property was added.
 
              Must conform to the format `YYYY-MM-DD`
           format: date
