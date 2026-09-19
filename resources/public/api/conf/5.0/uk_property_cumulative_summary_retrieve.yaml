@@ -50,11 +50,9 @@ responses:
           $ref: './schemas/uk_property_cumulative_summary_retrieve/def1/response.json'
         examples:
           Full expenses response for TY 2025-26 and after:
-            value:
-              $ref: './examples/uk_property_cumulative_summary_retrieve/def1/response.json'
+            externalValue: './examples/uk_property_cumulative_summary_retrieve/def1/response.json'
           Consolidated expenses response for TY 2025-26 and after:
-            value:
-              $ref: './examples/uk_property_cumulative_summary_retrieve/def1/consolidated_response.json'
+            externalValue: './examples/uk_property_cumulative_summary_retrieve/def1/consolidated_response.json'
 
   "400":
     description: Bad request
