@@ -44,8 +44,7 @@ responses:
         examples:
           example:
             description: Example Response given any tax year
-            value:
-              $ref: './examples/historic_uk_fhl_annual_submission_retrieve/def1/response.json'
+            externalValue: './examples/historic_uk_fhl_annual_submission_retrieve/def1/response.json'
 
   "400":
     description: Bad request
